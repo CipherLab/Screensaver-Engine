@@ -1,14 +1,18 @@
 ﻿using System;
 using System.Windows.Forms;
-using Microsoft.Win32;
 
 namespace FancyTiling
 {
     public partial class SettingsForm : Form
     {
+
+        public Settings Settings { get; internal set; }
+
+      
         public SettingsForm()
         {
             InitializeComponent();
+            Settings = new Settings();
             LoadSettings();
         }
 
@@ -17,30 +21,18 @@ namespace FancyTiling
         /// </summary>
         private void LoadSettings()
         {
-            RegistryKey key = Registry.CurrentUser.OpenSubKey("SOFTWARE\\MirrorScalingScreenSaver\\text");
-            //if (key == null)
-            //    textBox.Text = "C# Screen Saver";
-            //else
-            //    textBox.Text = (string)key.GetValue("text");
+            Settings.LoadFromReg();
+            lblDirectory.Text = this.Settings.Path;
+            chkMirror.Checked = this.Settings.Fancytile;
+            chkShuffle.Checked = this.Settings.Shuffle;
+            numericUpDown1.Value = this.Settings.Speed;
         }
 
-        /// <summary>
-        /// Save text into the Registry.
-        /// </summary>
-        private void SaveSettings()
-        {
-            // Create or get existing subkey
-            RegistryKey key = Registry.CurrentUser.CreateSubKey("SOFTWARE\\MirrorScalingScreenSaver\\text");
-
-            //key.SetValue("text", textBox.Text);
-            //key.SetValue("text", textBox.Text);
-            //key.SetValue("text", textBox.Text);
-            //key.SetValue("text", textBox.Text);
-        }
+     
 
         private void okButton_Click(object sender, EventArgs e)
         {
-            SaveSettings();
+            this.Settings.SaveSettings();
             Close();
         }
 
@@ -56,10 +48,26 @@ namespace FancyTiling
                 f.ShowDialog(this);
                 if (!string.IsNullOrEmpty(f.SelectedPath))
                 {
-
+                    Settings.Path = f.SelectedPath;
+                    lblDirectory.Text = f.SelectedPath;
                 }
             }
 
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            Settings.Speed = (int)((NumericUpDown)sender).Value;
+        }
+
+        private void chkShuffle_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.Shuffle = ((CheckBox)sender).Checked;
+        }
+
+        private void chkMirror_CheckedChanged(object sender, EventArgs e)
+        {
+            Settings.Fancytile = ((CheckBox)sender).Checked;
         }
     }
 }

@@ -36,10 +36,12 @@
             this.btnBrowse = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbSpeed = new System.Windows.Forms.ComboBox();
             this.chkShuffle = new System.Windows.Forms.CheckBox();
             this.chkMirror = new System.Windows.Forms.CheckBox();
             this.chkSlowZoom = new System.Windows.Forms.CheckBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // okButton
@@ -109,24 +111,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 98);
+            this.label3.Location = new System.Drawing.Point(12, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 13);
+            this.label3.Size = new System.Drawing.Size(139, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Slideshow Speed:";
-            // 
-            // cbSpeed
-            // 
-            this.cbSpeed.FormattingEnabled = true;
-            this.cbSpeed.Items.AddRange(new object[] {
-            "Slow",
-            "Medium",
-            "Fast"});
-            this.cbSpeed.Location = new System.Drawing.Point(167, 95);
-            this.cbSpeed.Name = "cbSpeed";
-            this.cbSpeed.Size = new System.Drawing.Size(121, 21);
-            this.cbSpeed.TabIndex = 12;
-            this.cbSpeed.Text = "Slow";
+            this.label3.Text = "Slideshow speed (seconds):";
             // 
             // chkShuffle
             // 
@@ -139,6 +128,7 @@
             this.chkShuffle.TabIndex = 13;
             this.chkShuffle.Text = "Shuffle pictures";
             this.chkShuffle.UseVisualStyleBackColor = true;
+            this.chkShuffle.CheckedChanged += new System.EventHandler(this.chkShuffle_CheckedChanged);
             // 
             // chkMirror
             // 
@@ -151,6 +141,7 @@
             this.chkMirror.TabIndex = 14;
             this.chkMirror.Text = "Mirror images to screen resolution";
             this.chkMirror.UseVisualStyleBackColor = true;
+            this.chkMirror.CheckedChanged += new System.EventHandler(this.chkMirror_CheckedChanged);
             // 
             // chkSlowZoom
             // 
@@ -163,16 +154,54 @@
             this.chkSlowZoom.TabIndex = 15;
             this.chkSlowZoom.Text = "Slow zoom";
             this.chkSlowZoom.UseVisualStyleBackColor = true;
+            this.chkSlowZoom.Visible = false;
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(167, 98);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 16;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Checked = true;
+            this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Location = new System.Drawing.Point(167, 191);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(70, 17);
+            this.checkBox1.TabIndex = 17;
+            this.checkBox1.Text = "Use XNA";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.Visible = false;
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(528, 234);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.chkSlowZoom);
             this.Controls.Add(this.chkMirror);
             this.Controls.Add(this.chkShuffle);
-            this.Controls.Add(this.cbSpeed);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBrowse);
@@ -184,6 +213,7 @@
             this.MaximizeBox = false;
             this.Name = "SettingsForm";
             this.Text = "ScreenSaver Settings";
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -198,9 +228,10 @@
         private System.Windows.Forms.Button btnBrowse;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbSpeed;
         private System.Windows.Forms.CheckBox chkShuffle;
         private System.Windows.Forms.CheckBox chkMirror;
         private System.Windows.Forms.CheckBox chkSlowZoom;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

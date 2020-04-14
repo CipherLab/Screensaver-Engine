@@ -46,6 +46,8 @@ namespace FancyTiling
                 //run the screen saver
                 Application.EnableVisualStyles();
                 Application.SetCompatibleTextRenderingDefault(false);
+                
+                //Application.Run(new SettingsForm());
                 ShowScreensaver();
                 Application.Run();
             }
