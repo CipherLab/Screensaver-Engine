@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <MonoGameContentReference Include="**\*.mgcb" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DarkMatterGUI\**" />
+    <EmbeddedResource Remove="DarkMatterGUI\**" />
+    <MonoGameContentReference Remove="DarkMatterGUI\**" />
+    <None Remove="DarkMatterGUI\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="AStar.cs" />
+    <Compile Remove="Astar2.cs" />
+    <Compile Remove="AStarTile.cs" />
+    <Compile Remove="DepthFirst.cs" />
+    <Compile Remove="Dijkstra.cs" />
+    <Compile Remove="PathFinder.cs" />
+    <Compile Remove="QLean.cs" />
+    <Compile Remove="Tile.cs" />
+    <Compile Remove="TileGrid - Copy.cs" />
+    <Compile Remove="TileGrid.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="HowIRide_MT.db" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.30" />
+    <PackageReference Include="MonoGame.Content.Builder" Version="3.7.0.9" />
+    <PackageReference Include="MonoGame.Extended.Gui" Version="3.7.0" />
+    <PackageReference Include="MonoGame.Framework.DesktopGL.Core" Version="3.8.0.2" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.112" />
+    <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
+    <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
+  </ItemGroup>
+</Project>
