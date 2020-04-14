@@ -1,7 +1,7 @@
 # FancyTiling-ScreenSaver
 A simple photo slideshow screensaver that fills a higher resolution screen by mirroring the top/bottom/left/right sides of the image.
 
-I still need to save/load settings, and I'd like to try an XNA mode so I can do some simple pan/zooms. 
+I still need to optomize the code, and just generally clean it up. I'd like to try an XNA mode so I can do some simple pan/zooms. 
 
 It will take an image and copy the top/bottom and/or right/left sides of the image by the number of pixels it would take to fill the screen.
 (1920x1080)
