@@ -5,9 +5,11 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using ImageMagick;
-using Microsoft.Win32;
+using Timer = System.Threading.Timer;
 
 namespace FancyTiling
 {
@@ -30,6 +32,7 @@ namespace FancyTiling
 
         #endregion
 
+        private Timer _timer { get; set; }
         private Settings Settings { get; set; }
         bool _isPreviewMode = false;
 
@@ -48,7 +51,23 @@ namespace FancyTiling
             this.Bounds = bounds;
             //hide the cursor
             Cursor.Hide();
-            moveTimer.Stop();
+
+            Settings = new Settings();
+            Settings.LoadFromReg();
+
+            Cursor.Hide();
+            TopMost = true;
+
+             _imageFiles = Directory
+                .GetFiles(Settings.Path, "*.jpg", SearchOption.AllDirectories).ToList();
+
+            if (Settings.Shuffle)
+                _imageFiles = _imageFiles.Randomize().ToList();
+
+            _timer = new Timer(ShowNextImage, 
+                null, 0, Settings.Speed * 1000);
+            // this.BackgroundImage = new Bitmap(1,1);
+            //  ShowImage(_imageFiles[0]);
 
         }
 
@@ -87,61 +106,23 @@ namespace FancyTiling
             }
         }
 
-        private Queue<string> _imageFiles = new Queue<string>();
-        private Queue<string> _seenImages = new Queue<string>();
+        private List<string> _imageFiles = new List<string>();
         private float _zoomFactor = .1f;
 
         private void ScreenSaverForm_Load(object sender, EventArgs e)
         {
-            Settings = new Settings();
-            Settings.LoadFromReg();
-
-            Cursor.Hide();
-            TopMost = true;
-
-            moveTimer.Interval = Settings.Speed * 1000;
-            moveTimer.Tick += new EventHandler(moveTimer_Tick);
-
-            var tempItems = Directory
-                .GetFiles(Settings.Path, "*.jpg", SearchOption.AllDirectories).ToList();
-
-            if (Settings.Shuffle)
-                tempItems = tempItems.Randomize().ToList();
-         
-
-            foreach (var tempItem in tempItems)
-            {
-                _imageFiles.Enqueue(tempItem);
-            }
-            moveTimer.Start();
         }
 
         public bool IsLoadingNext = false;
-        private void ShowNextImage()
+        private void ShowImage(string f)
         {
-            if (IsLoadingNext)
-                return;
+            _timer.Change(Settings.Speed * 1000, Timeout.Infinite);
 
             IsLoadingNext = true;
-
-            moveTimer.Stop();
             try
             {
-                if (_imageFiles.Count <= 0)
-                {
-                    foreach (var s in _seenImages.ToList().Randomize())
-                    {
-                        _imageFiles.Enqueue(s);
-                    }
-
-                    _seenImages.Clear();
-                }
-
-                var first = _imageFiles.Dequeue();
-                _seenImages.Enqueue(first);
-                // this.BackgroundImage = new Bitmap(first);
-
-                this.BackgroundImage = MirrorUpconvertImage(first);
+                var result =  Task.Factory.StartNew(() => MirrorUpconvertImage(f));
+                this.BackgroundImage = result.Result;
             }
             catch (Exception e)
             {
@@ -150,22 +131,33 @@ namespace FancyTiling
             finally
             {
                 GC.Collect();
-                moveTimer.Start();
                 IsLoadingNext = false;
             }
         }
-
-        private void moveTimer_Tick(object sender, System.EventArgs e)
+       
+        private int imageIdx = 0;
+        private void ShowPrevImage()
         {
-            ShowNextImage();
 
-            //change the image
+            if (IsLoadingNext)
+                return;
 
-            //Size newSize = new Size((int)(originalBitmap.Width * zoomFactor), (int)(originalBitmap.Height * zoomFactor));
-            //pbImage.Image = new Bitmap(originalBitmap, newSize);
-            //zoomFactor += .2f;
+            if (imageIdx <= 0)
+                return;
+
+            ShowImage(_imageFiles[--imageIdx]);
         }
+        private void ShowNextImage(object state)
+        {
+            if(IsLoadingNext)
+                return;
+            
+            if (imageIdx >= _imageFiles.Count)
+                imageIdx = 0;
 
+            ShowImage(_imageFiles[++imageIdx]);
+        }
+       
         private void LoadSettings()
         {
             this.LoadSettings();
@@ -288,6 +280,16 @@ namespace FancyTiling
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Right)
+            {
+               ShowNextImage(null);
+                return;
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                ShowPrevImage();
+                return;
+            }
             if (!_isPreviewMode) //disable exit functions for preview
             {
                 Application.Exit();

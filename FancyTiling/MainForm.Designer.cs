@@ -28,8 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.moveTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // MainForm
@@ -54,8 +52,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Timer moveTimer;
     }
 }
 
