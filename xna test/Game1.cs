@@ -1,18 +1,15 @@
-﻿using Dapper;
+﻿using System;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Drawing;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Threading.Tasks;
+using FancyTiling;
 using MonoGame.Extended.Sprites;
 using ScreenSaverHelper;
+using SharedKernel;
 using Color = Microsoft.Xna.Framework.Color;
 using Rectangle = Microsoft.Xna.Framework.Rectangle;
 
@@ -31,19 +28,29 @@ namespace MonoGameTest
         private KeyboardState LastKeyState;
 
         private Rectangle Bounds { get; }
-
+        private ISettings Settings { get; }
         private ImageHelper ImageHelper { get; set; }
         public Texture2D CurrentImage;
         Sprite ImageSprite;
+        private List<string> ImageFiles { get; }
+        private int imageIdx = 0;
         public Game1()
         {
-
-
             graphics = new GraphicsDeviceManager(this);
             Bounds = new Rectangle(0, 0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width,
                  GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
             //Bounds = new Rectangle(0, 0, 1920, 1280);
             ImageHelper = new ImageHelper(new System.Drawing.Rectangle(0, 0, Bounds.Width, Bounds.Height), true);
+
+            Settings = new Settings().LoadFromReg();
+
+            ImageFiles = Directory
+                .GetFiles(Settings.Path, "*.jpg", SearchOption.AllDirectories).ToList();
+            if (ImageFiles.Count <= 0)
+                return;
+
+            if (Settings.Shuffle)
+                ImageFiles = ImageFiles.Randomize().ToList();
 
             graphics.PreferredBackBufferHeight = Bounds.Height;
             graphics.PreferredBackBufferWidth = Bounds.Width;
@@ -70,8 +77,9 @@ namespace MonoGameTest
             EmptyPixel = new Texture2D(GraphicsDevice, 1, 1);
             EmptyPixel.SetData<Color>(new Color[] { Color.White });
 
-            ShowFancyTileImageFromFile(@"G:\AD\Amazon Drive\Pictures\backgrounds\2j8uK9m.jpg");
+            ShowFancyTileImageFromFile(ImageFiles.First());
 
+            this.EllapsedWatch.Start();
         }
 
         private void ShowFancyTileImageFromFile(string f)
@@ -102,19 +110,49 @@ namespace MonoGameTest
         {
             return previousKeyboardState.IsKeyDown(key) && currentKeyboardState.IsKeyUp(key);
         }
+
+        Stopwatch EllapsedWatch = new Stopwatch();
         protected override void Update(GameTime gameTime)
         {
             previousKeyboardState = currentKeyboardState;
             currentKeyboardState = Keyboard.GetState();
             // Move our sprite based on arrow keys being pressed:
-            if (isKeyPressed(Keys.Right))
-                ShowFancyTileImageFromFile(ImageTest1);
+            if (EllapsedWatch.Elapsed.TotalSeconds >= Settings.Speed)
+                ShowNextImage();
+            else if (isKeyPressed(Keys.Right))
+                ShowNextImage();
             else if (isKeyPressed(Keys.Left))
-                ShowFancyTileImageFromFile(ImageTest2);
+                ShowPrevImage();
             else if (isKeyPressed(Keys.Escape))
                 Exit();
 
             base.Update(gameTime);
+        }
+        private void ShowPrevImage()
+        {
+
+            if (LoadingImage)
+                return;
+
+            if (imageIdx <= 0)
+                return;
+            var image = ImageHelper.MirrorUpconvertImage(ImageFiles[--imageIdx]);
+            CurrentImage = Texture2D.FromStream(GraphicsDevice, new MemoryStream(image));
+            EllapsedWatch.Restart();
+
+        }
+        private void ShowNextImage()
+        {
+            if (LoadingImage)
+                return;
+
+            if (imageIdx >= ImageFiles.Count)
+                imageIdx = 0;
+
+            var image = ImageHelper.MirrorUpconvertImage(ImageFiles[++imageIdx]);
+            CurrentImage = Texture2D.FromStream(GraphicsDevice, new MemoryStream(image));
+            EllapsedWatch.Restart();
+
         }
 
         protected override void Draw(GameTime gameTime)

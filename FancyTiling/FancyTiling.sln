@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MonoGameTest", "..\xna test
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "FancyTilingSetup", "..\FancyTilingSetup\FancyTilingSetup.vdproj", "{6B02E0C3-BC81-48C9-8CB0-5539C65B52A0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedKernel", "..\SharedKernel\SharedKernel.csproj", "{C5212D04-6DF7-42CC-B67A-1F3F8743FC8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{BFF37F4D-6907-43F3-959B-E13C737FDBAF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6B02E0C3-BC81-48C9-8CB0-5539C65B52A0}.Debug|Any CPU.ActiveCfg = Debug
 		{6B02E0C3-BC81-48C9-8CB0-5539C65B52A0}.Release|Any CPU.ActiveCfg = Release
+		{C5212D04-6DF7-42CC-B67A-1F3F8743FC8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5212D04-6DF7-42CC-B67A-1F3F8743FC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5212D04-6DF7-42CC-B67A-1F3F8743FC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5212D04-6DF7-42CC-B67A-1F3F8743FC8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

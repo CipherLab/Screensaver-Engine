@@ -1,9 +1,10 @@
 ﻿using System;
 using Microsoft.Win32;
+using SharedKernel;
 
 namespace FancyTiling
 {
-    public class Settings
+    public class Settings : ISettings
     {
         private readonly string _softwareFancytilingscreensaver = "SOFTWARE\\FancyTilingScreenSaver";
 
@@ -20,23 +21,26 @@ namespace FancyTiling
         public bool Shuffle { get; set; }
         public bool Fancytile { get; set; }
 
-        public Settings LoadFromReg()
+        public ISettings LoadFromReg()
         {
-            RegistryKey key = Registry.CurrentUser.OpenSubKey(_softwareFancytilingscreensaver);
-            if (key == null)
+            using (RegistryKey key = Registry.CurrentUser.OpenSubKey(_softwareFancytilingscreensaver))
             {
-                this.Path = "c:\\";
-                this.Speed = 15;
-                this.Shuffle = true;
-                this.Fancytile = true;
-                SaveSettings();
-                return this;
+                if (key == null)
+                {
+                    this.Path = "c:\\";
+                    this.Speed = 15;
+                    this.Shuffle = true;
+                    this.Fancytile = true;
+                    SaveSettings();
+                    return this;
+                }
+
+                this.Path = (string) key.GetValue(nameof(Settings.Path));
+                this.Speed = (int) key.GetValue(nameof(Settings.Speed));
+                this.Shuffle = Convert.ToBoolean(key.GetValue(nameof(Settings.Shuffle)));
+                this.Fancytile = Convert.ToBoolean(key.GetValue(nameof(Settings.Fancytile)));
             }
 
-            this.Path = (string)key.GetValue(nameof(Settings.Path));
-            this.Speed = (int)key.GetValue(nameof(Settings.Speed));
-            this.Shuffle = Convert.ToBoolean(key.GetValue(nameof(Settings.Shuffle)));
-            this.Fancytile = Convert.ToBoolean(key.GetValue(nameof(Settings.Fancytile)));
             return this;
         }
         /// <summary>
