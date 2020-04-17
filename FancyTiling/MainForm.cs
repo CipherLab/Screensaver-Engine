@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ImageMagick;
+using ScreenSaverHelper;
 using Timer = System.Threading.Timer;
 
 namespace FancyTiling
@@ -35,7 +35,7 @@ namespace FancyTiling
         private Timer _timer { get; set; }
         private Settings Settings { get; set; }
         bool _isPreviewMode = false;
-
+        private ImageHelper ImageHelper { get; }
         #region Constructors
 
         public MainForm()
@@ -54,20 +54,24 @@ namespace FancyTiling
 
             Settings = new Settings();
             Settings.LoadFromReg();
-
+             
             Cursor.Hide();
             TopMost = true;
 
-             _imageFiles = Directory
-                .GetFiles(Settings.Path, "*.jpg", SearchOption.AllDirectories).ToList();
+            _imageFiles = Directory
+               .GetFiles(Settings.Path, "*.jpg", SearchOption.AllDirectories).ToList();
+            if (_imageFiles.Count <= 0)
+                return;
 
             if (Settings.Shuffle)
                 _imageFiles = _imageFiles.Randomize().ToList();
 
-            _timer = new Timer(ShowNextImage, 
+            _timer = new Timer(ShowNextImage,
                 null, 0, Settings.Speed * 1000);
             // this.BackgroundImage = new Bitmap(1,1);
             //  ShowImage(_imageFiles[0]);
+
+            ImageHelper = new ImageHelper(bounds, Settings.Fancytile);
 
         }
 
@@ -121,8 +125,11 @@ namespace FancyTiling
             IsLoadingNext = true;
             try
             {
-                var result =  Task.Factory.StartNew(() => MirrorUpconvertImage(f));
-                this.BackgroundImage = result.Result;
+                var result = Task.Factory.StartNew(() => ImageHelper.MirrorUpconvertImage(f));
+                using (var ms = new MemoryStream(result.Result))
+                {
+                   this.BackgroundImage = new Bitmap(ms);
+                }
             }
             catch (Exception e)
             {
@@ -134,7 +141,7 @@ namespace FancyTiling
                 IsLoadingNext = false;
             }
         }
-       
+
         private int imageIdx = 0;
         private void ShowPrevImage()
         {
@@ -149,132 +156,21 @@ namespace FancyTiling
         }
         private void ShowNextImage(object state)
         {
-            if(IsLoadingNext)
+            if (IsLoadingNext)
                 return;
-            
+
             if (imageIdx >= _imageFiles.Count)
                 imageIdx = 0;
 
             ShowImage(_imageFiles[++imageIdx]);
         }
-       
+
         private void LoadSettings()
         {
             this.LoadSettings();
         }
 
-        private Bitmap MirrorUpconvertImage(string i)
-        {
-            if (Settings.Fancytile)
-            {
-                using (MagickImage orig = new MagickImage(i))
-                {
-                    int origWidth = orig.Width;
-                    int origHeight = orig.Height;
-
-                    if (origHeight >= Bounds.Height && origWidth >= Bounds.Width)
-                    {
-                        Debug.WriteLine($"{new FileInfo(i).Name} - Original image is big enough");
-                        return new Bitmap(i);
-                    }
-
-                    if (origHeight >= Bounds.Height && origWidth < Bounds.Height)
-                    {
-                        Debug.WriteLine($"{new FileInfo(i).Name} - Not wide enough");
-                        var mirroredWImage = MirrorLeftAndRight(orig.ToByteArray(), origWidth, origHeight);
-                        return new MagickImage(mirroredWImage).ToBitmap();
-                    }
-
-                    if (origWidth >= Bounds.Width && origHeight < Bounds.Height)
-                    {
-                        Debug.WriteLine($"{new FileInfo(i).Name} - Not tall enough");
-                        var mirroredHImage = MirrorUpAndDown(orig.ToByteArray(), origWidth, Bounds.Height);
-                        return new MagickImage(mirroredHImage).ToBitmap();
-                    }
-
-                    if (origHeight < Bounds.Height && origWidth < Bounds.Width)
-                    {
-                        Debug.WriteLine($"{new FileInfo(i).Name} - Not tall or wide enough");
-                        var mirroredWImage = MirrorLeftAndRight(orig.ToByteArray(), origWidth, origHeight);
-
-                        //pass the niw extra wide one to be mirrored top and bottom
-                        var mirroredHImage = MirrorUpAndDown(mirroredWImage.ToArray(), Bounds.Width, origHeight);
-                        return new MagickImage(mirroredHImage).ToBitmap();
-                    }
-
-                    return new Bitmap(i);
-                }
-            }
-            else
-            {
-                return new Bitmap(i);
-            }
-        }
-
-        private byte[] MirrorUpAndDown(byte[] orig, int origWidth, int origHeight)
-        {
-            using (MagickImage top = new MagickImage(orig.ToArray()))
-            using (MagickImage bottom = new MagickImage(orig.ToArray()))
-            {
-                var hDif = (Bounds.Height - origHeight) / 2;
-
-                var geom1 = new MagickGeometry(0, 0, origWidth, hDif);
-                top.Crop(geom1);
-                var geom2 = new MagickGeometry(0, origHeight - hDif, origWidth, hDif);
-                bottom.Crop(geom2);
-
-                using (var imageCol = new MagickImageCollection())
-                {
-                    top.Flip();
-                    bottom.Flip();
-                    imageCol.Add(top);
-                    imageCol.Add(new MagickImage(orig));
-                    imageCol.Add(bottom);
-
-                    using (var result = imageCol.AppendVertically())
-                    {
-                        var size = new MagickGeometry(origWidth, Bounds.Height);
-                        size.IgnoreAspectRatio = true;
-                        result.Resize(size);
-
-                        return result.ToByteArray();
-                    }
-                }
-            }
-        }
-
-        private byte[] MirrorLeftAndRight(byte[] orig, int origWidth, int origHeight)
-        {
-            using (MagickImage left = new MagickImage(orig.ToArray()))
-            using (MagickImage right = new MagickImage(orig.ToArray()))
-            {
-                var wDif = (Bounds.Width - origWidth) / 2;
-
-                var geom1 = new MagickGeometry(origWidth - wDif, 0, wDif, origHeight);
-                right.Crop(geom1);
-                var geom2 = new MagickGeometry(0, 0, wDif, origHeight);
-                left.Crop(geom2);
-
-                using (var imageCol = new MagickImageCollection())
-                {
-                    left.Flop();
-                    right.Flop();
-                    imageCol.Add(left);
-                    imageCol.Add(new MagickImage(orig));
-                    imageCol.Add(right);
-
-                    using (var result = imageCol.AppendHorizontally())
-                    {
-                        var size = new MagickGeometry(Bounds.Width, origHeight);
-                        size.IgnoreAspectRatio = true;
-                        result.Resize(size);
-
-                        return result.ToByteArray();
-                    }
-                }
-            }
-        }
-
+    
 
         #region User Input
 
@@ -282,7 +178,7 @@ namespace FancyTiling
         {
             if (e.KeyCode == Keys.Right)
             {
-               ShowNextImage(null);
+                ShowNextImage(null);
                 return;
             }
             if (e.KeyCode == Keys.Left)

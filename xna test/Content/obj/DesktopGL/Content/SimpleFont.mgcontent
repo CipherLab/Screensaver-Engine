@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/mnewp/source/repos/FancyTiling Screensaver/core xna ver/MonoGameTest/Content/SimpleFont.spritefont</SourceFile>
-  <SourceTime>2020-03-12T09:15:55.9735265-05:00</SourceTime>
-  <DestFile>C:/Users/mnewp/source/repos/FancyTiling Screensaver/core xna ver/MonoGameTest/Content/bin/DesktopGL/Content/SimpleFont.xnb</DestFile>
-  <DestTime>2020-04-14T10:28:25.8459731-05:00</DestTime>
+  <SourceFile>C:/Users/mnewp/source/repos/FancyTiling-ScreenSaver/xna test/Content/SimpleFont.spritefont</SourceFile>
+  <SourceTime>2020-04-14T11:00:25.3600989-05:00</SourceTime>
+  <DestFile>C:/Users/mnewp/source/repos/FancyTiling-ScreenSaver/xna test/Content/bin/DesktopGL/Content/SimpleFont.xnb</DestFile>
+  <DestTime>2020-04-16T11:52:15.488457-05:00</DestTime>
   <Importer>FontDescriptionImporter</Importer>
   <ImporterTime>2018-08-05T14:17:44-05:00</ImporterTime>
   <Processor>FontDescriptionProcessor</Processor>

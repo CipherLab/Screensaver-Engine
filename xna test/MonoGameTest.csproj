@@ -43,4 +43,8 @@
     <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ScreenSaverHelper\ScreenSaverHelper.csproj" />
+  </ItemGroup>
 </Project>

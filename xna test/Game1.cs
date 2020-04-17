@@ -7,9 +7,14 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using MonoGame.Extended.Sprites;
+using ScreenSaverHelper;
+using Color = Microsoft.Xna.Framework.Color;
+using Rectangle = Microsoft.Xna.Framework.Rectangle;
 
 namespace MonoGameTest
 {
@@ -17,19 +22,32 @@ namespace MonoGameTest
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-
+        string ImageTest1 = @"G:\AD\Amazon Drive\Pictures\backgrounds\0s7Faqh.jpg";
+        string ImageTest2 = @"G:\AD\Amazon Drive\Pictures\backgrounds\0X3EHcT.jpg";
 
         public static SpriteFont SimpleFont;
         public static Texture2D EmptyPixel;
 
         private KeyboardState LastKeyState;
 
+        private Rectangle Bounds { get; }
 
+        private ImageHelper ImageHelper { get; set; }
+        public Texture2D CurrentImage;
+        Sprite ImageSprite;
         public Game1()
         {
+
+
             graphics = new GraphicsDeviceManager(this);
-            graphics.PreferredBackBufferHeight = 800;
-            graphics.PreferredBackBufferWidth = 800;
+            Bounds = new Rectangle(0, 0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width,
+                 GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
+            //Bounds = new Rectangle(0, 0, 1920, 1280);
+            ImageHelper = new ImageHelper(new System.Drawing.Rectangle(0, 0, Bounds.Width, Bounds.Height), true);
+
+            graphics.PreferredBackBufferHeight = Bounds.Height;
+            graphics.PreferredBackBufferWidth = Bounds.Width;
+            graphics.IsFullScreen = true;
             IsMouseVisible = true;
             Content.RootDirectory = "Content";
 
@@ -41,6 +59,7 @@ namespace MonoGameTest
             base.Initialize();
         }
 
+
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
@@ -51,34 +70,49 @@ namespace MonoGameTest
             EmptyPixel = new Texture2D(GraphicsDevice, 1, 1);
             EmptyPixel.SetData<Color>(new Color[] { Color.White });
 
+            ShowFancyTileImageFromFile(@"G:\AD\Amazon Drive\Pictures\backgrounds\2j8uK9m.jpg");
 
-            //PathFinder = new AStar(TileGrid, AllowDirection.NONDIAGONAL);
         }
 
-     
+        private void ShowFancyTileImageFromFile(string f)
+        {
+            LoadingImage = true;
+            try
+            {
+                var image = ImageHelper.MirrorUpconvertImage(f);
+                CurrentImage = Texture2D.FromStream(GraphicsDevice, new MemoryStream(image));
+            }
+            finally
+            {
+                LoadingImage = false;
+            }
+        }
+
 
         protected override void UnloadContent()
         {
             // TODO: Unload any non ContentManager content here
         }
 
+        private bool LoadingImage = false;
         List<int[]> StepData = new List<int[]>();
+        private KeyboardState previousKeyboardState { get; set; }
+        private KeyboardState currentKeyboardState { get; set; }
+        public bool isKeyPressed(Keys key)
+        {
+            return previousKeyboardState.IsKeyDown(key) && currentKeyboardState.IsKeyUp(key);
+        }
         protected override void Update(GameTime gameTime)
         {
-            // Allows the game to exit
-            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
-                this.Exit();
-
-            KeyboardState kState = Keyboard.GetState();
-            MouseState mState = Mouse.GetState();
-            Vector2 mPos = new Vector2(mState.X, mState.Y);
-
-            
-            if (kState.IsKeyDown(Keys.F1) && LastKeyState.IsKeyUp(Keys.F1))
-            {
-            }
-
-            LastKeyState = kState;
+            previousKeyboardState = currentKeyboardState;
+            currentKeyboardState = Keyboard.GetState();
+            // Move our sprite based on arrow keys being pressed:
+            if (isKeyPressed(Keys.Right))
+                ShowFancyTileImageFromFile(ImageTest1);
+            else if (isKeyPressed(Keys.Left))
+                ShowFancyTileImageFromFile(ImageTest2);
+            else if (isKeyPressed(Keys.Escape))
+                Exit();
 
             base.Update(gameTime);
         }
@@ -90,11 +124,14 @@ namespace MonoGameTest
 
             string drawString = $"{StepData.Count}";
 
+            if (CurrentImage != null && !LoadingImage)
+                spriteBatch.Draw(CurrentImage, Vector2.Zero, Color.White);
+
             spriteBatch.DrawString(SimpleFont, drawString, new Vector2(0, 3), Color.White);
             spriteBatch.End();
             base.Draw(gameTime);
         }
- 
+
     }
-  
+
 }
