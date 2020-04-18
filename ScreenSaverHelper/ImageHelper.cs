@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ScreenSaverHelper
 {
@@ -16,7 +17,7 @@ namespace ScreenSaverHelper
             Bounds = bounds;
             FancyTile = fancyTile;
         }
-        public byte[] MirrorUpconvertImage(string i)
+        public async Task<byte[]> MirrorUpconvertImage(string i)
         {
             if (FancyTile)
             {

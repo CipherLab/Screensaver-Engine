@@ -12,12 +12,12 @@ namespace MonoGameTest
         {
             try
             {
-                int FirstDim = source.Length;
-                int SecondDim = source.GroupBy(row => row.Length).Single().Key; // throws InvalidOperationException if source is not rectangular
+                int firstDim = source.Length;
+                int secondDim = source.GroupBy(row => row.Length).Single().Key; // throws InvalidOperationException if source is not rectangular
 
-                var result = new int[FirstDim, SecondDim];
-                for (int i = 0; i < FirstDim; ++i)
-                    for (int j = 0; j < SecondDim; ++j)
+                var result = new int[firstDim, secondDim];
+                for (int i = 0; i < firstDim; ++i)
+                    for (int j = 0; j < secondDim; ++j)
                         result[i, j] = source[i][j];
 
                 return result;

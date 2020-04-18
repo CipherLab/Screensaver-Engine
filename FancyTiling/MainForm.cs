@@ -32,7 +32,7 @@ namespace FancyTiling
 
         #endregion
 
-        private Timer _timer { get; set; }
+        private Timer Timer { get; set; }
         private Settings Settings { get; set; }
         bool _isPreviewMode = false;
         private ImageHelper ImageHelper { get; }
@@ -66,7 +66,7 @@ namespace FancyTiling
             if (Settings.Shuffle)
                 _imageFiles = _imageFiles.Randomize().ToList();
 
-            _timer = new Timer(ShowNextImage,
+            Timer = new Timer(ShowNextImage,
                 null, 0, Settings.Speed * 1000);
             // this.BackgroundImage = new Bitmap(1,1);
             //  ShowImage(_imageFiles[0]);
@@ -118,15 +118,15 @@ namespace FancyTiling
         }
 
         public bool IsLoadingNext = false;
-        private void ShowImage(string f)
+        private async Task ShowImage(string f)
         {
-            _timer.Change(Settings.Speed * 1000, Timeout.Infinite);
+            Timer.Change(Settings.Speed * 1000, Timeout.Infinite);
 
             IsLoadingNext = true;
             try
             {
-                var result = Task.Factory.StartNew(() => ImageHelper.MirrorUpconvertImage(f));
-                using (var ms = new MemoryStream(result.Result))
+                var result = await ImageHelper.MirrorUpconvertImage(f);
+                using (var ms = new MemoryStream(result))
                 {
                    this.BackgroundImage = new Bitmap(ms);
                 }
@@ -142,27 +142,27 @@ namespace FancyTiling
             }
         }
 
-        private int imageIdx = 0;
+        private int _imageIdx = 0;
         private void ShowPrevImage()
         {
 
             if (IsLoadingNext)
                 return;
 
-            if (imageIdx <= 0)
+            if (_imageIdx <= 0)
                 return;
 
-            ShowImage(_imageFiles[--imageIdx]);
+            ShowImage(_imageFiles[--_imageIdx]);
         }
         private void ShowNextImage(object state)
         {
             if (IsLoadingNext)
                 return;
 
-            if (imageIdx >= _imageFiles.Count)
-                imageIdx = 0;
+            if (_imageIdx >= _imageFiles.Count)
+                _imageIdx = 0;
 
-            ShowImage(_imageFiles[++imageIdx]);
+            ShowImage(_imageFiles[++_imageIdx]);
         }
 
         private void LoadSettings()
