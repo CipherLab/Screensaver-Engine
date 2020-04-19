@@ -21,7 +21,7 @@ namespace FancyTiling
         /// </summary>
         private void LoadSettings()
         {
-            Settings.LoadFromReg();
+            Settings.Load();
             lblDirectory.Text = this.Settings.Path;
             chkMirror.Checked = this.Settings.Fancytile;
             chkShuffle.Checked = this.Settings.Shuffle;

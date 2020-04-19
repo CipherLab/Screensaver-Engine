@@ -21,7 +21,7 @@ namespace FancyTiling
         public bool Shuffle { get; set; }
         public bool Fancytile { get; set; }
 
-        public ISettings LoadFromReg()
+        private void LoadFromReg()
         {
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(_softwareFancytilingscreensaver))
             {
@@ -32,7 +32,6 @@ namespace FancyTiling
                     this.Shuffle = true;
                     this.Fancytile = true;
                     SaveSettings();
-                    return this;
                 }
 
                 this.Path = (string) key.GetValue(nameof(Settings.Path));
@@ -40,9 +39,13 @@ namespace FancyTiling
                 this.Shuffle = Convert.ToBoolean(key.GetValue(nameof(Settings.Shuffle)));
                 this.Fancytile = Convert.ToBoolean(key.GetValue(nameof(Settings.Fancytile)));
             }
-
-            return this;
         }
+
+        public void Load()
+        {
+            LoadFromReg();
+        }
+
         /// <summary>
         /// Save text into the Registry.
         /// </summary>

@@ -6,7 +6,7 @@
         int Speed { get; set; }
         bool Shuffle { get; set; }
         bool Fancytile { get; set; }
-        ISettings LoadFromReg();
+        void Load();
 
         /// <summary>
         /// Save text into the Registry.

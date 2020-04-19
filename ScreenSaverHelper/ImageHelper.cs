@@ -17,7 +17,7 @@ namespace ScreenSaverHelper
             Bounds = bounds;
             FancyTile = fancyTile;
         }
-        public async Task<byte[]> MirrorUpconvertImage(string i)
+        public byte[] MirrorUpconvertImage(string i)
         {
             if (FancyTile)
             {
@@ -28,11 +28,15 @@ namespace ScreenSaverHelper
 
                     if (origHeight >= Bounds.Height && origWidth >= Bounds.Width)
                     {
+                        
                         Debug.WriteLine($"{new FileInfo(i).Name} - Original image is big enough");
-                        return new MagickImage(i).ToByteArray();
+                        var size = new MagickGeometry(Bounds.Width, Bounds.Height);
+                        size.IgnoreAspectRatio = true;
+                        orig.Resize(size);
+                        return orig.ToByteArray();
                     }
 
-                    if (origHeight >= Bounds.Height && origWidth < Bounds.Height)
+                    if (origHeight >= Bounds.Height && origWidth < Bounds.Width)
                     {
                         Debug.WriteLine($"{new FileInfo(i).Name} - Not wide enough");
                         var mirroredWImage = MirrorLeftAndRight(orig.ToByteArray(), origWidth, origHeight);
@@ -51,8 +55,10 @@ namespace ScreenSaverHelper
                         Debug.WriteLine($"{new FileInfo(i).Name} - Not tall or wide enough");
                         var mirroredWImage = MirrorLeftAndRight(orig.ToByteArray(), origWidth, origHeight);
 
+                        //new is widened to the bounds now
+                        origWidth = Bounds.Width;
                         //pass the niw extra wide one to be mirrored top and bottom
-                        var mirroredHImage = MirrorUpAndDown(mirroredWImage.ToArray(), Bounds.Width, origHeight);
+                        var mirroredHImage = MirrorUpAndDown(mirroredWImage.ToArray(), origWidth, origHeight);
                         return mirroredHImage;
                     }
 
@@ -76,9 +82,9 @@ namespace ScreenSaverHelper
                 using (var imageCol = new MagickImageCollection())
                 {
                     top.Flip();
-                    bottom.Flip();
                     imageCol.Add(top);
-                    imageCol.Add(new MagickImage(orig));
+                    imageCol.Add(new MagickImage(orig.ToArray()));
+                    bottom.Flip();
                     imageCol.Add(bottom);
 
                     using (var result = imageCol.AppendVertically())

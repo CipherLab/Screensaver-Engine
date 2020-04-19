@@ -53,7 +53,7 @@ namespace FancyTiling
             Cursor.Hide();
 
             Settings = new Settings();
-            Settings.LoadFromReg();
+            Settings.Load();
              
             Cursor.Hide();
             TopMost = true;
@@ -125,7 +125,7 @@ namespace FancyTiling
             IsLoadingNext = true;
             try
             {
-                var result = await ImageHelper.MirrorUpconvertImage(f);
+                var result = ImageHelper.MirrorUpconvertImage(f);
                 using (var ms = new MemoryStream(result))
                 {
                    this.BackgroundImage = new Bitmap(ms);

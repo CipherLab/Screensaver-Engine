@@ -46,7 +46,8 @@
   <PropertyGroup>
     <PostBuildEvent>copy "$(TargetDir)\$(TargetName).exe" %25SystemRoot%25\system32\$(TargetName).scr
 copy "$(TargetDir)Magick.NET-Q16-AnyCPU.dll" %25SystemRoot%25\system32
-copy "$(TargetDir)ScreenSaverHelper.dll" %25SystemRoot%25\system32</PostBuildEvent>
+copy "$(TargetDir)ScreenSaverHelper.dll" %25SystemRoot%25\system32
+copy "$(TargetDir)SharedKernel.dll" %25SystemRoot%25\system32</PostBuildEvent>
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="MainForm.cs">
