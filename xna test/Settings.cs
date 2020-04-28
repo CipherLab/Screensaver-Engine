@@ -1,7 +1,6 @@
-﻿using System.Drawing.Text;
-using SharedKernel;
+﻿using SharedKernel;
 
-namespace FancyTiling
+namespace MonoGameTest
 {
     public class Settings : ISettings
     {

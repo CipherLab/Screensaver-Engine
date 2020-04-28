@@ -10,13 +10,44 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:..\bin\Debug\netcoreapp3.1\Nez.dll
 
 #---------------------------------- Content ---------------------------------#
 
-#begin SimpleFont.spritefont
+#begin Shared/Arial.fnt
+/copy:Shared/Arial.fnt
+
+#begin Shared/Arial_0.png
+/copy:Shared/Arial_0.png
+
+#begin Shared/montserrat-32.fnt
+/copy:Shared/montserrat-32.fnt
+
+#begin Shared/montserrat-32_0.png
+/copy:Shared/montserrat-32_0.png
+
+#begin Shared/moon.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Shared/moon.png
+
+#begin Shared/SimpleFont.spritefont
 /importer:FontDescriptionImporter
 /processor:FontDescriptionProcessor
 /processorParam:PremultiplyAlpha=True
 /processorParam:TextureFormat=Compressed
-/build:SimpleFont.spritefont
+/build:Shared/SimpleFont.spritefont
+
+#begin Shared/small-font.fnt
+/copy:Shared/small-font.fnt
+
+#begin Shared/small-font_0.png
+/copy:Shared/small-font_0.png
 

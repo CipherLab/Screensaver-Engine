@@ -10,24 +10,78 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Remove="DarkMatterGUI\**" />
-    <EmbeddedResource Remove="DarkMatterGUI\**" />
-    <MonoGameContentReference Remove="DarkMatterGUI\**" />
-    <None Remove="DarkMatterGUI\**" />
+    <Compile Remove="Content\bin\**" />
+    <Compile Remove="Content\obj\**" />
+    <EmbeddedResource Remove="Content\bin\**" />
+    <EmbeddedResource Remove="Content\obj\**" />
+    <MonoGameContentReference Remove="Content\bin\**" />
+    <MonoGameContentReference Remove="Content\obj\**" />
+    <None Remove="Content\bin\**" />
+    <None Remove="Content\obj\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Camera.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Content\Shared\Arial.fnt" />
+    <None Remove="Content\Shared\Arial_0.png" />
+    <None Remove="Content\Shared\Arial_1.png" />
+    <None Remove="Content\Shared\impact-32.fnt" />
+    <None Remove="Content\Shared\impact-32_0.png" />
+    <None Remove="Content\Shared\monospaced.png" />
+    <None Remove="Content\Shared\montserrat-32.fnt" />
+    <None Remove="Content\Shared\montserrat-32_0.png" />
+    <None Remove="Content\Shared\moon.png" />
+    <None Remove="Content\Shared\Sensation.fnt" />
+    <None Remove="Content\Shared\SimpleFont.spritefont" />
+    <None Remove="Content\Shared\small-font.fnt" />
+    <None Remove="Content\Shared\small-font_0.png" />
   </ItemGroup>
 
 
   <ItemGroup>
     <PackageReference Include="MonoGame.Content.Builder" Version="3.7.0.9" />
-    <PackageReference Include="MonoGame.Extended.Gui" Version="3.7.0" />
     <PackageReference Include="MonoGame.Framework.DesktopGL.Core" Version="3.8.0.13" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="System.Drawing.Common" Version="4.7.0" />
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
   </ItemGroup>
 
 
   <ItemGroup>
+    <ProjectReference Include="..\Nez-master\Nez.ImGui\Nez.ImGui.csproj" />
+    <ProjectReference Include="..\Nez-master\Nez.Persistence\Nez.Persistence.csproj" />
+    <ProjectReference Include="..\Nez-master\Nez.Portable\Nez.csproj" />
     <ProjectReference Include="..\ScreenSaverHelper\ScreenSaverHelper.csproj" />
     <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Compile Update="Shared\ContentPathGenerator.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ContentPathGenerator.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <None Update="Shared\ContentPathGenerator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ContentPathGenerator.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="Content\Shared\" />
   </ItemGroup>
 </Project>
