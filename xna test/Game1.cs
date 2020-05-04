@@ -26,8 +26,9 @@ namespace MonoGameTest
         protected override void Initialize()
         {
             base.Initialize();
-
-            Scene = new FancyTilingScene();
+            
+            Scene = new DetectGuiItemsScene();
+            //Scene = new FancyTilingScene();
             Window.AllowUserResizing = true;
 
 

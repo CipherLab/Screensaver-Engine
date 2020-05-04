@@ -54,6 +54,7 @@
     <ProjectReference Include="..\Nez-master\Nez.ImGui\Nez.ImGui.csproj" />
     <ProjectReference Include="..\Nez-master\Nez.Persistence\Nez.Persistence.csproj" />
     <ProjectReference Include="..\Nez-master\Nez.Portable\Nez.csproj" />
+    <ProjectReference Include="..\OnnxGuiDetection\OnnxDetection.csproj" />
     <ProjectReference Include="..\ScreenSaverHelper\ScreenSaverHelper.csproj" />
     <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
   </ItemGroup>
@@ -74,14 +75,12 @@
 
 
   <ItemGroup>
+    <None Update="Content\Shared\maxresdefault.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Shared\ContentPathGenerator.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ContentPathGenerator.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Content\Shared\" />
   </ItemGroup>
 </Project>

@@ -25,7 +25,7 @@ namespace Nez
 		foreach( var dir in directories ) 
 		{
 			var dirName = new DirectoryInfo( dir ).Name.ToLower();
-			if( dirName == "bin" || dirName == "obj"  || dirName == "content"   || dirName == "ff")
+			if( dirName == "bin" || dirName == "obj"  || dirName == "content"   || dirName == "ff" || dirName == "dafgsdfasdf")
 				continue;
 
 			// dont delve into directories that don't contan xnb files
