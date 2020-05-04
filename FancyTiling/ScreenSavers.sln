@@ -29,6 +29,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inpainting", "Inpainting", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inpainting", "..\Inpainting\Inpainting\Inpainting.csproj", "{B0A9A7F6-5D58-4024-994A-2C7163F7B947}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nez.Samples", "..\Nez-master\Nez.Samples\Nez.Samples.csproj", "{21723027-1C7C-492C-9505-8E021424B347}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{B0A9A7F6-5D58-4024-994A-2C7163F7B947}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0A9A7F6-5D58-4024-994A-2C7163F7B947}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0A9A7F6-5D58-4024-994A-2C7163F7B947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21723027-1C7C-492C-9505-8E021424B347}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21723027-1C7C-492C-9505-8E021424B347}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21723027-1C7C-492C-9505-8E021424B347}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21723027-1C7C-492C-9505-8E021424B347}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +92,7 @@ Global
 		{6C889395-ADF1-4F9C-9F32-6BFE9F7450A6} = {5BEA3AC1-369D-461F-8DB3-32375F530CE1}
 		{146CC81A-6B01-490E-8C6C-8999C79EBD6E} = {5BEA3AC1-369D-461F-8DB3-32375F530CE1}
 		{B0A9A7F6-5D58-4024-994A-2C7163F7B947} = {77C6B239-47F3-4A55-8F29-2A185DEA3CD3}
+		{21723027-1C7C-492C-9505-8E021424B347} = {5BEA3AC1-369D-461F-8DB3-32375F530CE1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3C9E75C-C3D9-4C6A-9730-9816607B52EC}
