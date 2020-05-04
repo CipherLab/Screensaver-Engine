@@ -9,7 +9,7 @@ using Nez.Textures;
 namespace MonoGameTest.Scenes
 {
     //  [SampleScene("FancyTilingScene Scene", 9999, "FancyTilingScene")]
-    public class FancyTilingScene : Scene
+    public class MirrorEdgesEnlargeImage : Scene
     {
         private TilingScreenSaverComponent tilingScreenSaverComponent;
 
@@ -18,7 +18,7 @@ namespace MonoGameTest.Scenes
         private SpriteRenderer spriteRenderer { get; set; }
         SpriteRenderer addedComponent { get; set; }
 
-        public FancyTilingScene()
+        public MirrorEdgesEnlargeImage()
         {
             Enabled = true;
         }

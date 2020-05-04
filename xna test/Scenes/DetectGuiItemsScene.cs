@@ -17,7 +17,7 @@ using Rectangle = System.Drawing.Rectangle;
 
 namespace MonoGameTest.Scenes
 {
-    [SampleScene("Basic Scene", 9999, "")]
+    [SampleScene("Detect GUI Items", 9999, "")]
     public class DetectGuiItemsScene : SubSceneHelper
     {
         public override void Initialize()
