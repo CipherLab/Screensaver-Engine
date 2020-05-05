@@ -28,7 +28,7 @@ namespace MonoGameTest
             base.Initialize();
             
             //Scene = new BasicScene();
-            Scene = mew RigidBodyScene();
+            Scene = new RigidBodyScene();
             //Scene = new FancyTilingScene();
             Window.AllowUserResizing = true;
 
