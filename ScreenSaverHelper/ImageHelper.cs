@@ -79,7 +79,7 @@ namespace ScreenSaverHelper
         }
         public List<Rectangle> UnpackSpriteSheet(byte[] imageData, int distanceBetweenTiles, int padBoxes)
         {
-            var edges = EdgeDetector(imageData, MagickColors.White, MagickColors.White);
+            var edges = EdgeDetector(imageData, Color.White, Color.White);
 
             using (MemoryStream ms = new MemoryStream(edges))
             {
@@ -102,7 +102,8 @@ namespace ScreenSaverHelper
                         for (var b = 0; b < boxes.Count; b++)
                             boxes[b] = new Rectangle(boxes[b].X, boxes[b].Y, boxes[b].Width + padBoxes, boxes[b].Height + padBoxes);
 
-                        return boxes.Where(b=>b.Width > 20 && b.Height > 20).ToList();
+                        return boxes.ToList();
+                      //  return boxes.Where(b => b.Width > 20 && b.Height > 20).ToList();
                     }
                 }
 
@@ -114,8 +115,35 @@ namespace ScreenSaverHelper
             return new MagickImage(filename).ToByteArray();
 
         }
-        public byte[] EdgeDetector(byte[] imageData, MagickColor fillColor, MagickColor alphaColor, bool saveFile = false)
+        public byte[] GetBlurImageByteArrayFromFile(string filename, int factor)
         {
+            using (var img = new MagickImage(filename))
+            {
+                for (int i = 0; i < factor; i++)
+                    img.Blur();
+                return img.ToByteArray();
+            }
+        }
+        public byte[] GetBlurImageByteArrayFromData(byte[] data, int factor)
+        {
+            using (var img = new MagickImage(data))
+            {
+                for (int i = 0; i < factor; i++)
+                    img.Blur();
+                img.Write(@"c:\temp\canny_blur.png");
+                return img.ToByteArray(MagickFormat.Png);
+            }
+        }
+        public byte[] EdgeDetector(byte[] imageData, Color fillColor, Color alphaColor, bool negateFill = false, bool saveFile = false)
+        {
+            MagickColor fColor = MagickColors.White;
+            MagickColor aColor = MagickColors.White;
+
+            if (fillColor == Color.Black)
+                fColor = MagickColors.Black;
+
+            if (alphaColor == Color.Black)
+                aColor = MagickColors.Black;
 
             var image = new MagickImage(imageData);
             image.HasAlpha = true;
@@ -124,17 +152,18 @@ namespace ScreenSaverHelper
             if (fillColor != null)
             {
                 image.ColorFuzz = new Percentage(1);
-                image.FloodFill(fillColor, 0, 0);
-                //image.Negate();
+                image.FloodFill(fColor, 0, 0);
+              
             }
 
             if (alphaColor != null)
             {
                 image.InverseTransparentChroma(
-                    alphaColor,
-                    alphaColor);
+                    aColor,
+                    aColor);
             }
-
+            if (negateFill)
+                image.Negate();
             //image.HoughLine(5,5, Int16.MaxValue);
             image.BitDepth(Channels.Default);
             if (saveFile)
@@ -247,7 +276,7 @@ namespace ScreenSaverHelper
                         {
                             highImg.BrightnessContrast(new Percentage(m), new Percentage(0));
                             high1 = highImg.GetPixels().GetPixel(1, 1).ToColor();
-                            high2 = highImg.GetPixels().GetPixel(bitmap.Width -1, bitmap.Height -1).ToColor();
+                            high2 = highImg.GetPixels().GetPixel(bitmap.Width - 1, bitmap.Height - 1).ToColor();
                             high3 = highImg.GetPixels().GetPixel(bitmap.Width - 1, 1).ToColor();
                             high4 = highImg.GetPixels().GetPixel(1, bitmap.Height - 1).ToColor();
                         }
@@ -274,60 +303,7 @@ namespace ScreenSaverHelper
                         };
                     }
 
-                
 
-                    //var magicReadSettings = new MagickReadSettings
-                    //{
-                    //    Format = MagickFormat.Jpeg,
-                    //    ColorSpace = ColorSpace.Transparent,
-                    //    BackgroundColor = MagickColors.Transparent,
-                    //    // increasing the Density here makes a larger and sharper output to PNG
-                    //   // Density = new Density(950, DensityUnit.PixelsPerInch)
-                    //};
-
-
-
-
-                    //using (var origImage = new MagickImage(stream))//, magicReadSettings))
-                    //{
-                    //    return new CroppedImagePart
-                    //    {
-                    //        ImageData = origImage.ToByteArray(MagickFormat.Png),
-                    //        ImageProperties = box
-                    //    };
-
-
-
-
-
-
-
-                    //    c = bitmap.GetPixel(origImage.Width - 1, origImage.Height - 1);
-                    //    MagickColor fillColor2 = new MagickColor(c.R, c.G, c.B);
-                    //    c = bitmap.GetPixel(0, origImage.Height - 1);
-                    //    MagickColor fillColor3 = new MagickColor(c.R, c.G, c.B);
-                    //    c = bitmap.GetPixel(origImage.Width - 1, 0);
-                    //    MagickColor fillColor4 = new MagickColor(c.R, c.G, c.B);
-
-                    //    //origImage.HasAlpha = true;
-                    //    //origImage.Alpha(AlphaOption.Remove);
-                    //    //origImage.ColorFuzz = new Percentage(53);
-                    //    //origImage.TransparentChroma(fillColor, fillColor);
-
-                    //    //var alphaImg = DetermineAlpha(origImage, fillColor);
-                    //    origImage.ColorFuzz = new Percentage(25);
-                    //    // -transparent white
-                    //    origImage.Transparent(fillColor1);
-                    //    origImage.Transparent(fillColor2);
-                    //    origImage.Transparent(fillColor3);
-                    //    origImage.Transparent(fillColor4);
-
-                    //    return new CroppedImagePart
-                    //    {
-                    //        ImageData = origImage.ToByteArray(MagickFormat.Png),
-                    //        ImageProperties = box
-                    //    };
-                    //}
                 }
                 bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
                 stream.Seek(0, SeekOrigin.Begin);
@@ -350,65 +326,24 @@ namespace ScreenSaverHelper
             return replace;
         }
 
-        public byte[] DetermineAlpha(MagickImage image, MagickColor color)
+        public byte[] BlankImage(Rectangle box, Color fillColor)
         {
-            image.TransparentChroma(color, color);
-            image.BackgroundColor = new ColorMono(true);
-
-            // Q16 (Blue):
-            image.TransparentChroma(new MagickColor(0, 0, 0), new MagickColor(0, 0, 65535));
-            image.TransparentChroma(new ColorRGB(0, 0, 0), new ColorRGB(0, 0, 65535));
-            image.BackgroundColor = new MagickColor("#00f");
-            image.BackgroundColor = new MagickColor("#0000ff");
-            image.BackgroundColor = new MagickColor("#00000000ffff");
-
-            // With transparency (Red):
-            image.BackgroundColor = new MagickColor(65535, 0, 0, 32767);
-            image.BackgroundColor = new MagickColor("#ff000080");
-
-            // Q8 (Green):
-            image.TransparentChroma(new MagickColor(0, 0, 0), new MagickColor(0, 255, 0));
-            image.TransparentChroma(new ColorRGB(0, 0, 0), new ColorRGB(0, 255, 0));
-            image.BackgroundColor = new MagickColor("#0f0");
-            image.BackgroundColor = new MagickColor("#00ff00");
-
-            return image.ToByteArray(MagickFormat.Png);
-
-            // convert shirt.jpg
-            // -modulate 100,100,33.3
-            // shirt.Modulate(new Percentage(100), new Percentage(100), new Percentage(33.3));
-
-            // -colorspace HSL
-            image.ColorSpace = ColorSpace.HSL;
-
-            // -channel Hue,Saturation -separate +channel
-            using (MagickImageCollection images = new MagickImageCollection(image.Separate(Channels.Red | Channels.Green)))
+            using (var blankImage = new System.Drawing.Bitmap(box.Width, box.Height))
             {
-                // No need to clone because we can work on the original images.
-                // -delete 0,1 deletes them
+                var memStream = new MemoryStream();
+                blankImage.Save(memStream, ImageFormat.Jpeg);
 
-                //\(-clone 0 - background none - fuzz 5 % +transparent grey64 \) \
-                images[0].BackgroundColor = MagickColors.None;
-                images[0].ColorFuzz = new Percentage(5);
-                // +transparent grey64
-                images[0].InverseTransparent(color);
-
-                //\( -clone 1 -background none -fuzz 10% -transparent black \) \
-                images[1].BackgroundColor = MagickColors.None;
-                images[1].ColorFuzz = new Percentage(10);
-                // -transparent black
-                images[1].Transparent(color);
-
-                // -alpha extract
-                images[0].Alpha(AlphaOption.Extract);
-                images[1].Alpha(AlphaOption.Extract);
-
-                //delete 0,1 -alpha extract -compose multiply -composite \
-                images[0].Composite(images[1], CompositeOperator.Multiply);
-
+                using (Graphics g = Graphics.FromImage(blankImage))
+                {
+                    SolidBrush shadowBrush = new SolidBrush(fillColor);
+                    g.FillRectangles(shadowBrush, new RectangleF[] { box });
+                }
+                using (MemoryStream sout = new MemoryStream())
+                {
+                    blankImage.Save(sout, ImageFormat.Png);
+                    return sout.ToArray();
+                }
             }
-
-            return image.ToByteArray(MagickFormat.Png);
         }
         public byte[] ImageMaskFromSprites(List<Rectangle> boxes, byte[] image)
         {

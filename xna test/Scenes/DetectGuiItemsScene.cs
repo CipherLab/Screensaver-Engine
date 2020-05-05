@@ -38,7 +38,7 @@ namespace MonoGameTest.Scenes
 
             //temporary... will come from screenshot or whatev
             byte[] originalImage = ih.GetImageByteArrayFromFile(modelsDirectory);
-            byte[] mask = ih.EdgeDetector(originalImage, MagickColors.White, MagickColors.Black, true);
+            byte[] mask = ih.EdgeDetector(originalImage, System.Drawing.Color.Black, System.Drawing.Color.White, true);
 
             var bg = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(originalImage));
             //var bg_mask = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(mask));
