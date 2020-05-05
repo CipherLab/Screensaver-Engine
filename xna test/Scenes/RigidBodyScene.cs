@@ -96,20 +96,20 @@ namespace MonoGameTest.Scenes
 
             //a black line alpha edge detected img. suitable for sprite finding/unpacking
             //fill white, alpha black for lines
-            byte[] mask = ih.EdgeDetector(originalImage, System.Drawing.Color.Black, System.Drawing.Color.White, true);
+            //byte[] mask = ih.EdgeDetector(originalImage, System.Drawing.Color.Black, System.Drawing.Color.Black, true, false);
             //box locations for found stuff
-            List<Rectangle> boxes = ih.UnpackSpriteSheet(mask, 3, 5);
+            List<Rectangle> boxes = ih.UnpackSpriteSheet(originalImage, 2, 2);
 
 
-            mask = ih.EdgeDetector(originalImage, System.Drawing.Color.Black, System.Drawing.Color.Black, true, true);
-            byte[] originalImageBlur = ih.GetBlurImageByteArrayFromData(mask, 1);
+            var mask = ih.EdgeDetector(originalImage, System.Drawing.Color.Black, System.Drawing.Color.Black, true, true);
 
-            var originalImageBlurTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(originalImageBlur));
             var originalImageTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(originalImage));
             bgEntity1.AddComponent(new SpriteRenderer(originalImageTex));
             bgEntity1.UpdateOrder = 0;
 
-            bgEntity2.AddComponent(new SpriteRenderer(originalImageBlurTex));
+            byte[] maskImageBlur = ih.GetBlurImageByteArrayFromData(mask, 1);
+            var maskBlurTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(maskImageBlur));
+            //bgEntity2.AddComponent(new SpriteRenderer(maskBlurTex));
             bgEntity2.UpdateOrder = 1;
 
             //alpha sprites cut from original img using box locations
@@ -127,12 +127,12 @@ namespace MonoGameTest.Scenes
                 var v = new Vector2(Random.NextAngle(), Random.NextAngle());
 
                 if ((b.ImageProperties.Width > 10 && b.ImageProperties.Height > 10) &&
-                    (b.ImageProperties.Width < 100 && b.ImageProperties.Height < 100))
+                    (b.ImageProperties.Width < 300 && b.ImageProperties.Height < 300))
                 {
                     v = new Vector2(Random.NextAngle(), Random.NextAngle());
                     mass = 1f;
                 }
-                else if(b.ImageProperties.Height > 100)
+                else if(b.ImageProperties.Height > 200 && b.ImageProperties.Width > 300)
                 {
                     v = new Vector2(0,0);
                     mass = 0;

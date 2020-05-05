@@ -103,7 +103,7 @@ namespace ScreenSaverHelper
                             boxes[b] = new Rectangle(boxes[b].X, boxes[b].Y, boxes[b].Width + padBoxes, boxes[b].Height + padBoxes);
 
                         return boxes.ToList();
-                      //  return boxes.Where(b => b.Width > 20 && b.Height > 20).ToList();
+                        //  return boxes.Where(b => b.Width > 20 && b.Height > 20).ToList();
                     }
                 }
 
@@ -134,7 +134,7 @@ namespace ScreenSaverHelper
                 return img.ToByteArray(MagickFormat.Png);
             }
         }
-        public byte[] EdgeDetector(byte[] imageData, Color fillColor, Color alphaColor, bool negateFill = false, bool saveFile = false)
+        public byte[] EdgeDetector(byte[] imageData, Color fillColor, Color alphaColor, bool negateFill = false, bool alpha = false)
         {
             MagickColor fColor = MagickColors.White;
             MagickColor aColor = MagickColors.White;
@@ -146,14 +146,14 @@ namespace ScreenSaverHelper
                 aColor = MagickColors.Black;
 
             var image = new MagickImage(imageData);
-            image.HasAlpha = true;
+                image.HasAlpha = alpha;
             image.CannyEdge(1, 0, new Percentage(5), new Percentage(30));
             image.Negate();
             if (fillColor != null)
             {
                 image.ColorFuzz = new Percentage(1);
                 image.FloodFill(fColor, 0, 0);
-              
+
             }
 
             if (alphaColor != null)
@@ -166,9 +166,16 @@ namespace ScreenSaverHelper
                 image.Negate();
             //image.HoughLine(5,5, Int16.MaxValue);
             image.BitDepth(Channels.Default);
-            if (saveFile)
-                image.Write("c:\\temp\\canny.png");
-            return image.ToByteArray(MagickFormat.Png);
+            image.Write("c:\\temp\\canny.png");
+
+            if (alpha)
+            {
+                return image.ToByteArray(MagickFormat.Png);
+            }
+            else
+            {
+                return image.ToByteArray(MagickFormat.Jpg);
+            }
         }
 
         private byte[] MirrorUpAndDown(byte[] orig, int origWidth, int origHeight)
