@@ -26,15 +26,15 @@ namespace MonoGameTest.Scenes
 
 
             this.SimpleFont = Content.Load<SpriteFont>("Shared\\SimpleFont");
-            int originalWidth = 1280;
-            int originalHeight = 720;
-            SetDesignResolution(originalWidth, originalHeight, Scene.SceneResolutionPolicy.ShowAll);
-            Screen.SetSize(originalWidth, originalHeight);
+            int screenWidth = 1280;
+            int screenHeight = 720;
+            SetDesignResolution(screenWidth, screenHeight, Scene.SceneResolutionPolicy.ShowAll);
+            Screen.SetSize(screenWidth, screenHeight);
 
             string modelsDirectory = Path.Combine(Environment.CurrentDirectory, @"Content\Shared");
             modelsDirectory = Path.Combine(modelsDirectory, "maxresdefault.jpg");
 
-            var ih = new ImageHelper(new System.Drawing.Rectangle(0, 0, originalWidth, originalHeight), false);
+            var ih = new ImageHelper(new System.Drawing.Rectangle(0, 0, screenWidth, screenHeight), modelsDirectory);
 
             //temporary... will come from screenshot or whatev
             byte[] originalImage = ih.GetImageByteArrayFromFile(modelsDirectory);
@@ -49,14 +49,14 @@ namespace MonoGameTest.Scenes
             //bgEntity2.AddComponent(new SpriteRenderer(bg_mask));
             bgEntity1.UpdateOrder = 0;
             bgEntity2.UpdateOrder = 3;
-            List<Rectangle> boxes = ih.UnpackSpriteSheet(originalImage, 3, 5);
+            List<Rectangle> boxes = ih.GetSpriteBoundingBoxesInImage(3, 5);
 
             //var contentFilledImg = ih.ContentAwareFillFromSpriteImageMask(boxes, originalImage);
             //var contentFilledTexture = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(contentFilledImg));
            
             //bgEntity2.AddComponent(new SpriteRenderer(contentFilledTexture));
 
-            List<CroppedImagePart> detectedObjectImages = ih.GetSpritesFromImage(boxes, originalImage, true);
+            List<CroppedImagePart> detectedObjectImages = ih.GetSpritesFromImage(boxes, true);
             ShowImagesBehindBoundingBoxes(detectedObjectImages);
 
             // AddBoundingBoxes(boxes);

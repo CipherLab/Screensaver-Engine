@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using Microsoft.Xna.Framework;
@@ -15,7 +16,7 @@ using Rectangle = System.Drawing.Rectangle;
 namespace MonoGameTest.Scenes
 {
     [SampleScene("Rigid Bodies", 100,
-        "ArcadeRigidBodies can be used for a game-like physics effect\nThis demo just applies some impulses and lets gravity do the rest")]
+        "")]
     public class RigidBodyScene : SubSceneHelper
     {
         public override void Initialize()
@@ -79,68 +80,97 @@ namespace MonoGameTest.Scenes
 
         private void RigidBody(int originalWidth, int originalHeight)
         {
-            var ih = new ImageHelper(new System.Drawing.Rectangle(0, 0, originalWidth, originalHeight), false);
             string modelsDirectory = Path.Combine(Environment.CurrentDirectory, @"Content\Shared");
             modelsDirectory = Path.Combine(modelsDirectory, "maxresdefault.jpg");
 
-            byte[] xBorder = ih.BlankImage(new Rectangle(0, 0, Screen.Width, 2), System.Drawing.Color.White);
-            byte[] yBorder = ih.BlankImage(new Rectangle(0, 0, 2, Screen.Height), System.Drawing.Color.White);
-            byte[] originalImage = ih.GetImageByteArrayFromFile(modelsDirectory);
-            var bgEntity1 = CreateEntity("bg1", new Vector2(Screen.Width / 2, Screen.Height / 2));
-            var bgEntity2 = CreateEntity("bg2", new Vector2(Screen.Width / 2, Screen.Height / 2));
 
-            //the original background pic
-            
-            var yBorderTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(yBorder));
-            var xBorderTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(xBorder));
-
-            //a black line alpha edge detected img. suitable for sprite finding/unpacking
-            //fill white, alpha black for lines
-            //byte[] mask = ih.EdgeDetector(originalImage, System.Drawing.Color.Black, System.Drawing.Color.Black, true, false);
-            //box locations for found stuff
-            List<Rectangle> boxes = ih.UnpackSpriteSheet(originalImage, 2, 2);
+            Texture2D yBorderTex;
+            Texture2D xBorderTex;
+            List<CroppedImagePart> detectedObjectImages;
+            using (var origImageHelper = new ImageHelper(new System.Drawing.Rectangle(0, 0, originalWidth, originalHeight), modelsDirectory))
+            {
+                var bgEntity1 = CreateEntity("bg1", new Vector2(Screen.Width / 2f, Screen.Height / 2f));
+                byte[] originalImage = origImageHelper.GetImageByteArrayFromFile(modelsDirectory);
 
 
-            var mask = ih.EdgeDetector(originalImage, System.Drawing.Color.Black, System.Drawing.Color.Black, true, true);
 
-            var originalImageTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(originalImage));
-            bgEntity1.AddComponent(new SpriteRenderer(originalImageTex));
-            bgEntity1.UpdateOrder = 0;
-
-            byte[] maskImageBlur = ih.GetBlurImageByteArrayFromData(mask, 1);
-            var maskBlurTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(maskImageBlur));
-            //bgEntity2.AddComponent(new SpriteRenderer(maskBlurTex));
-            bgEntity2.UpdateOrder = 1;
-
-            //alpha sprites cut from original img using box locations
-            List<CroppedImagePart> detectedObjectImages = ih.GetSpritesFromImage(boxes, originalImage, true);
+                //transparent edge detected, filled black
+                byte[] maskTransparent = origImageHelper.EdgeDetectedFilledBlack(ImageFormat.Png);
+                byte[] maskImageBlur;
+                byte[] maskSolid = origImageHelper.EdgeDetectedFilledBlack(ImageFormat.Jpeg);
+                List<Rectangle> boxes;
+                using (var maskImageHelper = new ImageHelper(maskSolid))
+                {
+                    //box locations for found stuff
+                    boxes = maskImageHelper.GetSpriteBoundingBoxesInImage(2, 2);
+                }
 
 
+                //var originalImageTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(originalImage));
+                // bgEntity1.AddComponent(new SpriteRenderer(originalImageTex));
+
+                //trying to put a black mask of cut icons over the bg, but rigid bodies drawing over for some reason.
+                using (var maskImageHelper = new ImageHelper(maskTransparent))
+                {
+                    maskImageBlur = maskImageHelper.GetBlurImageByteArrayFromData(4);
+                    // bgEntity1.AddComponent(new SpriteRenderer(maskBlurTex));
+                    using (ISimpleImageHelper sih = new ImageHelper())
+                    {
+
+                        var result = sih.FlattenImages(originalImage, maskImageBlur, maskImageBlur, maskImageBlur);
+                        var maskBlurTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(result));
+                        bgEntity1.AddComponent(new SpriteRenderer(maskBlurTex));
+
+                    }
+                }
+
+                bgEntity1.UpdateOrder = 0;
+
+
+                detectedObjectImages = origImageHelper.GetSpritesFromImage(boxes, true);
+                AddRigidBodyEntities(detectedObjectImages);
+
+                //alpha sprites cut from original img using box locations
+            }
+
+
+        }
+
+        private void AddRigidBodyEntities(List<CroppedImagePart> detectedObjectImages)
+        {
+            Texture2D xBorderTex;
+            Texture2D yBorderTex;
+            using (ISimpleImageHelper imgHelper = new ImageHelper())
+            {
+                byte[] xBorder = imgHelper.BlankImage(new Rectangle(0, 0, Screen.Width, 2), System.Drawing.Color.White);
+                byte[] yBorder = imgHelper.BlankImage(new Rectangle(0, 0, 2, Screen.Height), System.Drawing.Color.White);
+
+                yBorderTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(yBorder));
+                xBorderTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(xBorder));
+            }
             var friction = 0f;
             var elasticity = 1f;
-            Random.NextFloat(1);
-
-         
             foreach (var b in detectedObjectImages)
             {
-                float mass = 0;
+                float mass =( b.ImageProperties.Width * b.ImageProperties.Height) / 100f;
                 var v = new Vector2(Random.NextAngle(), Random.NextAngle());
+                //int max = 400;
+                //if ((b.ImageProperties.Width > 10 && b.ImageProperties.Height > 10) &&
+                //    (b.ImageProperties.Width < max && b.ImageProperties.Height < max))
+                //{
+                //    v = new Vector2(Random.NextAngle(), Random.NextAngle());
+                //    mass = 1f;
+                //}
+                //else if (b.ImageProperties.Height > max && b.ImageProperties.Width > max)
+                //{
+                //    v = new Vector2(0, 0);
+                //    mass = 0;
+                //}
+                //else
+                //{
+                //    continue;
+                //}
 
-                if ((b.ImageProperties.Width > 10 && b.ImageProperties.Height > 10) &&
-                    (b.ImageProperties.Width < 300 && b.ImageProperties.Height < 300))
-                {
-                    v = new Vector2(Random.NextAngle(), Random.NextAngle());
-                    mass = 1f;
-                }
-                else if(b.ImageProperties.Height > 200 && b.ImageProperties.Width > 300)
-                {
-                    v = new Vector2(0,0);
-                    mass = 0;
-                }
-                else
-                {
-                    continue;
-                }
                 var tex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice,
                     new MemoryStream(b.ImageData));
 

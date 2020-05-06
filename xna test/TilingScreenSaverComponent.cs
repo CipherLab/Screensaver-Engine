@@ -59,10 +59,7 @@ namespace MonoGameTest
             Bounds = new Rectangle(0, 0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width,
                  GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
             //Bounds = new Rectangle(0, 0, 1920, 1280);
-            ImageHelper = new ImageHelper(
-                new System.Drawing.Rectangle(0, 0,
-                    Bounds.Width + _extraPaddingAmountPx,
-                    Bounds.Height + _extraPaddingAmountPx), true);
+        
 
             Settings = new Settings();
             Settings.Load();
@@ -87,7 +84,6 @@ namespace MonoGameTest
         private string CurrentImageFile { get; set; }
         private KeyboardState CurrentKeyboardState { get; set; }
         private List<string> ImageFiles { get; }
-        private ImageHelper ImageHelper { get; set; }
         private Vector2 PanTarget { get; set; }
         private KeyboardState PreviousKeyboardState { get; set; }
         Random Rand => new Random(Environment.TickCount);
@@ -160,17 +156,20 @@ namespace MonoGameTest
         {
             _loadingImage = true;
 
+            using (var imageHelper = new ImageHelper(new System.Drawing.Rectangle(0, 0, Bounds.Width + _extraPaddingAmountPx, Bounds.Height + _extraPaddingAmountPx), ImageFiles[_imageIdx]))
+            {
+                byte[] image = imageHelper.MirrorUpconvertImage();
+                CurrentImageFile = ImageFiles[_imageIdx];
 
+                _imageIdx++;
+                if (_imageIdx >= ImageFiles.Count)
+                    _imageIdx = 0;
 
-            byte[] image = ImageHelper.MirrorUpconvertImage(ImageFiles[_imageIdx]);
-            CurrentImageFile = ImageFiles[_imageIdx];
+                _loadingImage = false;
+                return Texture2D.FromStream(_graphicsDevice, new MemoryStream(image));
+            }
 
-            _imageIdx++;
-            if (_imageIdx >= ImageFiles.Count)
-                _imageIdx = 0;
-
-            _loadingImage = false;
-            return Texture2D.FromStream(_graphicsDevice, new MemoryStream(image));
+          
         }
 
         private Texture2D GetPrevImage()
@@ -179,16 +178,22 @@ namespace MonoGameTest
 
 
 
-            byte[] image = ImageHelper.MirrorUpconvertImage(ImageFiles[_imageIdx]);
-            CurrentImageFile = ImageFiles[_imageIdx];
+            using (var imageHelper =
+                new ImageHelper(
+                    new System.Drawing.Rectangle(0, 0, Bounds.Width + _extraPaddingAmountPx,
+                        Bounds.Height + _extraPaddingAmountPx), ImageFiles[_imageIdx]))
+            {
+                byte[] image = imageHelper.MirrorUpconvertImage();
+                CurrentImageFile = ImageFiles[_imageIdx];
 
-            _imageIdx--;
+                _imageIdx--;
 
-            if (_imageIdx <= 0)
-                _imageIdx = 0;
+                if (_imageIdx <= 0)
+                    _imageIdx = 0;
 
-            _loadingImage = false;
-            return Texture2D.FromStream(_graphicsDevice, new MemoryStream(image));
+                _loadingImage = false;
+                return Texture2D.FromStream(_graphicsDevice, new MemoryStream(image));
+            }
         }
 
         private Vector2 GetRandomTargetWithinExtraBounds()

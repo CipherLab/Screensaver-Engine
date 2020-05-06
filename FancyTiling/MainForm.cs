@@ -35,7 +35,7 @@ namespace FancyTiling
         private Timer Timer { get; set; }
         private Settings Settings { get; set; }
         bool _isPreviewMode = false;
-        private ImageHelper ImageHelper { get; }
+   
         #region Constructors
 
         public MainForm()
@@ -71,7 +71,6 @@ namespace FancyTiling
             // this.BackgroundImage = new Bitmap(1,1);
             //  ShowImage(_imageFiles[0]);
 
-            ImageHelper = new ImageHelper(bounds, Settings.Fancytile);
 
         }
 
@@ -125,10 +124,13 @@ namespace FancyTiling
             IsLoadingNext = true;
             try
             {
-                var result = ImageHelper.MirrorUpconvertImage(f);
-                using (var ms = new MemoryStream(result))
+                using (var helper = new ImageHelper(Bounds, _imageFiles[_imageIdx]))
                 {
-                   this.BackgroundImage = new Bitmap(ms);
+                    var result = helper.MirrorUpconvertImage();
+                    using (var ms = new MemoryStream(result))
+                    {
+                        this.BackgroundImage = new Bitmap(ms);
+                    }
                 }
             }
             catch (Exception e)

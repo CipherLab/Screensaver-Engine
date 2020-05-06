@@ -17,77 +17,87 @@ using Zavolokas.ImageProcessing.PatchMatch;
 
 namespace ScreenSaverHelper
 {
-    public class ImageHelper
+    public class ImageHelper : IDisposable, ISimpleImageHelper
     {
         private Rectangle Bounds { get; }
-        public bool FancyTile { get; }
 
-        public ImageHelper(Rectangle bounds, bool fancyTile)
+        private IMagickImage OriginalImage { get; }
+
+        private string ImageFile { get; }
+        public ImageHelper(Rectangle bounds, string imageFile)
         {
             Bounds = bounds;
-            FancyTile = fancyTile;
+            ImageFile = imageFile;
+            OriginalImage = new MagickImage(imageFile);
         }
-        public byte[] MirrorUpconvertImage(string i)
+        public ImageHelper(byte[] imageData)
         {
-            if (FancyTile)
+            OriginalImage = new MagickImage(imageData);
+        }
+        public ImageHelper()
+        {
+        }
+        public byte[] MirrorUpconvertImage()
+        {
+            int origWidth = OriginalImage.Width;
+            int origHeight = OriginalImage.Height;
+            string i = ImageFile;
+            if (origHeight >= Bounds.Height && origWidth >= Bounds.Width)
             {
-                using (MagickImage orig = new MagickImage(i))
-                {
-                    int origWidth = orig.Width;
-                    int origHeight = orig.Height;
 
-                    if (origHeight >= Bounds.Height && origWidth >= Bounds.Width)
-                    {
-
-                        Debug.WriteLine($"{new FileInfo(i).Name} - Original image is big enough");
-                        var size = new MagickGeometry(Bounds.Width, Bounds.Height);
-                        size.IgnoreAspectRatio = true;
-                        orig.Resize(size);
-                        return orig.ToByteArray();
-                    }
-
-                    if (origHeight >= Bounds.Height && origWidth < Bounds.Width)
-                    {
-                        Debug.WriteLine($"{new FileInfo(i).Name} - Not wide enough");
-                        var mirroredWImage = MirrorLeftAndRight(orig.ToByteArray(), origWidth, origHeight);
-                        return mirroredWImage;
-                    }
-
-                    if (origWidth >= Bounds.Width && origHeight < Bounds.Height)
-                    {
-                        Debug.WriteLine($"{new FileInfo(i).Name} - Not tall enough");
-                        var mirroredHImage = MirrorUpAndDown(orig.ToByteArray(), origWidth, Bounds.Height);
-                        return mirroredHImage;
-                    }
-
-                    if (origHeight < Bounds.Height && origWidth < Bounds.Width)
-                    {
-                        Debug.WriteLine($"{new FileInfo(i).Name} - Not tall or wide enough");
-                        var mirroredWImage = MirrorLeftAndRight(orig.ToByteArray(), origWidth, origHeight);
-
-                        //new is widened to the bounds now
-                        origWidth = Bounds.Width;
-                        //pass the niw extra wide one to be mirrored top and bottom
-                        var mirroredHImage = MirrorUpAndDown(mirroredWImage.ToArray(), origWidth, origHeight);
-                        return mirroredHImage;
-                    }
-
-                }
+                Debug.WriteLine($"{new FileInfo(i).Name} - Original image is big enough");
+                var size = new MagickGeometry(Bounds.Width, Bounds.Height);
+                size.IgnoreAspectRatio = true;
+                OriginalImage.Resize(size);
+                return OriginalImage.ToByteArray();
             }
+
+            if (origHeight >= Bounds.Height && origWidth < Bounds.Width)
+            {
+                Debug.WriteLine($"{new FileInfo(i).Name} - Not wide enough");
+                var mirroredWImage = MirrorLeftAndRight();
+                return mirroredWImage;
+            }
+
+            if (origWidth >= Bounds.Width && origHeight < Bounds.Height)
+            {
+                Debug.WriteLine($"{new FileInfo(i).Name} - Not tall enough");
+                var mirroredHImage = MirrorUpAndDown();
+                return mirroredHImage;
+            }
+
+            if (origHeight < Bounds.Height && origWidth < Bounds.Width)
+            {
+                Debug.WriteLine($"{new FileInfo(i).Name} - Not tall or wide enough");
+                var mirroredWImage = MirrorLeftAndRight();
+
+                //new is widened to the bounds now
+                origWidth = Bounds.Width;
+                //pass the niw extra wide one to be mirrored top and bottom
+                var mirroredHImage = MirrorUpAndDown();
+                return mirroredHImage;
+            }
+
 
             return GetImageByteArrayFromFile(i);
         }
-        public List<Rectangle> UnpackSpriteSheet(byte[] imageData, int distanceBetweenTiles, int padBoxes)
+        /// <summary>
+        /// Creates the edge filled object black with no transparency
+        /// </summary>
+        /// <param name="distanceBetweenTiles"></param>
+        /// <param name="padBoxes"></param>
+        /// <returns></returns>
+        public List<Rectangle> GetSpriteBoundingBoxesInImage(int distanceBetweenTiles, int padBoxes)
         {
-            var edges = EdgeDetector(imageData, Color.White, Color.White);
+            //var edges = EdgeDetectedFilledBlack(ImageFormat.Jpeg);
 
-            using (MemoryStream ms = new MemoryStream(edges))
+            using (MemoryStream ms = new MemoryStream(OriginalImage.ToByteArray()))
             {
                 using (Image img = Image.FromStream(ms))
                 {
                     ImageUnpacker unpacker = new ImageUnpacker(
                         img,
-                        imageData, false, distanceBetweenTiles);
+                        OriginalImage.ToByteArray(), false, distanceBetweenTiles);
                     unpacker.StartUnpacking();
 
                     //TODO: can do this in update loop, use event to notify or somethin?
@@ -124,9 +134,9 @@ namespace ScreenSaverHelper
                 return img.ToByteArray();
             }
         }
-        public byte[] GetBlurImageByteArrayFromData(byte[] data, int factor)
+        public byte[] GetBlurImageByteArrayFromData(int factor)
         {
-            using (var img = new MagickImage(data))
+            using (var img = OriginalImage.Clone())
             {
                 for (int i = 0; i < factor; i++)
                     img.Blur();
@@ -134,192 +144,229 @@ namespace ScreenSaverHelper
                 return img.ToByteArray(MagickFormat.Png);
             }
         }
-        public byte[] EdgeDetector(byte[] imageData, Color fillColor, Color alphaColor, bool negateFill = false, bool alpha = false)
+
+        public byte[] EdgeDetectedFilledBlack(ImageFormat format)
         {
-            MagickColor fColor = MagickColors.White;
-            MagickColor aColor = MagickColors.White;
-
-            if (fillColor == Color.Black)
-                fColor = MagickColors.Black;
-
-            if (alphaColor == Color.Black)
-                aColor = MagickColors.Black;
-
-            var image = new MagickImage(imageData);
-                image.HasAlpha = alpha;
-            image.CannyEdge(1, 0, new Percentage(5), new Percentage(30));
-            image.Negate();
-            if (fillColor != null)
+            using (IMagickImage image = new MagickImage(OriginalImage.Clone()))
             {
                 image.ColorFuzz = new Percentage(1);
-                image.FloodFill(fColor, 0, 0);
+                image.HasAlpha = true;
 
-            }
+                //White lines on black
+                var sigma = 8;
 
-            if (alphaColor != null)
-            {
-                image.InverseTransparentChroma(
-                    aColor,
-                    aColor);
-            }
-            if (negateFill)
+                var lowerP = 3;
+                var upperP = 20;
+                image.CannyEdge(1, sigma, new Percentage(lowerP), new Percentage(upperP));
+                //black lines on white
                 image.Negate();
-            //image.HoughLine(5,5, Int16.MaxValue);
-            image.BitDepth(Channels.Default);
-            image.Write("c:\\temp\\canny.png");
-
-            if (alpha)
-            {
-                return image.ToByteArray(MagickFormat.Png);
-            }
-            else
-            {
-                return image.ToByteArray(MagickFormat.Jpg);
-            }
-        }
-
-        private byte[] MirrorUpAndDown(byte[] orig, int origWidth, int origHeight)
-        {
-            using (MagickImage top = new MagickImage(orig.ToArray()))
-            using (MagickImage bottom = new MagickImage(orig.ToArray()))
-            {
-                var hDif = (Bounds.Height - origHeight) / 2;
-
-                var geom1 = new MagickGeometry(0, 0, origWidth, hDif);
-                top.Crop(geom1);
-                var geom2 = new MagickGeometry(0, origHeight - hDif, origWidth, hDif);
-                bottom.Crop(geom2);
+                //black lines on transparent
+                image.InverseTransparentChroma(MagickColors.Black, MagickColors.Black);
 
                 using (var imageCol = new MagickImageCollection())
                 {
-                    top.Flip();
-                    imageCol.Add(top);
-                    imageCol.Add(new MagickImage(orig.ToArray()));
-                    bottom.Flip();
-                    imageCol.Add(bottom);
-
-                    using (var result = imageCol.AppendVertically())
+                    //beef up the lines
+                    IMagickImage clone2;
+                    IMagickImage clone3;
+                    IMagickImage clone4;
+                    using (var clone1 = image.Clone())
                     {
-                        var size = new MagickGeometry(origWidth, Bounds.Height);
-                        size.IgnoreAspectRatio = true;
-                        result.Resize(size);
+                        clone2 = image.Clone();
+                        clone3 = image.Clone();
+                        clone4 = image.Clone();
 
-                        return result.ToByteArray();
+                        var size = new MagickGeometry(0, 1, OriginalImage.Width, Bounds.Height + 1);
+                        size.IgnoreAspectRatio = true;
+                        clone1.Resize(size);
+                        size = new MagickGeometry(1, 0, OriginalImage.Width + 1, Bounds.Height);
+                        clone2.Resize(size);
+                        size = new MagickGeometry(0, -1, OriginalImage.Width, Bounds.Height - 1);
+                        clone3.Resize(size);
+                        size = new MagickGeometry(-1, 0, OriginalImage.Width - 1, Bounds.Height);
+                        clone4.Resize(size);
+
+
+                        imageCol.Add(clone1);
+                        imageCol.Add(clone2);
+                        imageCol.Add(clone3);
+                        imageCol.Add(clone4);
+                        using (var result = imageCol.Flatten(MagickColors.Transparent))
+                        {
+                            //white with transparent bg.
+                            result.FloodFill(MagickColors.Black, 0, 0);
+
+                            //transparent bg with white fill
+                            result.Negate();
+
+                            //white fill to black, transparent bg!
+                            result.Negate((Channels.RGB));
+
+                            result.Write($"c:\\temp\\Flatten-S{sigma}-{lowerP}-{upperP}.png");
+                            if (format == ImageFormat.Png)
+                                return result.ToByteArray(MagickFormat.Png);
+
+                            if (format == ImageFormat.Jpeg)
+                            {
+                                result.Negate((Channels.Alpha));
+                                result.Write($"c:\\temp\\Flatten-S{sigma}-{lowerP}-{upperP}.Png");
+                                return result.ToByteArray(MagickFormat.Png);
+                            }
+
+                            throw new FormatException($"{format} not accounted for");
+                        }
+                    }
+                }
+
+            }
+        }
+
+        private byte[] MirrorUpAndDown()
+        {
+            using (var top = OriginalImage.Clone())
+            {
+                using (var bottom = OriginalImage.Clone())
+                {
+                    var hDif = (Bounds.Height - OriginalImage.Height) / 2;
+
+                    var geom1 = new MagickGeometry(0, 0, OriginalImage.Width, hDif);
+                    top.Crop(geom1);
+                    var geom2 = new MagickGeometry(0, OriginalImage.Height - hDif, OriginalImage.Width, hDif);
+                    bottom.Crop(geom2);
+
+                    using (var imageCol = new MagickImageCollection())
+                    {
+                        top.Flip();
+                        imageCol.Add(top);
+                        imageCol.Add(OriginalImage.Clone());
+                        bottom.Flip();
+                        imageCol.Add(bottom);
+
+                        using (var result = imageCol.AppendVertically())
+                        {
+                            var size = new MagickGeometry(OriginalImage.Width, Bounds.Height);
+                            size.IgnoreAspectRatio = true;
+                            result.Resize(size);
+
+                            return result.ToByteArray();
+                        }
                     }
                 }
             }
         }
 
-        private byte[] MirrorLeftAndRight(byte[] orig, int origWidth, int origHeight)
+        private byte[] MirrorLeftAndRight()
         {
-            using (MagickImage left = new MagickImage(orig.ToArray()))
-            using (MagickImage right = new MagickImage(orig.ToArray()))
+            using (var left = OriginalImage.Clone())
             {
-                var wDif = (Bounds.Width - origWidth) / 2;
-
-                var geom1 = new MagickGeometry(origWidth - wDif, 0, wDif, origHeight);
-                right.Crop(geom1);
-                var geom2 = new MagickGeometry(0, 0, wDif, origHeight);
-                left.Crop(geom2);
-
-                using (var imageCol = new MagickImageCollection())
+                using (var right = OriginalImage.Clone())
                 {
-                    left.Flop();
-                    right.Flop();
-                    imageCol.Add(left);
-                    imageCol.Add(new MagickImage(orig));
-                    imageCol.Add(right);
+                    var wDif = (Bounds.Width - OriginalImage.Width) / 2;
 
-                    using (var result = imageCol.AppendHorizontally())
+                    var geom1 = new MagickGeometry(OriginalImage.Width - wDif, 0, wDif, OriginalImage.Height);
+                    right.Crop(geom1);
+                    var geom2 = new MagickGeometry(0, 0, wDif, OriginalImage.Height);
+                    left.Crop(geom2);
+
+                    using (var imageCol = new MagickImageCollection())
                     {
-                        var size = new MagickGeometry(Bounds.Width, origHeight);
-                        size.IgnoreAspectRatio = true;
-                        result.Resize(size);
+                        left.Flop();
+                        right.Flop();
+                        imageCol.Add(left);
+                        imageCol.Add(OriginalImage.Clone());
+                        imageCol.Add(right);
 
-                        return result.ToByteArray();
+                        using (var result = imageCol.AppendHorizontally())
+                        {
+                            var size = new MagickGeometry(Bounds.Width, OriginalImage.Height);
+                            size.IgnoreAspectRatio = true;
+                            result.Resize(size);
+
+                            return result.ToByteArray();
+                        }
                     }
                 }
             }
         }
 
 
-        public List<CroppedImagePart> GetSpritesFromImage(List<Rectangle> boxes, byte[] image, bool makeTransparent)
+        public List<CroppedImagePart> GetSpritesFromImage(List<Rectangle> boxes, bool makeTransparent)
         {
-            return boxes.Select(r => GetSpriteFromImage(r, image, makeTransparent)).ToList();
+            return boxes.Select(r => GetSpriteFromImage(r, makeTransparent)).ToList();
         }
-        public CroppedImagePart GetSpriteFromImage(Rectangle box, byte[] image, bool makeTransparent)
+        public CroppedImagePart GetSpriteFromImage(Rectangle box, bool makeTransparent)
         {
             Image original;
-            using (MemoryStream ms = new MemoryStream(image))
+            using (MemoryStream ms = new MemoryStream(OriginalImage.ToByteArray()))
                 original = Image.FromStream(ms);
 
-            Bitmap bitmap = new Bitmap(box.Width, box.Height, original.PixelFormat);
-
-            using (Graphics objGraphics = Graphics.FromImage(bitmap))
+            using (Bitmap bitmap = new Bitmap(box.Width, box.Height, original.PixelFormat))
             {
-                objGraphics.DrawImage(original, new Rectangle(0, 0, bitmap.Width, bitmap.Height), box, GraphicsUnit.Pixel);
-                objGraphics.Dispose();
-            }
-
-            using (var stream = new MemoryStream())
-            {
-                if (makeTransparent)
+                using (Graphics objGraphics = Graphics.FromImage(bitmap))
                 {
+                    objGraphics.DrawImage(original, new Rectangle(0, 0, bitmap.Width, bitmap.Height), box, GraphicsUnit.Pixel);
+                    objGraphics.Dispose();
+                }
 
-                    int m = 15;
+                using (var stream = new MemoryStream())
+                {
+                    if (makeTransparent)
+                    {
+
+                        int m = 15;
+                        bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                        stream.Seek(0, SeekOrigin.Begin);
+                        MagickColor low1;
+                        MagickColor low2;
+                        MagickColor low3;
+                        MagickColor low4;
+                        MagickColor high1;
+                        MagickColor high2;
+                        MagickColor high3;
+                        MagickColor high4;
+                        using (MagickImage orig = new MagickImage(stream))
+                        {
+                            using (var highImg = orig.Clone())
+                            {
+                                highImg.BrightnessContrast(new Percentage(m), new Percentage(0));
+                                high1 = highImg.GetPixels().GetPixel(1, 1).ToColor();
+                                high2 = highImg.GetPixels().GetPixel(bitmap.Width - 1, bitmap.Height - 1).ToColor();
+                                high3 = highImg.GetPixels().GetPixel(bitmap.Width - 1, 1).ToColor();
+                                high4 = highImg.GetPixels().GetPixel(1, bitmap.Height - 1).ToColor();
+                            }
+
+                            using (var lwoImg = orig.Clone())
+                            {
+                                lwoImg.BrightnessContrast(new Percentage(m * -1), new Percentage(0));
+                                low1 = lwoImg.GetPixels().GetPixel(1, 1).ToColor();
+                                low2 = lwoImg.GetPixels().GetPixel(bitmap.Width - 1, bitmap.Height - 1).ToColor();
+                                low3 = lwoImg.GetPixels().GetPixel(bitmap.Width - 1, 1).ToColor();
+                                low4 = lwoImg.GetPixels().GetPixel(1, bitmap.Height - 1).ToColor();
+                            }
+
+                            orig.HasAlpha = true;
+                            orig.ColorFuzz = new Percentage(10);
+                            orig.TransparentChroma(low1, high1);
+                            orig.TransparentChroma(low2, high2);
+                            orig.TransparentChroma(low3, high3);
+                            orig.TransparentChroma(low4, high4);
+                            return new CroppedImagePart
+                            {
+                                ImageData = orig.ToByteArray(MagickFormat.Png),
+                                ImageProperties = box
+                            };
+                        }
+
+
+                    }
                     bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
                     stream.Seek(0, SeekOrigin.Begin);
-                    MagickColor low1;
-                    MagickColor low2;
-                    MagickColor low3;
-                    MagickColor low4;
-                    MagickColor high1;
-                    MagickColor high2;
-                    MagickColor high3;
-                    MagickColor high4;
-                    using (MagickImage orig = new MagickImage(stream))
+
+                    return new CroppedImagePart
                     {
-                        using (var highImg = orig.Clone())
-                        {
-                            highImg.BrightnessContrast(new Percentage(m), new Percentage(0));
-                            high1 = highImg.GetPixels().GetPixel(1, 1).ToColor();
-                            high2 = highImg.GetPixels().GetPixel(bitmap.Width - 1, bitmap.Height - 1).ToColor();
-                            high3 = highImg.GetPixels().GetPixel(bitmap.Width - 1, 1).ToColor();
-                            high4 = highImg.GetPixels().GetPixel(1, bitmap.Height - 1).ToColor();
-                        }
-
-                        using (var lwoImg = orig.Clone())
-                        {
-                            lwoImg.BrightnessContrast(new Percentage(m * -1), new Percentage(0));
-                            low1 = lwoImg.GetPixels().GetPixel(1, 1).ToColor();
-                            low2 = lwoImg.GetPixels().GetPixel(bitmap.Width - 1, bitmap.Height - 1).ToColor();
-                            low3 = lwoImg.GetPixels().GetPixel(bitmap.Width - 1, 1).ToColor();
-                            low4 = lwoImg.GetPixels().GetPixel(1, bitmap.Height - 1).ToColor();
-                        }
-
-                        orig.HasAlpha = true;
-                        orig.ColorFuzz = new Percentage(10);
-                        orig.TransparentChroma(low1, high1);
-                        orig.TransparentChroma(low2, high2);
-                        orig.TransparentChroma(low3, high3);
-                        orig.TransparentChroma(low4, high4);
-                        return new CroppedImagePart
-                        {
-                            ImageData = orig.ToByteArray(MagickFormat.Png),
-                            ImageProperties = box
-                        };
-                    }
-
-
+                        ImageData = stream.ToArray(),
+                        ImageProperties = box
+                    };
                 }
-                bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Jpeg);
-                stream.Seek(0, SeekOrigin.Begin);
-
-                return new CroppedImagePart
-                {
-                    ImageData = stream.ToArray(),
-                    ImageProperties = box
-                };
             }
         }
 
@@ -352,11 +399,31 @@ namespace ScreenSaverHelper
                 }
             }
         }
-        public byte[] ImageMaskFromSprites(List<Rectangle> boxes, byte[] image)
-        {
-            MagickImage original = new MagickImage(image);
 
-            using (var blankImage = new System.Drawing.Bitmap(original.Width, original.Height))
+        public byte[] FlattenImages(params byte[][] images)
+        {
+            using (var imageCol = new MagickImageCollection())
+            {
+                foreach (var image in images)
+                {
+                    using (IMagickImage im = new MagickImage(image))
+                    {
+                        imageCol.Add(im.Clone());
+                    }
+                }
+
+                using (var result = new MagickImage(imageCol.Flatten()))
+                {
+                    return result.ToByteArray();
+                }
+            }
+        }
+
+        public byte[] ImageMaskFromSprites(List<Rectangle> boxes)
+        {
+
+
+            using (var blankImage = new System.Drawing.Bitmap(OriginalImage.Width, OriginalImage.Height))
             {
                 var memStream = new MemoryStream();
                 blankImage.Save(memStream, ImageFormat.Jpeg);
@@ -377,12 +444,12 @@ namespace ScreenSaverHelper
                 }
             }
         }
-        public byte[] ContentAwareFillFromSpriteImageMask(List<Rectangle> boxes, byte[] image)
+        public byte[] ContentAwareFillFromSpriteImageMask(List<Rectangle> boxes)
         {
-            var partsToFillImage = ImageMaskFromSprites(boxes, image);
+            var partsToFillImage = ImageMaskFromSprites(boxes);
 
             var inpainter = new Inpainter();
-            var origImg = OpenArgbImage(image);
+            var origImg = OpenArgbImage(OriginalImage.ToByteArray());
             var partsImg = OpenArgbImage(partsToFillImage);
 
             var result = inpainter.Inpaint(origImg, partsImg, new InpaintSettings
@@ -423,6 +490,12 @@ namespace ScreenSaverHelper
                 imageBitmap.Dispose();
                 return image;
             }
+        }
+
+        public void Dispose()
+        {
+            if (OriginalImage != null)
+                OriginalImage.Dispose();
         }
     }
 }
