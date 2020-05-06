@@ -20,6 +20,8 @@ namespace MonoGameTest.Scenes
 	{
 		public const int ScreenSpaceRenderLayer = 999;
 		public UICanvas Canvas;
+        public UICanvas ForeGroundStage;
+
         public NezSpriteFont SimpleFont2 { get; set; }
 
 		Table _table;
@@ -52,6 +54,7 @@ namespace MonoGameTest.Scenes
 			Canvas = CreateEntity("ui").AddComponent(new UICanvas());
 			Canvas.IsFullScreen = true;
 			Canvas.RenderLayer = ScreenSpaceRenderLayer;
+
 			SetupSceneSelector();
 		}
 

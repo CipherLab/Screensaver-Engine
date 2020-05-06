@@ -7,5 +7,6 @@ namespace ScreenSaverHelper
     {
         byte[] BlankImage(Rectangle box, Color fillColor);
         byte[] FlattenImages(params byte[][] images);
+        
     }
 }

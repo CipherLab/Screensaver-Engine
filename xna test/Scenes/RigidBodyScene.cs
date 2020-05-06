@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
+using Nez.BitmapFonts;
 using Nez.Sprites;
+using Nez.Textures;
 using Nez.Verlet;
 using ScreenSaverHelper;
 using ScreenSaverHelper.Util;
@@ -19,63 +22,47 @@ namespace MonoGameTest.Scenes
         "")]
     public class RigidBodyScene : SubSceneHelper
     {
+        //public RigidBodyScene() : base(true, true)
+        //{ }
+
+        private int RigidBodiesRenderLayer = 5;
+        private int BackgroundRenderLayer = 15;
         public override void Initialize()
         {
             base.Initialize();
+
+            // create a Renderer that renders all but the light layer and screen space layer
+            //AddRenderer(new RenderLayerRenderer(0, 3, ScreenSpaceRenderLayer));
+            //AddRenderer(new RenderLayerExcludeRenderer(0, ScreenSpaceRenderLayer, RigidBodiesRenderLayer));
+
+
+
+            // add a PostProcessor that renders the light render target and blurs it
+            //AddPostProcessor(new PolyLightPostProcessor(0, lightRenderer.RenderTexture))
+            //    .SetEnableBlur(true)
+            //    .SetBlurAmount(0.5f);
+
+
 
             int originalWidth = 1280;
             int originalHeight = 720;
 
             this.SimpleFont = Content.Load<SpriteFont>("Shared\\SimpleFont");
-            SetDesignResolution(originalWidth, originalHeight, Scene.SceneResolutionPolicy.ShowAll);
+            SetDesignResolution(originalWidth, originalHeight, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
             Screen.SetSize(originalWidth, originalHeight);
 
             Screen.IsFullscreen = false;
             Screen.ApplyChanges();
 
+            // renderer for the background image and the light map (created by StencilLightRenderer)
+           var bg= AddRenderer(new RenderLayerRenderer(0, BackgroundRenderLayer));
+           var rb = AddRenderer(new RenderLayerRenderer(1, RigidBodiesRenderLayer));
+           bg.WantsToRenderAfterPostProcessors = false;
+           rb.WantsToRenderAfterPostProcessors = true;
 
-
-            //var ih = new ImageHelper(new System.Drawing.Rectangle(0, 0, originalWidth, originalHeight), false);
-            //string modelsDirectory = Path.Combine(Environment.CurrentDirectory, @"Content\Shared");
-            //modelsDirectory = Path.Combine(modelsDirectory, "maxresdefault.jpg");
-
-            //byte[] xBorder = ih.BlankImage(new Rectangle(0, 0, Screen.Width, 2), System.Drawing.Color.White);
-            //byte[] yBorder = ih.BlankImage(new Rectangle(0, 0, 2, Screen.Height), System.Drawing.Color.White);
-            //byte[] originalImage = ih.GetImageByteArrayFromFile(modelsDirectory);
-            //byte[] originalImageBlur = ih.GetBlurImageByteArrayFromFile(modelsDirectory, 3);
-            //var bgEntity1 = CreateEntity("bg1", new Vector2(Screen.Width / 2, Screen.Height / 2));
-
-            ////the original background pic
-            //var originalImageBlurTex =
-            //    Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(originalImageBlur));
-            //var yBorderTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(yBorder));
-            //var xBorderTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(xBorder));
-            //bgEntity1.AddComponent(new SpriteRenderer(originalImageBlurTex));
-            //bgEntity1.UpdateOrder = 0;
-
-            ////a black line alpha edge detected img. suitable for sprite finding/unpacking
-            ////fill white, alpha black for lines
-            //byte[] mask = ih.EdgeDetector(originalImage, System.Drawing.Color.Black, System.Drawing.Color.White, true);
-            ////box locations for found stuff
-            //List<Rectangle> boxes = ih.UnpackSpriteSheet(mask, 3, 5, 20, 100);
-
-            ////alpha sprites cut from original img using box locations
-            //List<CroppedImagePart> detectedObjectImages = ih.GetSpritesFromImage(boxes, originalImage, true);
-
-
-
-
-            //// create an Entity and Component to manage the Verlet World and tick its update method
-            //var verletSystem = CreateEntity("verlet-system")
-            //    .AddComponent<VerletSystem>();
-
-            //foreach (var b in detectedObjectImages)
-            //{
-            //    verletSystem.World.AddComposite(new Ball(b.Vector2, 25));
-
-            //}
-
-            RigidBody(originalWidth, originalHeight);
+           this.AddRenderer(bg);
+           this.AddRenderer(rb);
+           RigidBody(originalWidth, originalHeight);
         }
 
         private void RigidBody(int originalWidth, int originalHeight)
@@ -83,20 +70,14 @@ namespace MonoGameTest.Scenes
             string modelsDirectory = Path.Combine(Environment.CurrentDirectory, @"Content\Shared");
             modelsDirectory = Path.Combine(modelsDirectory, "maxresdefault.jpg");
 
-
-            Texture2D yBorderTex;
-            Texture2D xBorderTex;
-            List<CroppedImagePart> detectedObjectImages;
             using (var origImageHelper = new ImageHelper(new System.Drawing.Rectangle(0, 0, originalWidth, originalHeight), modelsDirectory))
             {
-                var bgEntity1 = CreateEntity("bg1", new Vector2(Screen.Width / 2f, Screen.Height / 2f));
+             
                 byte[] originalImage = origImageHelper.GetImageByteArrayFromFile(modelsDirectory);
 
 
-
                 //transparent edge detected, filled black
-                byte[] maskTransparent = origImageHelper.EdgeDetectedFilledBlack(ImageFormat.Png);
-                byte[] maskImageBlur;
+                //byte[] maskTransparent = origImageHelper.EdgeDetectedFilledBlack(ImageFormat.Png);
                 byte[] maskSolid = origImageHelper.EdgeDetectedFilledBlack(ImageFormat.Jpeg);
                 List<Rectangle> boxes;
                 using (var maskImageHelper = new ImageHelper(maskSolid))
@@ -105,33 +86,48 @@ namespace MonoGameTest.Scenes
                     boxes = maskImageHelper.GetSpriteBoundingBoxesInImage(2, 2);
                 }
 
+                var dark = origImageHelper.ChangeBrightness(-30);
+                var blur = origImageHelper.GetBlurImageByteArrayFromData(3);
+                var result = origImageHelper.FlattenImages(dark, blur);
+                var originalImageTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(result));
 
-                //var originalImageTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(originalImage));
-                // bgEntity1.AddComponent(new SpriteRenderer(originalImageTex));
+                var spriteR = new SpriteRenderer(originalImageTex);
+                spriteR.SetRenderLayer(BackgroundRenderLayer);
 
-                //trying to put a black mask of cut icons over the bg, but rigid bodies drawing over for some reason.
-                using (var maskImageHelper = new ImageHelper(maskTransparent))
-                {
-                    maskImageBlur = maskImageHelper.GetBlurImageByteArrayFromData(4);
-                    // bgEntity1.AddComponent(new SpriteRenderer(maskBlurTex));
-                    using (ISimpleImageHelper sih = new ImageHelper())
-                    {
-
-                        var result = sih.FlattenImages(originalImage, maskImageBlur, maskImageBlur, maskImageBlur);
-                        var maskBlurTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(result));
-                        bgEntity1.AddComponent(new SpriteRenderer(maskBlurTex));
-
-                    }
-                }
-
-                bgEntity1.UpdateOrder = 0;
+                CreateEntity("bg")
+                    .SetPosition(Screen.Center)
+                    .AddComponent(spriteR)
+                    .SetRenderLayer(BackgroundRenderLayer);
 
 
-                detectedObjectImages = origImageHelper.GetSpritesFromImage(boxes, true);
+                //var overlayImg = origImageHelper.ContentAwareFillFromSpriteImageMask(boxes);
+                ////using (var overlayHelper = new ImageHelper(maskTransparent))
+                //using (var overlayHelper = new ImageHelper(overlayImg))
+                //{
+                //    var blurImage = overlayHelper.GetBlurImageByteArrayFromData(4);
+                //    // bgEntity1.AddComponent(new SpriteRenderer(maskBlurTex));
+                //    using (ISimpleImageHelper sih = new ImageHelper())
+                //    {
+                //        var result = sih.FlattenImages(originalImage, blurImage, blurImage, blurImage);
+                //        var maskBlurTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(result));
+                //        bgEntity1.AddComponent(new SpriteRenderer(maskBlurTex));
+                //    }
+                //}
+
+
+                var detectedObjectImages = origImageHelper.GetSpritesFromImage(boxes, true);
+
+               
+                //AddPostProcessor(new PolyLightPostProcessor(0, lightRenderer.RenderTexture))
+                //    .SetEnableBlur(true)
+                //    .SetBlurAmount(0.5f);
+
+                var post = AddPostProcessor(new PixelGlitchPostProcessor(1));
                 AddRigidBodyEntities(detectedObjectImages);
-
-                //alpha sprites cut from original img using box locations
             }
+
+
+
 
 
         }
@@ -152,9 +148,11 @@ namespace MonoGameTest.Scenes
             var elasticity = 1f;
             foreach (var b in detectedObjectImages)
             {
-                float mass =( b.ImageProperties.Width * b.ImageProperties.Height) / 100f;
+                float mass = (b.ImageProperties.Width * b.ImageProperties.Height) / 100f;
                 var v = new Vector2(Random.NextAngle(), Random.NextAngle());
-                //int max = 400;
+                var impulse = new Vector2(1f, 1f);
+
+                int max = 200;
                 //if ((b.ImageProperties.Width > 10 && b.ImageProperties.Height > 10) &&
                 //    (b.ImageProperties.Width < max && b.ImageProperties.Height < max))
                 //{
@@ -170,14 +168,19 @@ namespace MonoGameTest.Scenes
                 //{
                 //    continue;
                 //}
-
+                if (b.ImageProperties.Height > max && b.ImageProperties.Width > max)
+                {
+                    v = new Vector2(.001f, .0001f);
+                    impulse = new Vector2(0,0);
+                }
                 var tex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice,
                     new MemoryStream(b.ImageData));
 
+           
                 CreateEntity(b.Vector2, mass, friction, elasticity,
                         v, tex,
                         false, false)
-                    .AddImpulse(new Vector2(1f, 1f));
+                    .AddImpulse(impulse);
             }
 
             //bottom
@@ -219,16 +222,21 @@ namespace MonoGameTest.Scenes
                 .SetElasticity(elasticity)
                 .SetVelocity(velocity);
             rigidbody.ShouldUseGravity = shouldUseGravity;
-            var entity = CreateEntity(Utils.RandomString(3));
-            entity.Position = position;
-            entity.AddComponent(new SpriteRenderer(texture));
-            entity.AddComponent(rigidbody);
+            var r = new SpriteRenderer(texture);
+            r.SetRenderLayer(RigidBodiesRenderLayer);
+
+            var entity = CreateEntity(Utils.RandomString(3))
+                .SetPosition(position)
+                .AddComponent(rigidbody)
+                .AddComponent(r)
+                .SetRenderLayer(RigidBodiesRenderLayer);
+
             if (circle)
                 entity.AddComponent<CircleCollider>();
             else
                 entity.AddComponent<BoxCollider>();
-
-            entity.UpdateOrder = 3;
+            
+            //entity.UpdateOrder = RigidBodiesRenderLayer;
             return rigidbody;
         }
     }

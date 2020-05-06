@@ -144,6 +144,17 @@ namespace ScreenSaverHelper
                 return img.ToByteArray(MagickFormat.Png);
             }
         }
+        public byte[] ChangeBrightness(int factor)
+        {
+            using (var img = OriginalImage.Clone())
+            {
+                img.BrightnessContrast(new Percentage(factor), new Percentage(0));
+                for (int i = 0; i < factor; i++)
+                    img.Blur();
+                img.Write(@"c:\temp\canny_blur.png");
+                return img.ToByteArray(MagickFormat.Png);
+            }
+        }
 
         public byte[] EdgeDetectedFilledBlack(ImageFormat format)
         {
