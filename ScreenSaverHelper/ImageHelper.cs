@@ -34,6 +34,11 @@ namespace ScreenSaverHelper
         {
             OriginalImage = new MagickImage(imageData);
         }
+        public ImageHelper(Rectangle bounds, byte[] imageData)
+        {
+            Bounds = bounds;
+            OriginalImage = new MagickImage(imageData, MagickFormat.Jpg);
+        }
         public ImageHelper()
         {
         }
@@ -91,34 +96,7 @@ namespace ScreenSaverHelper
         {
             //var edges = EdgeDetectedFilledBlack(ImageFormat.Jpeg);
 
-            using (MemoryStream ms = new MemoryStream(OriginalImage.ToByteArray()))
-            {
-                using (Image img = Image.FromStream(ms))
-                {
-                    ImageUnpacker unpacker = new ImageUnpacker(
-                        img,
-                        OriginalImage.ToByteArray(), false, distanceBetweenTiles);
-                    unpacker.StartUnpacking();
-
-                    //TODO: can do this in update loop, use event to notify or somethin?
-                    while (!unpacker.IsUnpacked())
-                    {
-                        System.Threading.Thread.Sleep(10);
-                    }
-
-                    if (unpacker.IsUnpacked())
-                    {
-                        var boxes = unpacker.GetBoxes();
-                        for (var b = 0; b < boxes.Count; b++)
-                            boxes[b] = new Rectangle(boxes[b].X, boxes[b].Y, boxes[b].Width + padBoxes, boxes[b].Height + padBoxes);
-
-                        return boxes.ToList();
-                        //  return boxes.Where(b => b.Width > 20 && b.Height > 20).ToList();
-                    }
-                }
-
-            }
-            return null;
+            return GetSpriteBoundingBoxesInImage(OriginalImage.ToByteArray(), distanceBetweenTiles, padBoxes);
         }
         public byte[] GetImageByteArrayFromFile(string filename)
         {
@@ -164,7 +142,7 @@ namespace ScreenSaverHelper
                 image.HasAlpha = true;
 
                 //White lines on black
-                var sigma = 8;
+                var sigma = 6;
 
                 var lowerP = 3;
                 var upperP = 20;
@@ -173,60 +151,32 @@ namespace ScreenSaverHelper
                 image.Negate();
                 //black lines on transparent
                 image.InverseTransparentChroma(MagickColors.Black, MagickColors.Black);
+                image.Write($"c:\\temp\\InverseTransparentChroma-S{sigma}-{lowerP}-{upperP}.png");
 
-                using (var imageCol = new MagickImageCollection())
+                image.FloodFill(MagickColors.Black, 1, 1);
+                image.FloodFill(MagickColors.Black, 1, OriginalImage.Height - 1);
+                image.FloodFill(MagickColors.Black, OriginalImage.Width - 1, 1);
+                image.FloodFill(MagickColors.Black, OriginalImage.Width - 1, OriginalImage.Height - 1);
+                image.Write($"c:\\temp\\Flatten0-S{sigma}-{lowerP}-{upperP}.png");
+                for (int i = 1; i < 4; i++)
                 {
-                    //beef up the lines
-                    IMagickImage clone2;
-                    IMagickImage clone3;
-                    IMagickImage clone4;
-                    using (var clone1 = image.Clone())
-                    {
-                        clone2 = image.Clone();
-                        clone3 = image.Clone();
-                        clone4 = image.Clone();
+                    image.FloodFill(MagickColors.Black, i, OriginalImage.Height / i - 1);
+                    image.FloodFill(MagickColors.Black, OriginalImage.Width / i - 1, i);
+                    image.FloodFill(MagickColors.Black, OriginalImage.Width / i - 1, OriginalImage.Height / i - 1);
 
-                        var size = new MagickGeometry(0, 1, OriginalImage.Width, Bounds.Height + 1);
-                        size.IgnoreAspectRatio = true;
-                        clone1.Resize(size);
-                        size = new MagickGeometry(1, 0, OriginalImage.Width + 1, Bounds.Height);
-                        clone2.Resize(size);
-                        size = new MagickGeometry(0, -1, OriginalImage.Width, Bounds.Height - 1);
-                        clone3.Resize(size);
-                        size = new MagickGeometry(-1, 0, OriginalImage.Width - 1, Bounds.Height);
-                        clone4.Resize(size);
-
-
-                        imageCol.Add(clone1);
-                        imageCol.Add(clone2);
-                        imageCol.Add(clone3);
-                        imageCol.Add(clone4);
-                        using (var result = imageCol.Flatten(MagickColors.Transparent))
-                        {
-                            //white with transparent bg.
-                            result.FloodFill(MagickColors.Black, 0, 0);
-
-                            //transparent bg with white fill
-                            result.Negate();
-
-                            //white fill to black, transparent bg!
-                            result.Negate((Channels.RGB));
-
-                            result.Write($"c:\\temp\\Flatten-S{sigma}-{lowerP}-{upperP}.png");
-                            if (format == ImageFormat.Png)
-                                return result.ToByteArray(MagickFormat.Png);
-
-                            if (format == ImageFormat.Jpeg)
-                            {
-                                result.Negate((Channels.Alpha));
-                                result.Write($"c:\\temp\\Flatten-S{sigma}-{lowerP}-{upperP}.Png");
-                                return result.ToByteArray(MagickFormat.Png);
-                            }
-
-                            throw new FormatException($"{format} not accounted for");
-                        }
-                    }
                 }
+                image.Write($"c:\\temp\\Flatten1-S{sigma}-{lowerP}-{upperP}.png");
+                if (format == ImageFormat.Png)
+                    return image.ToByteArray(MagickFormat.Png);
+
+                if (format == ImageFormat.Jpeg)
+                {
+                    image.Write($"c:\\temp\\Flatten2-S{sigma}-{lowerP}-{upperP}.png");
+                    image.ColorAlpha(MagickColors.White);
+                    image.Write($"c:\\temp\\Flatten3-S{sigma}-{lowerP}-{upperP}.png");
+                    return image.ToByteArray(MagickFormat.Png);
+                }
+                throw new FormatException($"{format} not accounted for");
 
             }
         }
@@ -302,12 +252,12 @@ namespace ScreenSaverHelper
 
         public List<CroppedImagePart> GetSpritesFromImage(List<Rectangle> boxes, bool makeTransparent)
         {
-            return boxes.Select(r => GetSpriteFromImage(r, makeTransparent)).ToList();
+            return boxes.Select(r => GetSpriteFromImage(OriginalImage.ToByteArray(), r, makeTransparent)).ToList();
         }
-        public CroppedImagePart GetSpriteFromImage(Rectangle box, bool makeTransparent)
+        public CroppedImagePart GetSpriteFromImage(byte[] image, Rectangle box, bool makeTransparent)
         {
             Image original;
-            using (MemoryStream ms = new MemoryStream(OriginalImage.ToByteArray()))
+            using (MemoryStream ms = new MemoryStream(image))
                 original = Image.FromStream(ms);
 
             using (Bitmap bitmap = new Bitmap(box.Width, box.Height, original.PixelFormat))
@@ -428,6 +378,40 @@ namespace ScreenSaverHelper
                     return result.ToByteArray();
                 }
             }
+        }
+
+        public List<Rectangle> GetSpriteBoundingBoxesInImage(byte[] image, int distanceBetweenTiles, int padBoxes)
+        {
+            using (Image img = Image.FromStream(new MemoryStream(image)))
+            {
+                ImageUnpacker unpacker = new ImageUnpacker(
+                    img,
+                    image, false, distanceBetweenTiles);
+                unpacker.StartUnpacking();
+
+                //TODO: can do this in update loop, use event to notify or somethin?
+                while (!unpacker.IsUnpacked())
+                {
+                    System.Threading.Thread.Sleep(10);
+                }
+
+                if (unpacker.IsUnpacked())
+                {
+                    var boxes = unpacker.GetBoxes();
+                    for (var b = 0; b < boxes.Count; b++)
+                        boxes[b] = new Rectangle(boxes[b].X, boxes[b].Y, boxes[b].Width + padBoxes, boxes[b].Height + padBoxes);
+
+                    return boxes.ToList();
+                    //  return boxes.Where(b => b.Width > 20 && b.Height > 20).ToList();
+                }
+            }
+
+            return null;
+        }
+
+        public List<CroppedImagePart> GetSpritesFromImage(byte[] screenCapturedImage, List<Rectangle> foundObjectsBoxes, bool alpha)
+        {
+            return foundObjectsBoxes.Select(r => GetSpriteFromImage(screenCapturedImage, r, alpha)).ToList();
         }
 
         public byte[] ImageMaskFromSprites(List<Rectangle> boxes)

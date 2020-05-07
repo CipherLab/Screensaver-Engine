@@ -58,6 +58,7 @@
     <ProjectReference Include="..\OnnxGuiDetection\OnnxDetection.csproj" />
     <ProjectReference Include="..\ScreenSaverHelper\ScreenSaverHelper.csproj" />
     <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
+    <ProjectReference Include="..\WpfApp\WpfApp.csproj" />
   </ItemGroup>
 
 

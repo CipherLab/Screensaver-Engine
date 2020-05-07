@@ -21,11 +21,14 @@ namespace MonoGameTest
 #else
     static class Program
 #endif
-    {
+    { 
+
         private static Game1 _game;
 
         internal static void RunGame()
         {
+            Globals.ScreenCapturedImage = WpfApp.WindowsFormsHelper.ScreenGrab();
+
             _game = new Game1(1280,720,false,true,"Screen Saver","Content");
             _game.Run();
 #if !__IOS__ && !__TVOS__

@@ -37,6 +37,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarseerPhysics.Portable", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nez.FarseerPhysics", "..\Nez-master\Nez.FarseerPhysics\Nez.FarseerPhysics.csproj", "{F42115E1-1943-4FF8-93A2-2558D3126485}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "..\WpfApp\WpfApp.csproj", "{C5313BDF-AFBD-4594-8323-946C4C8CF170}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -97,6 +99,10 @@ Global
 		{F42115E1-1943-4FF8-93A2-2558D3126485}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F42115E1-1943-4FF8-93A2-2558D3126485}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F42115E1-1943-4FF8-93A2-2558D3126485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5313BDF-AFBD-4594-8323-946C4C8CF170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5313BDF-AFBD-4594-8323-946C4C8CF170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5313BDF-AFBD-4594-8323-946C4C8CF170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5313BDF-AFBD-4594-8323-946C4C8CF170}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
