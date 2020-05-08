@@ -75,8 +75,2517 @@
     </Compile>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Beard\Basic\Beard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Beard\Thrones\Beard1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Beard\Thrones\Beard2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Beard\Thrones\Beard3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Beard\Thrones\Beard4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Beard\Vikings\VikingBeard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Body\Basic\Human.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Body\Undead_Preview\Skeleton1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Ears\Basic\ElfEar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Ears\Basic\HumanEar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Basic\Angry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Basic\Eyebrows1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Basic\Eyebrows2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Basic\Eyebrows3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Basic\Eyebrows4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Basic\Eyebrows6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\=3=.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Annoyed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Crying.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Dizzy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Eh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Enrage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Greedy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Happy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Injured.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\InLove.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\OMG.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Perverted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Sad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Sick.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\Sigh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\SweatDrop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Emoji\WTF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Expressions\Angry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Expressions\Bored.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Expressions\Happy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Expressions\Sad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Expressions\Shy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Expressions\Surprised.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyebrows\Expressions\VerySurprised.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Basic\Dead.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Basic\Female.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Basic\Male.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes12.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes13.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes14.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes15.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Bonus\Eyes9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\83.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\=3=.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Annoyed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Blank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\BunnyFace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Confused.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Crying.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Dead.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Dizzy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Drooling.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Eh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Enrage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Fishy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Greedy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Happy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Injured.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\InLove.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Kitty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\OMG.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Orly.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Perverted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Sad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Sick.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Sigh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\SweatDrop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\Wanting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\WTF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Emoji\XD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Expressions\Angry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Expressions\Bored.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Expressions\Happy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Expressions\Normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Expressions\Sad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Expressions\Shy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Expressions\Surprised.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Expressions\VerySurprised.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Undead\GlowingEyes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Undead\ZombieEyes1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Undead\ZombieEyes2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Undead\ZombieEyes3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Undead\ZombieEyes4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Undead\ZombieEyes5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Undead\ZombieEyes6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Undead\ZombieEyes7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Eyes\Undead_Preview\Skeleton1Eyes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\Afro.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\AfroSmall.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\BuzzCut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\Leaky.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\LongHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\Mohawk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\PushedBack.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\Shaggy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\ShortHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\ShortPonytail.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\SideFringe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\Slicked.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\SlickedTwintales.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\ZombieShabby.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Basic\ZombieSticks.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\AnimeGirl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\Army.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\BowlCut.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\Bundle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\Clumsy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\CoolBoy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\Dandy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\FauxHawk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\FringedUp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\SideFringeDisheveled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\SlickedTwintalesDisheveled.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\Twisty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Bonus\VillageGirl.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Style_Preview_NoPaint\Blade.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Style_Preview_NoPaint\Rocky.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Style_Preview_NoPaint\Wavy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Thrones\Hair1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Thrones\Hair2_HideEars.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Thrones\Hair3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Thrones\Hair4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Thrones\Hair5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Thrones\Hair6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Hair\Thrones\Hair7_HideEars.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Head\Basic\Head.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Head\Basic\HeadScar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Head\Basic\PeasantHead.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Head\Undead_Preview\Skeleton1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Basic\Angry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Basic\Normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Basic\Smirk.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Basic\Zombie.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\11.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\4.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\5.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\6.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\7.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\8.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Bonus\9.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\83.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\=3=.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Annoyed.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Blank.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\BunnyFace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Confused.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Crying.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Dead.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Dizzy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Drooling.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Eh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Enrage.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Fishy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Greedy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Happy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Injured.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\InLove.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Kitty.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\OMG.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Orly.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Perverted.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Sad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Sick.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Sigh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\SweatDrop.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\Wanting.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\WTF.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Emoji\XD.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Expressions\Angry.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Expressions\Bored.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Expressions\Happy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Expressions\Normal.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Expressions\Sad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Expressions\Shy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Expressions\Surprised.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Mouth\Expressions\VerySurprised.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Other\HeadMask.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\BodyParts\Other\Shadow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\ArielDress_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\BanditLightArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\ChainmailLightArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\Cleric_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\Deserter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\FarmerClothes.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\FireAdept.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\Hermit.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\Hunter.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\HunterLightArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\HunterTunic.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\IronArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\IronPlateArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\LeatherJacket.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\LeatherLightArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\LeatherRivetedArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\Militiaman.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\PeasantClothing.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\Robe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\Scout_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\Slave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Basic\WaterAdept.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Christmas\Santa1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Christmas\Santa2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Christmas\SantaHelper.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Knights\CrusaderChainmail_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Knights\EliteGuardArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Knights\FalconLightArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Knights\GguardsmenArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Knights\KnightArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Military_Preview\UberSoldier.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Pro\ManticoreArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Pro\Rags1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Pro\Rags2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Pro\Rags3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\Ninja1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\Ninja2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\Ninja3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\SamuraiElder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\SamuraiHeavy1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\SamuraiHeavy2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\SamuraiHeavy3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\SamuraiLight1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\SamuraiLight2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Samurai\SamuraiLight3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SandLords\SandElder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SandLords\SandHealer1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SandLords\SandHealer2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SandLords\SandMage1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SandLords\SandMage2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SandLords\SandShooter1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SandLords\SandShooter2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SandLords\SandWarrior1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SandLords\SandWarrior2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\AssassinArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\BanditArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\BerserkArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\BishopArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\CardinalArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\CataphractArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\ChampionArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\DarkKnight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\DestroyerArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\DruidArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\DwellerArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\FireKnightArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\FireWarriorArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\FireWizardArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\GladiatorArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\GreyKnight.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\GuardArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\HalberdierArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\HeavyArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\IceWizardArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\InquisitorArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\KnightArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\LandsknechtArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\MarauderArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\MercenaryArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\NecromancerArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\Nomad.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\PaladinArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\PathfinderArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\PyromancerArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\RangerArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\RoyalArcherArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\RoyalGuard.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\ShamanArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\SiegeArcherArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\SniperArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\SpearmanArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\SpikedArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\StormBringerArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\ThiefArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\Wanderer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\WarlockArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\WaterWizardArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\WitchArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SpellMasters\WitchHunterArmor_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SwampLords\SwampElder.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SwampLords\SwampHealer1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SwampLords\SwampHealer2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SwampLords\SwampMage1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SwampLords\SwampMage2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SwampLords\SwampShooter1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SwampLords\SwampShooter2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SwampLords\SwampWarrior1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\SwampLords\SwampWarrior2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\DarkMountain.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\FreeFolk_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\GoldLion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\HorseLord.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\IronIslands.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\LittleLion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\Mountain_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\NightsWatch_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\NorthWarden.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\RedLion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Thrones\SandWarrior.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Undead_Preview\SkeletonArmor1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Vikings\VikingFurArmor.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Vikings\VikingLightArmor1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Vikings\VikingLightArmor2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Vikings\VikingLightArmor3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Vikings\VikingRoughArmor1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Vikings\VikingRoughArmor2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Armor\Vikings\VikingRoughArmor3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Back\Basic\ArrowQuiver.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Back\Basic\ArrowQuiverBig.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Back\Pro\ArrowQuiver2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Back\Pro\ArrowQuiver3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Basic\BattleBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Basic\FamilyBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Basic\HunterBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Basic\HunterShortBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Basic\ScoutShortBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Pro\OrcBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Samurai\SamuraiBow1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Samurai\SamuraiBow2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Samurai\SamuraiBow3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SandLords\SandShooterBow1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SandLords\SandShooterBow2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SpellMasters\GoldDragon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SpellMasters\HornBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SpellMasters\MarauderBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SpellMasters\PathFinderBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SpellMasters\RangerBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SpellMasters\RoyalArcherBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SpellMasters\ScoutBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SpellMasters\SniperBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SpellMasters\WitchHunterBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SwampLords\SwampShooter1Bow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\SwampLords\SwampShooter2Bow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Vikings\VikingIronBow1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Vikings\VikingIronBow2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Vikings\VikingIronBow3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Vikings\VikingLongBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Vikings\VikingShortBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Bow\Vikings\VikingWoodenBow.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Cape\Basic\CotttonCape_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Cape\Pro\BatCape_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Cape\Pro\GrandmaCape_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Cape\Pro\HeroicCape_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Cape\Pro\HeroicCape2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Cape\Pro\OldCape_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Cape\Pro\OldCape2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Cape\Pro\RoyalCape_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Cape\Pro\VampireCape_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Earrings\Basic\Banan.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Earrings\Basic\GoldenEarring.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Earrings\Basic\Worm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Glasses\Basic\LibrarianGlasses.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Glasses\Pro\SteampunkGlasses.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\BowmanHat_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\ClericHood_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\ExpertBowmanHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\ExpertHunterHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\HawkHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\HermitHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\HermitHood_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\HunterHat1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\HunterHat2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\HunterHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\KnightHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\LeatherCap.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\LeatherHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\MilitiamanHelmet1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\MilitiamanHelmet2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\PeasantCap.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\ScoutHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\SlaveHeadband_FullHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\SteelHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Basic\StrawHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Christmas\SantaHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Christmas\SantaHelperHat1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Christmas\SantaHelperHat2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Christmas\SantaHelperHat3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Knights\CrusaderHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Knights\EliteKnightHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Knights\FalconIronHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Knights\GuardHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Knights\SharpHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Knights\WarriorHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Military_Preview\UberSoldierHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\AdvancedDipperHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\AgileHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\AmateurDipperHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\AmateurDodgeHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\ArcherHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\FireAdeptHood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\GypsyHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\HalfmoonHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\JesterHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\ManticoreHelmet.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\MasterDodgeHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Pro\SteelPotHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Samurai\NinjaHelm1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Samurai\NinjaHelm2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Samurai\NinjaHelm3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Samurai\SamuraiElderHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Samurai\SamuraiHelm1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Samurai\SamuraiHelm2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Samurai\SamuraiHelm3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SandLords\SandElderTurban.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SandLords\SandHealerHood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SandLords\SandShooterTurban.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SandLords\SandWarriorHelm1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SandLords\SandWarriorHelm2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\AssassinHood_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\BerserkHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\BishopHat_FullHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\CardinalHat_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\CataphractHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\ChampionHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\DeserterBandage_FullHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\DestroyerHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\DruidHat_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\DwellerHood_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\EnforcedHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\FireWizardHood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\GladiatorHelm1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\GladiatorHelm2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\GuardHelm1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\GuardHelm2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\GuardHelm3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\HalberdierHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\HeavyHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\HunterHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\IceWizardHood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\InquisitorHat1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\InquisitorHat2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\LandsknechtHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\MarauderHood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\MercenaryHelm1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\MercenaryHelm2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\NecromancerHood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\PaladinHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\PathfinderHat_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\PathfinderHood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\RangerHat_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\RoyalArcherHat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\ShamanHelm_FullHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\SiegeArcherHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\SnperHood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\SpearmanHelm1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\SpearmanHelm2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\ThiefHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\VisorKnightHelm_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\WarlockHood.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\WaterWizardHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\WitchHat_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SpellMasters\WitchHunterHat_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SwampLords\ShamanMask_FullHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SwampLords\ShamanMask2_FullHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SwampLords\ShamanMask3_FullHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SwampLords\SwampLordMask1_FullHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\SwampLords\SwampLordMask2 _FullHair.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Thrones\DarkMountain_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Thrones\Mountain_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Undead_Preview\SkeletonHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Vikings\VikingIronHelm1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Vikings\VikingIronHelm2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Vikings\VikingIronHelm3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Helmet\Vikings\VikingLeatherHelm.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Mask\Basic\BanditMask_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Mask\Pro\CarnivalMask.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Mask\Pro\Mask1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Mask\Pro\Mask2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Mask\Pro\ShamanMask_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Axe\SmallAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Axe\WoodcutterAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Dagger\HunterKnife_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Dagger\ShortDagger_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Hammer\WarHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Hammer\WoodenMace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Hammer\WoodenSpikedClub.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Sword\FamilySword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Sword\Machete_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Sword\MagicSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Sword\MilitiamanShortSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Sword\RustySword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Sword\ShortIronKatana_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Sword\ShortSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Sword\SlaveSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Sword\TrainingSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Wand\ClericWand1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Wand\ClericWand2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Wand\FireAdeptWand1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Wand\FireAdeptWand2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Wand\HardwoodWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Wand\HermitWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Wand\WaterAdeptWand1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Basic\Wand\WaterAdeptWand2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Christmas\Wand\SantaHelperWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Christmas\Wand\SantaWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Knights\Sword\BalancedSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Knights\Sword\EliteGuardSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Knights\Sword\EliteKnightSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Knights\Sword\ShortKnightSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Axe\DreadCleaver.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Axe\RunicAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Axe\StoneAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Dagger\AspenStake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Dagger\BronzeDagger.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Hammer\BoneClub.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Hammer\DarkStoneHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Hammer\Morgenstern.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Hammer\WoodenClub.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Sword\Bilbo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Sword\ManticoreSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Sword\Morgana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Sword\Smallsword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Sword\Stoccata.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Wand\CursedBone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Wand\DrownedGoblinHand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Pro\Wand\MalformedStaff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Samurai\Sword\Katana1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Samurai\Sword\Katana2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Samurai\Sword\Katana3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Samurai\Sword\Kunai.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Samurai\Sword\Ninjato_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Samurai\Sword\Sai_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SandLords\Staff\SandElderStaff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SandLords\Staff\SandHealerStaff1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SandLords\Staff\SandHealerStaff2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SandLords\Staff\SandMageStaff1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SandLords\Staff\SandMageStaff2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SandLords\Sword\SandWarriorSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SandLords\Sword\SandWarriorSword2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\AssassinDagger_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\DeserterDagger_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\FireWarriorSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\FireWarriorSword2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\GuardSword1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\GuardSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\InquisitorSword1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\InquisitorSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\InquisitorSword3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\InquisitorSword4_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Sword\KnightSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\BishopWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\CardinalWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\DruidWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\DwellerWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\FireWizardWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\IceWizardWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\PyromancerWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\ShamanWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\StormBringerWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\WarlockWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\WaterWizardWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SpellMasters\Wand\WitchWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SwampLords\Spear\SwampWarriorSpear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SwampLords\Staff\ElderStaff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SwampLords\Staff\SwampHealer1Staff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SwampLords\Staff\SwampHealer2Staff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SwampLords\Staff\SwampMage1Staff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\SwampLords\Staff\SwampMage2Staff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Thrones\Axe\FreeFolkAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Thrones\Sword\HorseLordSickle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Thrones\Sword\IronIslandsSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Thrones\Sword\LionSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Thrones\Sword\LittleLionSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Thrones\Sword\NorthWardenSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Thrones\Sword\WolfSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Undead_Preview\Sword\RustySword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Vikings\Axe\VikingAxe1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Vikings\Axe\VikingAxe2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Vikings\Axe\VikingAxe3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Vikings\Sword\VikingSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Vikings\Sword\VikingSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon1H\Vikings\Sword\VikingSword3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Basic\Axe\OldPoleaxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Basic\Axe\SteelAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Basic\Axe\WoodcutterPoleaxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Basic\Hammer\TwoHandedWoodenMace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Basic\Sword\BroadSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Knights\Sword\TwoHandedSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Pro\Hammer\BlackHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Pro\Hammer\GateCrusher.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Pro\Hammer\LongHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Pro\Hammer\TitanHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Pro\Hammer\WarClub.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Pro\Spear\Harpoon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Pro\Spear\SiegeSpear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Samurai\Sword\DarkSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Samurai\Sword\SamuraiElderSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Samurai\Sword\SamuraiSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Samurai\Sword\SamuraiSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Samurai\Sword\SamuraiSword2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Samurai\Sword\SamuraiSword3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Samurai\Sword\SamuraiSword3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Samurai\Sword\ShadowSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Samurai\Sword\SunriseSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Axe\BerserkAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Axe\DestroyerAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Axe\Scythe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Spear\CataphractSpear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Spear\Halberd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Spear\Spear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Spear\WoodenStake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Sword\FireKnightSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Sword\HeavySword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Sword\MercenarySword1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Sword\MercenarySword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Sword\PaladinSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\SpellMasters\Sword\Zweihander_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Thrones\Axe\SandWarriorHalberd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Thrones\Sword\MountainSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Vikings\Axe\TwoHandedVikingAxe1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Vikings\Axe\TwoHandedVikingAxe2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Vikings\Axe\TwoHandedVikingAxe3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Vikings\Sword\TwoHandedVikingSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Vikings\Sword\TwoHandedVikingSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeapon2H\Vikings\Sword\TwoHandedVikingSword3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Axe\SmallAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Axe\WoodcutterAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Dagger\HunterKnife_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Dagger\ShortDagger_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Hammer\WarHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Hammer\WoodenMace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Hammer\WoodenSpikedClub.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Sword\FamilySword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Sword\Machete_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Sword\MagicSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Sword\MilitiamanShortSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Sword\RustySword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Sword\ShortIronKatana_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Sword\ShortSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Sword\SlaveSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Sword\TrainingSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Wand\ClericWand1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Wand\ClericWand2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Wand\FireAdeptWand1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Wand\FireAdeptWand2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Wand\HardwoodWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Wand\HermitWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Wand\WaterAdeptWand1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Basic\Wand\WaterAdeptWand2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Christmas\Wand\SantaHelperWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Christmas\Wand\SantaWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Knights\Sword\BalancedSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Knights\Sword\EliteGuardSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Knights\Sword\EliteKnightSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Knights\Sword\ShortKnightSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Axe\DreadCleaver.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Axe\RunicAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Axe\StoneAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Dagger\AspenStake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Dagger\BronzeDagger.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Hammer\BoneClub.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Hammer\DarkStoneHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Hammer\Morgenstern.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Hammer\WoodenClub.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Sword\Bilbo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Sword\ManticoreSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Sword\Morgana.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Sword\Smallsword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Sword\Stoccata.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Wand\CursedBone.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Wand\DrownedGoblinHand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Pro\Wand\MalformedStaff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Samurai\Sword\Katana1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Samurai\Sword\Katana2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Samurai\Sword\Katana3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Samurai\Sword\Kunai.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Samurai\Sword\Ninjato_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Samurai\Sword\Sai_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SandLords\Staff\SandElderStaff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SandLords\Staff\SandHealerStaff1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SandLords\Staff\SandHealerStaff2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SandLords\Staff\SandMageStaff1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SandLords\Staff\SandMageStaff2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SandLords\Sword\SandWarriorSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SandLords\Sword\SandWarriorSword2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\AssassinDagger_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\DeserterDagger_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\FireWarriorSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\FireWarriorSword2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\GuardSword1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\GuardSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\InquisitorSword1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\InquisitorSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\InquisitorSword3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\InquisitorSword4_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Sword\KnightSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\BishopWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\CardinalWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\DruidWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\DwellerWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\FireWizardWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\IceWizardWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\PyromancerWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\ShamanWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\StormBringerWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\WarlockWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\WaterWizardWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SpellMasters\Wand\WitchWand.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SwampLords\Spear\SwampWarriorSpear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SwampLords\Staff\ElderStaff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SwampLords\Staff\SwampHealer1Staff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SwampLords\Staff\SwampHealer2Staff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SwampLords\Staff\SwampMage1Staff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\SwampLords\Staff\SwampMage2Staff.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Thrones\Axe\FreeFolkAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Thrones\Sword\HorseLordSickle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Thrones\Sword\IronIslandsSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Thrones\Sword\LionSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Thrones\Sword\LittleLionSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Thrones\Sword\NorthWardenSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Thrones\Sword\WolfSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Undead_Preview\Sword\RustySword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Vikings\Axe\VikingAxe1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Vikings\Axe\VikingAxe2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Vikings\Axe\VikingAxe3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Vikings\Sword\VikingSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Vikings\Sword\VikingSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail1H\Vikings\Sword\VikingSword3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Basic\Axe\OldPoleaxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Basic\Axe\SteelAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Basic\Axe\WoodcutterPoleaxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Basic\Hammer\TwoHandedWoodenMace.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Basic\Sword\BroadSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Knights\Sword\TwoHandedSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Pro\Hammer\BlackHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Pro\Hammer\GateCrusher.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Pro\Hammer\LongHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Pro\Hammer\TitanHammer.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Pro\Hammer\WarClub.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Pro\Spear\Harpoon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Pro\Spear\SiegeSpear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Samurai\Sword\DarkSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Samurai\Sword\SamuraiElderSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Samurai\Sword\SamuraiSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Samurai\Sword\SamuraiSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Samurai\Sword\SamuraiSword2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Samurai\Sword\SamuraiSword3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Samurai\Sword\SamuraiSword3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Samurai\Sword\ShadowSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Samurai\Sword\SunriseSword.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Axe\BerserkAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Axe\DestroyerAxe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Axe\Scythe.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Spear\CataphractSpear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Spear\Halberd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Spear\Spear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Spear\WoodenStake.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Sword\FireKnightSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Sword\HeavySword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Sword\MercenarySword1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Sword\MercenarySword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Sword\PaladinSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\SpellMasters\Sword\Zweihander_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Thrones\Axe\SandWarriorHalberd.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Thrones\Sword\MountainSword_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Vikings\Axe\TwoHandedVikingAxe1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Vikings\Axe\TwoHandedVikingAxe2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Vikings\Axe\TwoHandedVikingAxe3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Vikings\Sword\TwoHandedVikingSword1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Vikings\Sword\TwoHandedVikingSword2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\MeleeWeaponTrail2H\Vikings\Sword\TwoHandedVikingSword3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Basic\HermitLamp.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Basic\MilitiamanShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Basic\SteelTowerShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Basic\WoodenBuckler.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Basic\WoodenShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Knights\CrusaderShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Knights\SteelShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Knights\WarriorShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Military_Preview\SWAT.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Pro\CrusaderShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Pro\KiteShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Pro\TowerShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Samurai\SamuraiShield1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Samurai\SamuraiShield2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Samurai\SamuraiShield3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\SpellMasters\BottleBomb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\SpellMasters\CardinalBook.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\SpellMasters\FireWarriorShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\SpellMasters\GladiatorShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\SpellMasters\GuardShield1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\SpellMasters\GuardShield2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\SpellMasters\KnightShield.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Undead_Preview\RustyShield1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Vikings\IronShield1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Vikings\IronShield2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Vikings\IronShield3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Vikings\WoodenShield1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Vikings\WoodenShield2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Shield\Vikings\WoodenShield3.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Basic\Potions\LagrePotion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Basic\Potions\MediumPotion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Basic\Potions\SmallPotion.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Bombs\HandBomb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Bombs\MagicBomb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Bombs\SpikeBomb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Food\Apple.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Food\Cheese.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Food\ChickenLeg.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Food\Grog.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Food\Ham.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Food\Hamburger.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Potions\Bottle.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Potions\LagrePotion_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Potions\MediumPotion_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Potions\Potion1_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Potions\Potion2_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Potions\Potion3_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Potions\SmallPotion_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Potions\WaterBag.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Throwing\Axeorang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Throwing\Boomerang_Paint.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Throwing\Boomerang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Throwing\SavageBoomerang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Throwing\ThrowingStar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Throwing\ThrowingStar2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Sprites\FantasyHeroes\Equipment\Supplies\Pro\Throwing\TribalBoomerang.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
+
+
     <None Update="Content\nez\effects\Bevels.mgfxo">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -222,5 +2731,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ContentPathGenerator.cs</LastGenOutput>
     </None>
+
   </ItemGroup>
 </Project>

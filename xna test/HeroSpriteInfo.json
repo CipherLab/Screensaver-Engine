@@ -1,0 +1,5847 @@
+[
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Food",
+    "FileName": "Apple.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Dagger",
+    "FileName": "AspenStake.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Dagger",
+    "FileName": "AspenStake.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "AssassinDagger_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "AssassinDagger_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Throwing",
+    "FileName": "Axeorang.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "BalancedSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "BalancedSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Axe",
+    "FileName": "BerserkAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Axe",
+    "FileName": "BerserkAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "Bilbo.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "Bilbo.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "BishopWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "BishopWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "BlackHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "BlackHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "BoneClub.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "BoneClub.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Throwing",
+    "FileName": "Boomerang_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Throwing",
+    "FileName": "Boomerang.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Potions",
+    "FileName": "Bottle.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "BroadSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "BroadSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Dagger",
+    "FileName": "BronzeDagger.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Dagger",
+    "FileName": "BronzeDagger.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "CardinalWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "CardinalWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Spear",
+    "FileName": "CataphractSpear.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Spear",
+    "FileName": "CataphractSpear.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Food",
+    "FileName": "Cheese.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Food",
+    "FileName": "ChickenLeg.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "ClericWand1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "ClericWand1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "ClericWand2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "ClericWand2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Wand",
+    "FileName": "CursedBone.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Wand",
+    "FileName": "CursedBone.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "DarkStoneHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "DarkStoneHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "DarkSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "DarkSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "DeserterDagger_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "DeserterDagger_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Axe",
+    "FileName": "DestroyerAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Axe",
+    "FileName": "DestroyerAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Axe",
+    "FileName": "DreadCleaver.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Axe",
+    "FileName": "DreadCleaver.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Wand",
+    "FileName": "DrownedGoblinHand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Wand",
+    "FileName": "DrownedGoblinHand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "DruidWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "DruidWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "DwellerWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "DwellerWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "ElderStaff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "ElderStaff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "EliteGuardSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "EliteGuardSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "EliteKnightSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "EliteKnightSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "FamilySword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "FamilySword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "FireAdeptWand1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "FireAdeptWand1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "FireAdeptWand2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "FireAdeptWand2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "FireKnightSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "FireKnightSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "FireWarriorSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "FireWarriorSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "FireWarriorSword2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "FireWarriorSword2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "FireWizardWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "FireWizardWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Thrones",
+    "Style": "Axe",
+    "FileName": "FreeFolkAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Thrones",
+    "Style": "Axe",
+    "FileName": "FreeFolkAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "GateCrusher.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "GateCrusher.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Food",
+    "FileName": "Grog.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "GuardSword1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "GuardSword1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "GuardSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "GuardSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Spear",
+    "FileName": "Halberd.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Spear",
+    "FileName": "Halberd.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Food",
+    "FileName": "Ham.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Food",
+    "FileName": "Hamburger.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Bombs",
+    "FileName": "HandBomb.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "HardwoodWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "HardwoodWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Pro",
+    "Style": "Spear",
+    "FileName": "Harpoon.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Pro",
+    "Style": "Spear",
+    "FileName": "Harpoon.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "HeavySword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "HeavySword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "HermitWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "HermitWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "HorseLordSickle.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "HorseLordSickle.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Dagger",
+    "FileName": "HunterKnife_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Dagger",
+    "FileName": "HunterKnife_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "IceWizardWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "IceWizardWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "InquisitorSword1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "InquisitorSword1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "InquisitorSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "InquisitorSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "InquisitorSword3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "InquisitorSword3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "InquisitorSword4_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "InquisitorSword4_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "IronIslandsSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "IronIslandsSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Katana1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Katana1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Katana2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Katana2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Katana3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Katana3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "KnightSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "KnightSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Kunai.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Kunai.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Potions",
+    "FileName": "LagrePotion_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Basic",
+    "Style": "Potions",
+    "FileName": "LagrePotion.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "LionSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "LionSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "LittleLionSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "LittleLionSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "LongHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "LongHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "Machete_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "Machete_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Bombs",
+    "FileName": "MagicBomb.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "MagicSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "MagicSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Wand",
+    "FileName": "MalformedStaff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Wand",
+    "FileName": "MalformedStaff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "ManticoreSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "ManticoreSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Potions",
+    "FileName": "MediumPotion_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Basic",
+    "Style": "Potions",
+    "FileName": "MediumPotion.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "MercenarySword1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "MercenarySword1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "MercenarySword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "MercenarySword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "MilitiamanShortSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "MilitiamanShortSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "Morgana.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "Morgana.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "Morgenstern.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "Morgenstern.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "MountainSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "MountainSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Ninjato_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Ninjato_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "NorthWardenSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "NorthWardenSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "OldPoleaxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "OldPoleaxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "PaladinSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "PaladinSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Potions",
+    "FileName": "Potion1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Potions",
+    "FileName": "Potion2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Potions",
+    "FileName": "Potion3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "PyromancerWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "PyromancerWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Axe",
+    "FileName": "RunicAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Axe",
+    "FileName": "RunicAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "RustySword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Undead_Preview_",
+    "Style": "Sword",
+    "FileName": "RustySword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "RustySword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Undead_Preview_",
+    "Style": "Sword",
+    "FileName": "RustySword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Sai_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "Sai_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiElderSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiElderSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SamuraiSword3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandElderStaff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandElderStaff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandHealerStaff1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandHealerStaff1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandHealerStaff2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandHealerStaff2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandMageStaff1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandMageStaff1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandMageStaff2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SandLords",
+    "Style": "Staff",
+    "FileName": "SandMageStaff2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Thrones",
+    "Style": "Axe",
+    "FileName": "SandWarriorHalberd.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Thrones",
+    "Style": "Axe",
+    "FileName": "SandWarriorHalberd.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SandLords",
+    "Style": "Sword",
+    "FileName": "SandWarriorSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SandLords",
+    "Style": "Sword",
+    "FileName": "SandWarriorSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SandLords",
+    "Style": "Sword",
+    "FileName": "SandWarriorSword2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SandLords",
+    "Style": "Sword",
+    "FileName": "SandWarriorSword2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Christmas",
+    "Style": "Wand",
+    "FileName": "SantaHelperWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Christmas",
+    "Style": "Wand",
+    "FileName": "SantaHelperWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Christmas",
+    "Style": "Wand",
+    "FileName": "SantaWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Christmas",
+    "Style": "Wand",
+    "FileName": "SantaWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Throwing",
+    "FileName": "SavageBoomerang.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Axe",
+    "FileName": "Scythe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Axe",
+    "FileName": "Scythe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "ShadowSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "ShadowSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "ShamanWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "ShamanWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Dagger",
+    "FileName": "ShortDagger_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Dagger",
+    "FileName": "ShortDagger_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "ShortIronKatana_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "ShortIronKatana_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "ShortKnightSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "ShortKnightSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "ShortSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "ShortSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Pro",
+    "Style": "Spear",
+    "FileName": "SiegeSpear.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Pro",
+    "Style": "Spear",
+    "FileName": "SiegeSpear.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "SlaveSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "SlaveSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "SmallAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "SmallAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Potions",
+    "FileName": "SmallPotion_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Basic",
+    "Style": "Potions",
+    "FileName": "SmallPotion.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "Smallsword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "Smallsword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Spear",
+    "FileName": "Spear.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Spear",
+    "FileName": "Spear.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Bombs",
+    "FileName": "SpikeBomb.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "SteelAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "SteelAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "Stoccata.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Sword",
+    "FileName": "Stoccata.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Axe",
+    "FileName": "StoneAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Axe",
+    "FileName": "StoneAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "StormBringerWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "StormBringerWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SunriseSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Samurai",
+    "Style": "Sword",
+    "FileName": "SunriseSword.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "SwampHealer1Staff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "SwampHealer1Staff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "SwampHealer2Staff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "SwampHealer2Staff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "SwampMage1Staff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "SwampMage1Staff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "SwampMage2Staff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SwampLords",
+    "Style": "Staff",
+    "FileName": "SwampMage2Staff.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SwampLords",
+    "Style": "Spear",
+    "FileName": "SwampWarriorSpear.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SwampLords",
+    "Style": "Spear",
+    "FileName": "SwampWarriorSpear.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Throwing",
+    "FileName": "ThrowingStar.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Throwing",
+    "FileName": "ThrowingStar2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "TitanHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "TitanHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "TrainingSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Sword",
+    "FileName": "TrainingSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Throwing",
+    "FileName": "TribalBoomerang.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "TwoHandedSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Knights",
+    "Style": "Sword",
+    "FileName": "TwoHandedSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "TwoHandedVikingAxe1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "TwoHandedVikingAxe1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "TwoHandedVikingAxe2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "TwoHandedVikingAxe2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "TwoHandedVikingAxe3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "TwoHandedVikingAxe3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "TwoHandedVikingSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "TwoHandedVikingSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "TwoHandedVikingSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "TwoHandedVikingSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "TwoHandedVikingSword3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "TwoHandedVikingSword3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Basic",
+    "Style": "Hammer",
+    "FileName": "TwoHandedWoodenMace.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Basic",
+    "Style": "Hammer",
+    "FileName": "TwoHandedWoodenMace.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "VikingAxe1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "VikingAxe1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "VikingAxe2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "VikingAxe2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "VikingAxe3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Vikings",
+    "Style": "Axe",
+    "FileName": "VikingAxe3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "VikingSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "VikingSword1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "VikingSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "VikingSword2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "VikingSword3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Vikings",
+    "Style": "Sword",
+    "FileName": "VikingSword3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "WarClub.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "WarClub.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Hammer",
+    "FileName": "WarHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Hammer",
+    "FileName": "WarHammer.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "WarlockWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "WarlockWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "WaterAdeptWand1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "WaterAdeptWand1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "WaterAdeptWand2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Wand",
+    "FileName": "WaterAdeptWand2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Supplies",
+    "Plan": "Pro",
+    "Style": "Potions",
+    "FileName": "WaterBag.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "WaterWizardWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "WaterWizardWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "WitchWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "SpellMasters",
+    "Style": "Wand",
+    "FileName": "WitchWand.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "WolfSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Thrones",
+    "Style": "Sword",
+    "FileName": "WolfSword_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "WoodcutterAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "WoodcutterAxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "WoodcutterPoleaxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "Basic",
+    "Style": "Axe",
+    "FileName": "WoodcutterPoleaxe.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "WoodenClub.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Pro",
+    "Style": "Hammer",
+    "FileName": "WoodenClub.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Hammer",
+    "FileName": "WoodenMace.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Hammer",
+    "FileName": "WoodenMace.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon1H",
+    "Plan": "Basic",
+    "Style": "Hammer",
+    "FileName": "WoodenSpikedClub.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail1H",
+    "Plan": "Basic",
+    "Style": "Hammer",
+    "FileName": "WoodenSpikedClub.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Spear",
+    "FileName": "WoodenStake.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Spear",
+    "FileName": "WoodenStake.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeapon2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "Zweihander_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "MeleeWeaponTrail2H",
+    "Plan": "SpellMasters",
+    "Style": "Sword",
+    "FileName": "Zweihander_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "=3=.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "=3=.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "=3=.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "1.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "10.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "11.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "2.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "3.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "4.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "5.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "6.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "7.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "8.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "83.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "83.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "9.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "AdvancedDipperHat.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Afro.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "AfroSmall.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "AgileHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "AmateurDipperHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "AmateurDodgeHat.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Angry.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Angry.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Angry.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Angry.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Angry.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "AnimeGirl.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Annoyed.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Annoyed.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Annoyed.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "ArcherHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ArielDress_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Army.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Back",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ArrowQuiver.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Back",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "ArrowQuiver2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Back",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "ArrowQuiver3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Back",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ArrowQuiverBig.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "AssassinArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "AssassinHood_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Earrings",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Banan.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "BanditArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "BanditLightArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Mask",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "BanditMask_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Cape",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "BatCape_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "BattleBow.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Beard",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Beard.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Beard",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Beard1.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Beard",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Beard2.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Beard",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Beard3.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Beard",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Beard4.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "BerserkArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "BerserkHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "BishopArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "BishopHat_FullHair.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Style_Preview__NoPaint_",
+    "Style": "",
+    "FileName": "Blade.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Blank.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Blank.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Bored.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Bored.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Bored.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "BottleBomb.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "BowlCut.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "BowmanHat_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Bundle.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "BunnyFace.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "BunnyFace.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "BuzzCut.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "CardinalArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "CardinalBook.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "CardinalHat_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Mask",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "CarnivalMask.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "CataphractArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "CataphractHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ChainmailLightArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "ChampionArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "ChampionHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Cleric_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ClericHood_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Clumsy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Confused.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Confused.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "CoolBoy.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Cape",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "CotttonCape_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "CrusaderChainmail_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "CrusaderHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "CrusaderShield.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "CrusaderShield.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Crying.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Crying.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Crying.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Dandy.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "DarkKnight.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "DarkMountain_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "DarkMountain.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Dead.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Dead.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Dead.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Deserter.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "DeserterBandage_FullHair.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "DestroyerArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "DestroyerHelm_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Dizzy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Dizzy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Dizzy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Drooling.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Drooling.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "DruidArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "DruidHat_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "DwellerArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "DwellerHood_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Eh.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Eh.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Eh.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Ears",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ElfEar.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "EliteGuardArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "EliteKnightHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "EnforcedHelm_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Enrage.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Enrage.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Enrage.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ExpertBowmanHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ExpertHunterHat.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Eyebrows1.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Eyebrows2.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Eyebrows3.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Eyebrows4.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Eyebrows6.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes1.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes10.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes11.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes12.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes13.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes14.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes15.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes2.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes3.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes4.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes5.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes6.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes7.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes8.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Eyes9.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "FalconIronHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "FalconLightArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "FamilyBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "FarmerClothes.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "FauxHawk.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Female.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "FireAdept.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "FireAdeptHood.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "FireKnightArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "FireWarriorArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "FireWarriorShield.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "FireWizardArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "FireWizardHood.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Fishy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Fishy.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "FreeFolk_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "FringedUp.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "GguardsmenArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GladiatorArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GladiatorHelm1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GladiatorHelm2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GladiatorShield.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Undead",
+    "Style": "",
+    "FileName": "GlowingEyes.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GoldDragon.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Earrings",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "GoldenEarring.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "GoldLion.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Cape",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "GrandmaCape_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Greedy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Greedy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Greedy.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GreyKnight.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GuardArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "GuardHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GuardHelm1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GuardHelm2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GuardHelm3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GuardShield1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "GuardShield2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "GypsyHat.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Hair1.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Hair2_HideEars.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Hair3.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Hair4.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Hair5.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Hair6.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Hair7_HideEars.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "HalberdierArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "HalberdierHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "HalfmoonHat.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Happy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Happy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Happy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Happy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Happy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Happy.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HawkHelm.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Head",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Head.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Head",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HeadScar.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "HeavyArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "HeavyHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Hermit.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HermitHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HermitHood_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HermitLamp.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Cape",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "HeroicCape_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Cape",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "HeroicCape2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "HornBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "HorseLord.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Body",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Human.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Ears",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HumanEar.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Hunter.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HunterBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "HunterHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HunterHat1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HunterHat2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HunterHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HunterLightArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HunterShortBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "HunterTunic.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "IceWizardArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "IceWizardHood.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Injured.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Injured.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Injured.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "InLove.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "InLove.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "InLove.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "InquisitorArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "InquisitorHat1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "InquisitorHat2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "IronArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "IronIslands.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "IronPlateArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "IronShield1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "IronShield2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "IronShield3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "JesterHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "KiteShield.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Kitty.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Kitty.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "KnightArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "KnightArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "KnightHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "KnightShield.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "LandsknechtArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "LandsknechtHelm_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Leaky.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "LeatherCap.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "LeatherHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "LeatherJacket.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "LeatherLightArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "LeatherRivetedArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Glasses",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "LibrarianGlasses.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "LittleLion.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "LongHair.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Male.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "ManticoreArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "ManticoreHelmet.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "MarauderArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "MarauderBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "MarauderHood.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Mask",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "Mask1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Mask",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "Mask2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "MasterDodgeHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "MercenaryArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "MercenaryHelm1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "MercenaryHelm2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Militiaman.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "MilitiamanHelmet1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "MilitiamanHelmet2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "MilitiamanShield.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Mohawk.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Mountain_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "Mountain_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "NecromancerArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "NecromancerHood.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "NightsWatch_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "Ninja1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "Ninja2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "Ninja3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "NinjaHelm1_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "NinjaHelm2_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "NinjaHelm3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "Nomad.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Normal.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Normal.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Normal.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "NorthWarden.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Cape",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "OldCape_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Cape",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "OldCape2_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "OMG.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "OMG.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "OMG.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "OrcBow.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Orly.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Orly.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "PaladinArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "PaladinHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "PathfinderArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "PathFinderBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "PathfinderHat_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "PathfinderHood.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "PeasantCap.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "PeasantClothing.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Head",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "PeasantHead.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Perverted.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Perverted.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Perverted.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "PushedBack.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "PyromancerArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "Rags1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "Rags2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "Rags3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "RangerArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "RangerBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "RangerHat_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "RedLion.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Robe.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Style_Preview__NoPaint_",
+    "Style": "",
+    "FileName": "Rocky.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "RoyalArcherArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "RoyalArcherBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "RoyalArcherHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Cape",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "RoyalCape_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "RoyalGuard.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Undead_Preview_",
+    "Style": "",
+    "FileName": "RustyShield1.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Sad.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Sad.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Sad.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Sad.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Sad.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Sad.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiBow1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiBow2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiBow3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiElder.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiElderHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiHeavy1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiHeavy2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiHeavy3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiHelm1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiHelm2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiHelm3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiLight1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiLight2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiLight3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiShield1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiShield2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Samurai",
+    "Style": "",
+    "FileName": "SamuraiShield3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandElder.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandElderTurban.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandHealer1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandHealer2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandHealerHood.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandMage1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandMage2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandShooter1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandShooter2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandShooterBow1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandShooterBow2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandShooterTurban.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Thrones",
+    "Style": "",
+    "FileName": "SandWarrior.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandWarrior1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandWarrior2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandWarriorHelm1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SandLords",
+    "Style": "",
+    "FileName": "SandWarriorHelm2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Christmas",
+    "Style": "",
+    "FileName": "Santa1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Christmas",
+    "Style": "",
+    "FileName": "Santa2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Christmas",
+    "Style": "",
+    "FileName": "SantaHat.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Christmas",
+    "Style": "",
+    "FileName": "SantaHelper.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Christmas",
+    "Style": "",
+    "FileName": "SantaHelperHat1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Christmas",
+    "Style": "",
+    "FileName": "SantaHelperHat2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Christmas",
+    "Style": "",
+    "FileName": "SantaHelperHat3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Scout_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "ScoutBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ScoutHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ScoutShortBow.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Shaggy.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "ShamanArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "ShamanHelm_FullHair.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "ShamanMask_FullHair.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Mask",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "ShamanMask_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "ShamanMask2_FullHair.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "ShamanMask3_FullHair.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "SharpHelm_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ShortHair.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ShortPonytail.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Shy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Shy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Shy.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Sick.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Sick.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Sick.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "SideFringe.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "SideFringeDisheveled.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "SiegeArcherArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "SiegeArcherHelm_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Sigh.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Sigh.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Sigh.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Body",
+    "Plan": "Undead_Preview_",
+    "Style": "",
+    "FileName": "Skeleton1.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Head",
+    "Plan": "Undead_Preview_",
+    "Style": "",
+    "FileName": "Skeleton1.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Undead_Preview_",
+    "Style": "",
+    "FileName": "Skeleton1Eyes.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Undead_Preview_",
+    "Style": "",
+    "FileName": "SkeletonArmor1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Undead_Preview_",
+    "Style": "",
+    "FileName": "SkeletonHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Slave.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "SlaveHeadband_FullHair.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Slicked.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "SlickedTwintales.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "SlickedTwintalesDisheveled.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Smirk.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "SniperArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "SniperBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "SnperHood.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "SpearmanArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "SpearmanHelm1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "SpearmanHelm2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "SpikedArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Glasses",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "SteampunkGlasses.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "SteelHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "SteelPotHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "SteelShield.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "SteelTowerShield.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "StormBringerArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "StrawHat.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Surprised.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Surprised.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "Surprised.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampElder.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampHealer1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampHealer2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampLordMask1_FullHair.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampLordMask2_FullHair.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampMage1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampMage2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampShooter1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampShooter1Bow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampShooter2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampShooter2Bow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampWarrior1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SwampLords",
+    "Style": "",
+    "FileName": "SwampWarrior2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Military_Preview_",
+    "Style": "",
+    "FileName": "SWAT.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "SweatDrop.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "SweatDrop.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "SweatDrop.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "ThiefArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "ThiefHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "TowerShield.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "Twisty.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Military_Preview_",
+    "Style": "",
+    "FileName": "UberSoldier.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Military_Preview_",
+    "Style": "",
+    "FileName": "UberSoldierHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Cape",
+    "Plan": "Pro",
+    "Style": "",
+    "FileName": "VampireCape_Paint.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "VerySurprised.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "VerySurprised.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Expressions",
+    "Style": "",
+    "FileName": "VerySurprised.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Beard",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingBeard.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingFurArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingIronBow1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingIronBow2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingIronBow3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingIronHelm1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingIronHelm2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingIronHelm3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingLeatherHelm.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingLightArmor1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingLightArmor2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingLightArmor3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingLongBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingRoughArmor1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingRoughArmor2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingRoughArmor3_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingShortBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "VikingWoodenBow.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Bonus",
+    "Style": "",
+    "FileName": "VillageGirl.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "VisorKnightHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "Wanderer.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Wanting.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "Wanting.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "WarlockArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "WarlockHood.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "WarriorHelm_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Knights",
+    "Style": "",
+    "FileName": "WarriorShield.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "WaterAdept.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "WaterWizardArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "WaterWizardHelm.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Style_Preview__NoPaint_",
+    "Style": "",
+    "FileName": "Wavy.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "WitchArmor.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "WitchHat_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Armor",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "WitchHunterArmor_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Bow",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "WitchHunterBow.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Helmet",
+    "Plan": "SpellMasters",
+    "Style": "",
+    "FileName": "WitchHunterHat_Paint.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "WoodenBuckler.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "WoodenShield.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "WoodenShield1.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "WoodenShield2.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Shield",
+    "Plan": "Vikings",
+    "Style": "",
+    "FileName": "WoodenShield3.png"
+  },
+  {
+    "Category": "Equipment",
+    "ItemType": "Earrings",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Worm.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyebrows",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "WTF.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "WTF.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "WTF.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "XD.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Emoji",
+    "Style": "",
+    "FileName": "XD.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Mouth",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "Zombie.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Undead",
+    "Style": "",
+    "FileName": "ZombieEyes1.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Undead",
+    "Style": "",
+    "FileName": "ZombieEyes2.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Undead",
+    "Style": "",
+    "FileName": "ZombieEyes3.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Undead",
+    "Style": "",
+    "FileName": "ZombieEyes4.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Undead",
+    "Style": "",
+    "FileName": "ZombieEyes5.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Undead",
+    "Style": "",
+    "FileName": "ZombieEyes6.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Eyes",
+    "Plan": "Undead",
+    "Style": "",
+    "FileName": "ZombieEyes7.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ZombieShabby.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Hair",
+    "Plan": "Basic",
+    "Style": "",
+    "FileName": "ZombieSticks.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Other",
+    "Plan": "Other",
+    "Style": "",
+    "FileName": "HeadMask.png"
+  },
+  {
+    "Category": "BodyParts",
+    "ItemType": "Other",
+    "Plan": "Other",
+    "Style": "",
+    "FileName": "Shadow.png"
+  }
+]

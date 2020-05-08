@@ -36,7 +36,7 @@ namespace MonoGameTest.Scenes
         private SpriteRenderer BgComponent { get; set; }
         private List<CroppedImagePart> DetectedObjectImages { get; set; }
         private int Friction = 0;
-        private int Elasticity = 0;
+        private int Elasticity = 1;
         private bool AllowUpdate { get; set; }
         private List<Rectangle> FoundObjectsBoxes { get; set; }
         public override void Initialize()
@@ -326,7 +326,7 @@ namespace MonoGameTest.Scenes
 
             var b = DetectedObjectImages[AddedRigidBodyIdx++];
             float mass = (b.ImageProperties.Width * b.ImageProperties.Height) / 100f;
-            var v = new Vector2(Random.NextAngle(), Random.NextAngle());
+            var v = new Vector2(Random.Range(3, 13), Random.Range(3, 13));
             var impulse = new Vector2(1f, 1f);
 
             int max = 200;
