@@ -11,13 +11,14 @@ using OnnxGuiDetection;
 using OnnxGuiDetection.ML.DataModels;
 using ScreenSaverHelper;
 using ScreenSaverHelper.Util;
+using SharedKernel.Interfaces;
 using BoundingBox = SharedKernel.BoundingBox;
 using Graphics = Nez.Graphics;
 using Rectangle = System.Drawing.Rectangle;
 
 namespace MonoGameTest.Scenes
 {
-    [SampleScene("Detect GUI Items", 9999, "")]
+    [WindowScene("Detect GUI Items", 9999, "")]
     public class DetectGuiItemsScene : SubSceneHelper
     {
         public override void Initialize()
@@ -56,7 +57,7 @@ namespace MonoGameTest.Scenes
            
             //bgEntity2.AddComponent(new SpriteRenderer(contentFilledTexture));
 
-            List<CroppedImagePart> detectedObjectImages = ih.GetSpritesFromImage(boxes, true);
+            IEnumerable<ICroppedImagePart> detectedObjectImages = ih.GetSpritesFromImage(boxes, true);
             ShowImagesBehindBoundingBoxes(detectedObjectImages);
 
             // AddBoundingBoxes(boxes);
@@ -68,7 +69,7 @@ namespace MonoGameTest.Scenes
             //  Graphics.Instance.BitmapFont = Core.Content.LoadBitmapFont("Content\\Shared\\montserrat-32.fnt");
 
         }
-        private void ShowImagesBehindBoundingBoxes(List<CroppedImagePart> boxes)
+        private void ShowImagesBehindBoundingBoxes(IEnumerable<ICroppedImagePart> boxes)
         {
             foreach (var t in boxes)
             {

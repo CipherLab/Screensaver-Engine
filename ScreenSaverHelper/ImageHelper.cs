@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using ScreenSaverHelper.Util;
+using SharedKernel.Interfaces;
 using Zavolokas.ImageProcessing.Inpainting;
 using Zavolokas.Structures;
 using Rectangle = System.Drawing.Rectangle;
@@ -17,8 +18,9 @@ using Zavolokas.ImageProcessing.PatchMatch;
 
 namespace ScreenSaverHelper
 {
-    public class ImageHelper : IDisposable, ISimpleImageHelper
+    public class ImageHelper : IDisposable, ISimpleImageHelper, IHeroSpriteImageHelper
     {
+        public List<Rectangle> SpriteLocations { get; }
         private Rectangle Bounds { get; }
 
         private IMagickImage OriginalImage { get; }
@@ -41,6 +43,28 @@ namespace ScreenSaverHelper
         }
         public ImageHelper()
         {
+        }
+
+
+        public ImageHelper(string file)
+        {
+            OriginalImage = new MagickImage(file);
+            Bounds = new Rectangle(0, 0, OriginalImage.Width, OriginalImage.Height);
+
+        }
+
+        public byte[] GetFlattenedSprite()
+        {
+            using (var imageCol = new MagickImageCollection())
+            {
+                int idx = 0;
+                foreach (var s in SpriteLocations)
+                {
+
+                }
+
+                return imageCol.Flatten(MagickColors.Transparent).ToByteArray(MagickFormat.Png);
+            }
         }
         public byte[] MirrorUpconvertImage()
         {
@@ -134,9 +158,9 @@ namespace ScreenSaverHelper
             }
         }
 
-        public byte[] EdgeDetectedFilledBlack(ImageFormat format)
+        public byte[] EdgeDetectedFilledBlack(byte[] inputImage, ImageFormat format)
         {
-            using (IMagickImage image = new MagickImage(OriginalImage.Clone()))
+            using (IMagickImage image = new MagickImage(inputImage))
             {
                 image.ColorFuzz = new Percentage(1);
                 image.HasAlpha = true;
@@ -151,34 +175,41 @@ namespace ScreenSaverHelper
                 image.Negate();
                 //black lines on transparent
                 image.InverseTransparentChroma(MagickColors.Black, MagickColors.Black);
-                image.Write($"c:\\temp\\InverseTransparentChroma-S{sigma}-{lowerP}-{upperP}.png");
+                //image.Write($"c:\\temp\\InverseTransparentChroma-S{sigma}-{lowerP}-{upperP}.png");
 
                 image.FloodFill(MagickColors.Black, 1, 1);
-                image.FloodFill(MagickColors.Black, 1, OriginalImage.Height - 1);
-                image.FloodFill(MagickColors.Black, OriginalImage.Width - 1, 1);
-                image.FloodFill(MagickColors.Black, OriginalImage.Width - 1, OriginalImage.Height - 1);
-                image.Write($"c:\\temp\\Flatten0-S{sigma}-{lowerP}-{upperP}.png");
+                image.FloodFill(MagickColors.Black, 1, image.Height - 1);
+                image.FloodFill(MagickColors.Black, image.Width - 1, 1);
+                image.FloodFill(MagickColors.Black, image.Width - 1, image.Height - 1);
+                //image.Write($"c:\\temp\\Flatten0-S{sigma}-{lowerP}-{upperP}.png");
                 for (int i = 1; i < 4; i++)
                 {
-                    image.FloodFill(MagickColors.Black, i, OriginalImage.Height / i - 1);
-                    image.FloodFill(MagickColors.Black, OriginalImage.Width / i - 1, i);
-                    image.FloodFill(MagickColors.Black, OriginalImage.Width / i - 1, OriginalImage.Height / i - 1);
+                    image.FloodFill(MagickColors.Black, i, image.Height / i - 1);
+                    image.FloodFill(MagickColors.Black, image.Width / i - 1, i);
+                    image.FloodFill(MagickColors.Black, image.Width / i - 1, image.Height / i - 1);
 
                 }
-                image.Write($"c:\\temp\\Flatten1-S{sigma}-{lowerP}-{upperP}.png");
+                //image.Write($"c:\\temp\\Flatten1-S{sigma}-{lowerP}-{upperP}.png");
                 if (format == ImageFormat.Png)
                     return image.ToByteArray(MagickFormat.Png);
 
                 if (format == ImageFormat.Jpeg)
                 {
-                    image.Write($"c:\\temp\\Flatten2-S{sigma}-{lowerP}-{upperP}.png");
+                    //image.Write($"c:\\temp\\Flatten2-S{sigma}-{lowerP}-{upperP}.png");
                     image.ColorAlpha(MagickColors.White);
-                    image.Write($"c:\\temp\\Flatten3-S{sigma}-{lowerP}-{upperP}.png");
+                    //image.Write($"c:\\temp\\Flatten3-S{sigma}-{lowerP}-{upperP}.png");
                     return image.ToByteArray(MagickFormat.Png);
                 }
                 throw new FormatException($"{format} not accounted for");
 
             }
+        }
+        public byte[] EdgeDetectedFilledBlack(ImageFormat format)
+        {
+            var fmt = MagickFormat.Png;
+            if (format == ImageFormat.Jpeg)
+                fmt = MagickFormat.Jpg;
+            return EdgeDetectedFilledBlack(this.OriginalImage.ToByteArray(fmt), format);
         }
 
         private byte[] MirrorUpAndDown()
@@ -250,17 +281,22 @@ namespace ScreenSaverHelper
         }
 
 
-        public List<CroppedImagePart> GetSpritesFromImage(List<Rectangle> boxes, bool makeTransparent)
+        public IEnumerable<ICroppedImagePart> GetSpritesFromImage(List<Rectangle> boxes, bool makeTransparent)
         {
-            return boxes.Select(r => GetSpriteFromImage(OriginalImage.ToByteArray(), r, makeTransparent)).ToList();
+            return boxes.Select(r => GetSpriteFromImage(OriginalImage.ToByteArray(), r, false, makeTransparent)).ToList();
         }
-        public CroppedImagePart GetSpriteFromImage(byte[] image, Rectangle box, bool makeTransparent)
+
+        public ICroppedImagePart GetSpriteFromImage(byte[] image, Rectangle box, bool flipH, bool makeTransparent)
         {
             Image original;
             using (MemoryStream ms = new MemoryStream(image))
                 original = Image.FromStream(ms);
 
-            using (Bitmap bitmap = new Bitmap(box.Width, box.Height, original.PixelFormat))
+            Image bitmap;
+            using (MemoryStream ms = new MemoryStream(BlankImage(box, Color.Transparent)))
+                bitmap = Image.FromStream(ms);
+
+            using (bitmap)
             {
                 using (Graphics objGraphics = Graphics.FromImage(bitmap))
                 {
@@ -322,11 +358,17 @@ namespace ScreenSaverHelper
                     bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
                     stream.Seek(0, SeekOrigin.Begin);
 
-                    return new CroppedImagePart
+                    using (MagickImage tempImage = new MagickImage(stream))
                     {
-                        ImageData = stream.ToArray(),
-                        ImageProperties = box
-                    };
+                        if (flipH)
+                            tempImage.Flop();
+                        return new CroppedImagePart
+                        {
+                            ImageData = tempImage.ToByteArray(MagickFormat.Png),
+                            ImageProperties = box
+                        };
+                    }
+
                 }
             }
         }
@@ -409,9 +451,23 @@ namespace ScreenSaverHelper
             return null;
         }
 
-        public List<CroppedImagePart> GetSpritesFromImage(byte[] screenCapturedImage, List<Rectangle> foundObjectsBoxes, bool alpha)
+        public List<ICroppedImagePart> GetSpritesFromImage(byte[] screenCapturedImage, List<Rectangle> foundObjectsBoxes, bool alpha)
         {
-            return foundObjectsBoxes.Select(r => GetSpriteFromImage(screenCapturedImage, r, alpha)).ToList();
+            return foundObjectsBoxes.Select(r => GetSpriteFromImage(screenCapturedImage, r, false, alpha)).ToList();
+        }
+
+        public void SaveByteImageToFile(byte[] backgroundImage, string cTempScreengrabJpg)
+        {
+            using (IMagickImage img = new MagickImage(backgroundImage))
+            {
+                img.Write(cTempScreengrabJpg);
+            }
+        }
+
+        public ICroppedImagePart GetSpriteFromImage(Rectangle box, bool flipH, bool alpha)
+        {
+
+            return GetSpriteFromImage(OriginalImage.ToByteArray(), box, flipH, alpha);
         }
 
         public byte[] ImageMaskFromSprites(List<Rectangle> boxes)

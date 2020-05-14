@@ -1,25 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using System.Drawing;
+using SharedKernel.Interfaces;
 using Rectangle = System.Drawing.Rectangle;
 
 namespace ScreenSaverHelper.Util
 {
-    public class CroppedImagePart
+    public class CroppedImagePart : ICroppedImagePart
     {
         public Rectangle ImageProperties { get; set; }
         public byte[] ImageData { get; set; }
-
-        public Vector2 Vector2
+        public PointF Position
         {
             get
             {
-                float x = ImageProperties.X + ImageProperties.Width / 2;
-                float y = ImageProperties.Y + ImageProperties.Height / 2;
+                float x = ImageProperties.X + ImageProperties.Width / 2f;
+                float y = ImageProperties.Y + ImageProperties.Height / 2f;
 
-                return new Vector2(x,y);
+                return new PointF(x, y);
             }
         }
+
     }
 }

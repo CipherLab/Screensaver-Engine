@@ -27,6 +27,7 @@ namespace MonoGameTest
         {
             base.Initialize();
             
+            //Scene = new PlatformerScene();
             //Scene = new BasicScene();
             Scene = new RigidBodyScene();
             //Scene = new FancyTilingScene();

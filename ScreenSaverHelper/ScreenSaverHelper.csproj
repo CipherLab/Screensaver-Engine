@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Inpainting\Inpainting\Inpainting.csproj" />
+    <ProjectReference Include="..\SharedKernel\SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>

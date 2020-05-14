@@ -1,4 +1,5 @@
 ﻿using SharedKernel;
+using SharedKernel.Interfaces;
 
 namespace MonoGameTest
 {

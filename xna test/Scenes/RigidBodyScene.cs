@@ -1,28 +1,29 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using MonoGameTest.Sprites;
+using Nez;
+using Nez.Sprites;
+using Nez.Textures;
+using Nez.Tiled;
+using ScreenSaverHelper;
+using ScreenSaverHelper.Util;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Threading;
-using Google.Protobuf.WellKnownTypes;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Nez;
-using Nez.BitmapFonts;
-using Nez.Sprites;
-using Nez.Textures;
-using Nez.Verlet;
-using ScreenSaverHelper;
-using ScreenSaverHelper.Util;
-using Enum = System.Enum;
+using SharedKernel.Interfaces;
+using Color = Microsoft.Xna.Framework.Color;
+using Graphics = Nez.Graphics;
 using Random = Nez.Random;
 using Rectangle = System.Drawing.Rectangle;
 
 namespace MonoGameTest.Scenes
 {
-    [SampleScene("Rigid Bodies", 100,
-        "")]
+    [WindowScene("Rigid Bodies", 100, "")]
     public class RigidBodyScene : SubSceneHelper
     {
 
@@ -34,13 +35,30 @@ namespace MonoGameTest.Scenes
         internal Phase CurrentPhase { get; set; }
         private List<PhaseSteps> PhaseStepsList { get; set; }
         private SpriteRenderer BgComponent { get; set; }
-        private List<CroppedImagePart> DetectedObjectImages { get; set; }
+        private IEnumerable<ICroppedImagePart> DetectedObjectImages { get; set; }
         private int Friction = 0;
         private int Elasticity = 1;
         private bool AllowUpdate { get; set; }
         private List<Rectangle> FoundObjectsBoxes { get; set; }
         public override void Initialize()
         {
+
+
+            int originalWidth = 1280;
+            int originalHeight = 720;
+
+            //originalWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            //originalHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+
+            this.SimpleFont = Content.Load<SpriteFont>("Shared\\SimpleFont");
+            SetDesignResolution(originalWidth, originalHeight, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
+            Screen.SetSize(originalWidth, originalHeight);
+
+            //Screen.IsFullscreen = true;
+            Screen.ApplyChanges();
+
+            AddRigidBorders(Friction, Elasticity);
+
             CurrentPhase = Phase.ShowBackground;
             PhaseStepsList = new List<PhaseSteps>();
             CurrentPhaseStep = new PhaseSteps(0, Phase.ShowBackground, Phase.BlurBackground, 5000);
@@ -62,21 +80,6 @@ namespace MonoGameTest.Scenes
             //AddPostProcessor(new PolyLightPostProcessor(0, lightRenderer.RenderTexture))
             //    .SetEnableBlur(true)
             //    .SetBlurAmount(0.5f);
-
-
-            int originalWidth = 1280;
-            int originalHeight = 720;
-
-            originalWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-            originalHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-
-            this.SimpleFont = Content.Load<SpriteFont>("Shared\\SimpleFont");
-            SetDesignResolution(originalWidth, originalHeight, Scene.SceneResolutionPolicy.ShowAllPixelPerfect);
-            Screen.SetSize(originalWidth, originalHeight);
-
-            Screen.IsFullscreen = true;
-            Screen.ApplyChanges();
-
 
             // renderer for the background image and the light map (created by StencilLightRenderer)
             var bg = AddRenderer(new RenderLayerRenderer(0, BackgroundRenderLayer));
@@ -104,6 +107,9 @@ namespace MonoGameTest.Scenes
         private PhaseSteps CurrentPhaseStep { get; set; }
         public override void Update()
         {
+            if (CurrentPhaseStep == null)
+                return;
+
             if (CurrentPhaseStep.Phase != CurrentPhase)
                 CurrentPhaseStep = PhaseStepsList.Single(x => x.Phase == CurrentPhase);
 
@@ -204,7 +210,7 @@ namespace MonoGameTest.Scenes
                                 new Thread(
                                     () =>
                                     {
-                                        FoundObjectsBoxes = maskImageHelper.GetSpriteBoundingBoxesInImage(maskSolid,4, 1);
+                                        FoundObjectsBoxes = maskImageHelper.GetSpriteBoundingBoxesInImage(maskSolid, 4, 1);
                                     }).Start();
 
                             }
@@ -228,9 +234,8 @@ namespace MonoGameTest.Scenes
                             if (FoundObjectsBoxes.Any())
                             {
                                 FoundObjectsBoxes = FoundObjectsBoxes
-                                    .OrderByDescending(x => x.Height)
-                                    .ThenByDescending(x => x.Width)
-                                    .Take(100).ToList();
+                                    .OrderByDescending(x => x.Height * x.Width)
+                                    .Take(200).ToList();
 
                                 new Thread(
                                         () =>
@@ -250,19 +255,25 @@ namespace MonoGameTest.Scenes
 
                     break;
                 case Phase.RigidBodyMode:
-                    if (!CurrentPhaseStep.ActionStarted && DetectedObjectImages != null && DetectedObjectImages.Count > 0)
+                    if (!CurrentPhaseStep.ActionStarted && DetectedObjectImages != null && DetectedObjectImages.Count() > 0)
                     {
                         CurrentPhaseStep.ActionStarted = true;
-                        AddRigidBorders(Friction, Elasticity);
                     }
                     else
                     {
                         AddRigidBodyEntities(Friction, Elasticity);
-                        if (AddedRigidBodyIdx >= DetectedObjectImages.Count)
+                        if (AddedRigidBodyIdx >= DetectedObjectImages.Count())
                             CurrentPhaseStep.ActionCompleted = true;
                     }
+
                     if (CurrentPhaseStep.DoNextStep)
+                    {
                         CurrentPhase = CurrentPhaseStep.NextPhase;
+
+                        AddPlayer();
+
+                    }
+
                     break;
 
                 case Phase.None:
@@ -277,6 +288,72 @@ namespace MonoGameTest.Scenes
             base.Update();
         }
 
+        private void AddPlayer()
+        {
+            var rowCount = Screen.Height / 16;
+            var columnCount = Screen.Width / 16;
+            var playerEntity = CreateEntity("player", new Vector2(100, 100));
+            playerEntity.AddComponent(new Caveman());
+
+            var rigidbody = new ArcadeRigidbody()
+                .SetMass(.1f)
+                .SetFriction(1)
+                .SetElasticity(0.1f)
+                .SetVelocity(Vector2.Zero);
+            // playerEntity.AddComponent(new BoxCollider(-8, -16, 16, 32));
+            playerEntity.AddComponent<BoxCollider>();
+
+            rigidbody.ShouldUseGravity = true;
+            playerEntity.AddComponent(rigidbody);
+            var mover = new TiledMapMover(new TmxLayer
+            {
+                Map = new TmxMap
+                {
+                    TmxDirectory = null,
+                    Version = null,
+                    TiledVersion = null,
+                    Width = columnCount,
+                    Height = rowCount,
+                    TileWidth = 16,
+                    TileHeight = 16,
+                    HexSideLength = null,
+                    Orientation = OrientationType.Orthogonal,
+                    StaggerAxis = StaggerAxisType.X,
+                    StaggerIndex = StaggerIndexType.Odd,
+                    RenderOrder = RenderOrderType.RightDown,
+                    BackgroundColor = default,
+                    NextObjectID = null,
+                    Layers = null,
+                    Tilesets = null,
+                    TileLayers = null,
+                    ObjectGroups = null,
+                    ImageLayers = null,
+                    Groups = null,
+                    Properties = null,
+                    MaxTileWidth = 16,
+                    MaxTileHeight = 16
+                },
+                Name = null,
+                Opacity = 0,
+                Visible = false,
+                OffsetX = 0,
+                OffsetY = 0,
+                Properties = null,
+                Width = columnCount,
+                Height = rowCount,
+                Tiles = new TmxLayerTile[columnCount * rowCount]
+            })
+            {
+                Entity = playerEntity,
+                Enabled = true,
+                UpdateOrder = 1,
+                ColliderHorizontalInset = 0,
+                ColliderVerticalInset = 0,
+            };
+
+            playerEntity.AddComponent(mover);
+        }
+
         private int AddedRigidBodyIdx = 0;
 
         private void AddRigidBorders(int friction, int elasticity)
@@ -285,46 +362,46 @@ namespace MonoGameTest.Scenes
             Texture2D yBorderTex;
             using (ISimpleImageHelper imgHelper = new ImageHelper())
             {
-                byte[] xBorder = imgHelper.BlankImage(new Rectangle(0, 0, Screen.Width, 2), System.Drawing.Color.White);
-                byte[] yBorder = imgHelper.BlankImage(new Rectangle(0, 0, 2, Screen.Height), System.Drawing.Color.White);
+                byte[] xBorder = imgHelper.BlankImage(new Rectangle(0, 0, Screen.Width, 4), System.Drawing.Color.White);
+                byte[] yBorder = imgHelper.BlankImage(new Rectangle(0, 0, 4, Screen.Height), System.Drawing.Color.White);
 
                 yBorderTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(yBorder));
                 xBorderTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(xBorder));
             }
             //bottom
             var rb = CreateEntity(
-                new Vector2(Screen.Width / 2f, Screen.Height - 1),
+                new PointF(Screen.Width / 2f, Screen.Height + 4),
                 0, friction, elasticity,
-                new Vector2(0, 0), xBorderTex, false, false);
-            rb.Entity.GetComponent<SpriteRenderer>().Color = Color.DarkMagenta;
+                new Vector2(0, 0), xBorderTex, false, Screen.Width, 4, false);
+            rb.Entity.GetComponent<SpriteRenderer>().Color = Color.Transparent;
 
             //top
             rb = CreateEntity(
-                new Vector2(Screen.Width / 2f, 2),
+                new PointF(Screen.Width / 2f, -4),
                 0, friction, elasticity,
-                new Vector2(0, 0), xBorderTex, false, false);
-            rb.Entity.GetComponent<SpriteRenderer>().Color = Color.DarkMagenta;
+                new Vector2(0, 0), xBorderTex, false, Screen.Width, 4, false);
+            rb.Entity.GetComponent<SpriteRenderer>().Color = Color.Transparent;
 
             //left
             rb = CreateEntity(
-                new Vector2(1, Screen.Height / 2f),
+                new PointF(-4, Screen.Height / 2f),
                 0, friction, elasticity,
-                new Vector2(0, 0), yBorderTex, false, false);
-            rb.Entity.GetComponent<SpriteRenderer>().Color = Color.DarkMagenta;
+                new Vector2(0, 0), yBorderTex, false, 4, Screen.Height, false);
+            rb.Entity.GetComponent<SpriteRenderer>().Color = Color.Transparent;
 
             //right
             rb = CreateEntity(
-                new Vector2(Screen.Width - 1, Screen.Height / 2f),
+                new PointF(Screen.Width + 4, Screen.Height / 2f),
                 0, friction, elasticity,
-                new Vector2(0, 0), yBorderTex, false, false);
-            rb.Entity.GetComponent<SpriteRenderer>().Color = Color.DarkMagenta;
+                new Vector2(0, 0), yBorderTex, false, 4, Screen.Height, false);
+            rb.Entity.GetComponent<SpriteRenderer>().Color = Color.Transparent;
         }
         private void AddRigidBodyEntities(int friction, int elasticity)
         {
-            if (AddedRigidBodyIdx > DetectedObjectImages.Count)
+            if (AddedRigidBodyIdx > DetectedObjectImages.Count())
                 return;
 
-            var b = DetectedObjectImages[AddedRigidBodyIdx++];
+            var b = DetectedObjectImages.Skip(AddedRigidBodyIdx++).First();
             float mass = (b.ImageProperties.Width * b.ImageProperties.Height) / 100f;
             var v = new Vector2(Random.Range(3, 13), Random.Range(3, 13));
             var impulse = new Vector2(1f, 1f);
@@ -354,16 +431,16 @@ namespace MonoGameTest.Scenes
                 new MemoryStream(b.ImageData));
 
 
-            CreateEntity(b.Vector2, mass, friction, elasticity,
+            CreateEntity(b.Position, mass, friction, elasticity,
                     v, tex,
-                    false, false)
+                    false, b.ImageProperties.Width, b.ImageProperties.Height, false)
                 .AddImpulse(impulse);
 
         }
 
 
-        ArcadeRigidbody CreateEntity(Vector2 position, float mass, float friction, float elasticity, Vector2 velocity,
-                                     Texture2D texture, bool shouldUseGravity, bool circle = true)
+        ArcadeRigidbody CreateEntity(PointF position, float mass, float friction, float elasticity, Vector2 velocity,
+                                     Texture2D texture, bool shouldUseGravity, int width, int height, bool circle = true)
         {
             var rigidbody = new ArcadeRigidbody()
                 .SetMass(mass)
@@ -375,7 +452,7 @@ namespace MonoGameTest.Scenes
             r.SetRenderLayer(RigidBodiesRenderLayer);
 
             var entity = CreateEntity(Utils.RandomString(3))
-                .SetPosition(position)
+                .SetPosition(new Vector2(position.X,position.Y))
                 .AddComponent(rigidbody)
                 .AddComponent(r)
                 .SetRenderLayer(RigidBodiesRenderLayer);
@@ -383,7 +460,8 @@ namespace MonoGameTest.Scenes
             if (circle)
                 entity.AddComponent<CircleCollider>();
             else
-                entity.AddComponent<BoxCollider>();
+                entity.AddComponent(new BoxCollider(width, height));
+            //entity.AddComponent<BoxCollider>();
 
             //entity.UpdateOrder = RigidBodiesRenderLayer;
             return rigidbody;

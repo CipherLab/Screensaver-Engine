@@ -63,9 +63,9 @@ namespace MonoGameTest.Scenes
 		{
 			var assembly = typeof(SubSceneHelper).Assembly;
 			var scenes = assembly.GetTypes()
-				.Where(t => t.GetCustomAttributes(typeof(SampleSceneAttribute), true).Length > 0)
+				.Where(t => t.GetCustomAttributes(typeof(WindowSceneAttribute), true).Length > 0)
 				.OrderBy<Type, int>(t =>
-					((SampleSceneAttribute)t.GetCustomAttributes(typeof(SampleSceneAttribute), true)[0]).Order);
+					((WindowSceneAttribute)t.GetCustomAttributes(typeof(WindowSceneAttribute), true)[0]).Order);
 
 			foreach (var s in scenes)
 				yield return s;
@@ -113,9 +113,9 @@ namespace MonoGameTest.Scenes
 			{
 				foreach (var attr in type.GetCustomAttributes(true))
 				{
-					if (attr.GetType() == typeof(SampleSceneAttribute))
+					if (attr.GetType() == typeof(WindowSceneAttribute))
 					{
-						var sampleAttr = attr as SampleSceneAttribute;
+						var sampleAttr = attr as WindowSceneAttribute;
 						var button = _table.Add(new TextButton(sampleAttr.ButtonName, buttonStyle)).SetFillX()
 							.SetMinHeight(30).GetElement<TextButton>();
 						_sceneButtons.Add(button);

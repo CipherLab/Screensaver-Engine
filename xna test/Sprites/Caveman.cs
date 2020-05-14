@@ -127,14 +127,12 @@ namespace MonoGameTest.Sprites
 
 			if (moveDir.X < 0)
 			{
-				if (_collisionState.Below)
 					animation = "Run";
 				_animator.FlipX = true;
 				_velocity.X = -MoveSpeed;
 			}
 			else if (moveDir.X > 0)
 			{
-				if (_collisionState.Below)
 					animation = "Run";
 				_animator.FlipX = false;
 				_velocity.X = MoveSpeed;
@@ -146,23 +144,23 @@ namespace MonoGameTest.Sprites
 					animation = "Idle";
 			}
 
-			if (_collisionState.Below && _jumpInput.IsPressed)
+			if ( _jumpInput.IsPressed)
 			{
 				animation = "Jumping";
 				_velocity.Y = -Mathf.Sqrt(2f * JumpHeight * Gravity);
 			}
 
-			if (!_collisionState.Below && _velocity.Y > 0)
+			if ( _velocity.Y > 0)
 				animation = "Falling";
 
 			// apply gravity
-			_velocity.Y += Gravity * Time.DeltaTime;
+			//_velocity.Y += Gravity * Time.DeltaTime;
 
 			// move
 			_mover.Move(_velocity * Time.DeltaTime, _boxCollider, _collisionState);
 
-			if (_collisionState.Below)
-				_velocity.Y = 0;
+			//if (_collisionState.Below)
+			//	_velocity.Y = 0;
 
 			if (animation != null && !_animator.IsAnimationActive(animation))
 				_animator.Play(animation);

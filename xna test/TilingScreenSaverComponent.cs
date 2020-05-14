@@ -11,6 +11,7 @@ using MonoGame.Utilities.Deflate;
 using Nez;
 using ScreenSaverHelper;
 using SharedKernel;
+using SharedKernel.Interfaces;
 using Color = Microsoft.Xna.Framework.Color;
 using IDrawable = Nez.UI.IDrawable;
 using Random = System.Random;
