@@ -1,25 +1,21 @@
-﻿using Nez;
-using ScreenSaverEngine2.Shared;
-using SharedKernel.Enums;
-using SharedKernel.Interfaces;
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Net.NetworkInformation;
 using Microsoft.Xna.Framework.Graphics;
+using Nez;
 using Nez.Sprites;
-using Nez.Tweens;
-using Unity;
+using ScreenSaverEngine2.Shared;
+using SharedKernel.Enums;
+using SharedKernel.Interfaces;
 using Debug = Nez.Debug;
 using Random = Nez.Random;
 
-namespace ScreenSaverEngine2.Scenes
+namespace ScreenSaverEngine2.Scenes.SceneHelpers
 {
     public abstract class BaseScreenSaver : StartSceneSubSceneHelper
     {
@@ -207,7 +203,7 @@ namespace ScreenSaverEngine2.Scenes
 
         private void EnqueueLoadingBoundingBoxes(byte[] imageData)
         {
-            SceneHelpers.DelegateDeclarationListRectangle d1 = ImageHelper.GetSpriteBoundingBoxesInImage;
+            ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListRectangle d1 = ImageHelper.GetSpriteBoundingBoxesInImage;
             RunLoadingFunction rlf = new RunLoadingFunction(d1, 0, true, imageData, 4, 1);
 
             rlf.JobComplete += (sender, e) =>
@@ -222,7 +218,7 @@ namespace ScreenSaverEngine2.Scenes
             LoadingFunctions.Enqueue(rlf);
         }
 
-        private void EnqueueLoadingFunction(SceneHelpers.DelegateDeclarationBool processToRun, int minDuration, bool useBackgroundThread)
+        private void EnqueueLoadingFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationBool processToRun, int minDuration, bool useBackgroundThread)
         {
             RunLoadingFunction rlf1 = new RunLoadingFunction(processToRun, minDuration, useBackgroundThread);
             rlf1.JobComplete += (sender, args) =>
@@ -233,7 +229,7 @@ namespace ScreenSaverEngine2.Scenes
             LoadingFunctions.Enqueue(rlf1);
         }
 
-        private void EnqueueLoadingFunction(SceneHelpers.DelegateDeclarationImageData processToRun, int minDuration, bool useBackgroundThread)
+        private void EnqueueLoadingFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationImageData processToRun, int minDuration, bool useBackgroundThread)
         {
             RunLoadingFunction rlf = new RunLoadingFunction(processToRun, minDuration, useBackgroundThread);
             rlf.JobComplete += (sender, e) =>
@@ -250,7 +246,7 @@ namespace ScreenSaverEngine2.Scenes
 
         private void EnqueueLoadingSpritesFromImageBoxData(List<Rectangle> boxData)
         {
-            SceneHelpers.DelegateDeclarationListCroppedImageParts d1 = ImageHelper.GetSpritesFromImage;
+            ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListCroppedImageParts d1 = ImageHelper.GetSpritesFromImage;
             RunLoadingFunction rlf = new RunLoadingFunction(d1, 0, true, this.BackgroundImage,
                 boxData.OrderByDescending(r => r.Width * r.Height).Take(MaxFloatingRigidBodies).ToList());
 

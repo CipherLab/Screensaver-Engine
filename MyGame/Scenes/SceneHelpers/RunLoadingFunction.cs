@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Nez;
 using SharedKernel.Interfaces;
 
-namespace ScreenSaverEngine2.Scenes
+namespace ScreenSaverEngine2.Scenes.SceneHelpers
 {
     public class RunLoadingFunction
     {
@@ -18,21 +18,21 @@ namespace ScreenSaverEngine2.Scenes
         private readonly int _padBoxes;
 
         //IEnumerable<ICroppedImagePart> DetectedObjectImages
-        public RunLoadingFunction(SceneHelpers.DelegateDeclarationBool functionToRun, int minDuration, bool loadOnBackgroundThread)
+        public RunLoadingFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationBool functionToRun, int minDuration, bool loadOnBackgroundThread)
         {
             MinDuration = minDuration;
             BoolReturnFunctionToRun = functionToRun;
             LoadOnBackgroundThread = loadOnBackgroundThread;
         }
 
-        public RunLoadingFunction(SceneHelpers.DelegateDeclarationImageData functionToRun, int minDuration, bool loadOnBackgroundThread)
+        public RunLoadingFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationImageData functionToRun, int minDuration, bool loadOnBackgroundThread)
         {
             MinDuration = minDuration;
             ImageDataReturnFunctionToRun = functionToRun;
             LoadOnBackgroundThread = loadOnBackgroundThread;
         }
 
-        public RunLoadingFunction(SceneHelpers.DelegateDeclarationListRectangle functionToRun, int minDuration, bool loadOnBackgroundThread, byte[] imageData, int distanceBetweenTiles, int padBoxes)
+        public RunLoadingFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListRectangle functionToRun, int minDuration, bool loadOnBackgroundThread, byte[] imageData, int distanceBetweenTiles, int padBoxes)
         {
             MinDuration = minDuration;
             _imageData = imageData;
@@ -42,7 +42,7 @@ namespace ScreenSaverEngine2.Scenes
             LoadOnBackgroundThread = loadOnBackgroundThread;
         }
 
-        public RunLoadingFunction(SceneHelpers.DelegateDeclarationListCroppedImageParts functionToRun, int minDuration, bool loadOnBackgroundThread, byte[] imageData, List<Rectangle> boundingBoxes)
+        public RunLoadingFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListCroppedImageParts functionToRun, int minDuration, bool loadOnBackgroundThread, byte[] imageData, List<Rectangle> boundingBoxes)
         {
             MinDuration = minDuration;
             _imageData = imageData;
@@ -53,13 +53,13 @@ namespace ScreenSaverEngine2.Scenes
 
         public event EventHandler<JobCompleteEventArgs> JobComplete;
 
-        public SceneHelpers.DelegateDeclarationListCroppedImageParts ListCroppedImagePartsReturnFunctionToRun { get; set; }
-        public SceneHelpers.DelegateDeclarationListRectangle ListRectangleReturnFunctionToRun { get; set; }
+        public ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListCroppedImageParts ListCroppedImagePartsReturnFunctionToRun { get; set; }
+        public ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListRectangle ListRectangleReturnFunctionToRun { get; set; }
         public int MinDuration { get; set; }
 
-        private SceneHelpers.DelegateDeclarationBool BoolReturnFunctionToRun { get; }
+        private ScreenSaverEngine2.SceneHelpers.DelegateDeclarationBool BoolReturnFunctionToRun { get; }
 
-        private SceneHelpers.DelegateDeclarationImageData ImageDataReturnFunctionToRun { get; }
+        private ScreenSaverEngine2.SceneHelpers.DelegateDeclarationImageData ImageDataReturnFunctionToRun { get; }
 
         //private bool ReadyToExecute { get; set; }
         private bool IsFunctionDone { get; set; }
@@ -98,7 +98,7 @@ namespace ScreenSaverEngine2.Scenes
             }
         }
 
-        protected IEnumerator RunFunction(SceneHelpers.DelegateDeclarationBool thingToRun)
+        protected IEnumerator RunFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationBool thingToRun)
         {
             if (LoadOnBackgroundThread)
             {
@@ -125,7 +125,7 @@ namespace ScreenSaverEngine2.Scenes
             OnJobComplete(new JobCompleteEventArgs(true));
         }
 
-        protected IEnumerator RunFunction(SceneHelpers.DelegateDeclarationListRectangle thingToRun)
+        protected IEnumerator RunFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListRectangle thingToRun)
         {
             List<Rectangle> boxData = new List<Rectangle>();
             if (LoadOnBackgroundThread)
@@ -151,7 +151,7 @@ namespace ScreenSaverEngine2.Scenes
             OnJobComplete(new JobCompleteEventArgs(true, boxData));
         }
 
-        protected IEnumerator RunFunction(SceneHelpers.DelegateDeclarationListCroppedImageParts thingToRun)
+        protected IEnumerator RunFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListCroppedImageParts thingToRun)
         {
             IEnumerable<ICroppedImagePart> boxData = new List<ICroppedImagePart>();
             if (LoadOnBackgroundThread)
@@ -177,7 +177,7 @@ namespace ScreenSaverEngine2.Scenes
             OnJobComplete(new JobCompleteEventArgs(true, boxData));
         }
 
-        protected IEnumerator RunFunction(SceneHelpers.DelegateDeclarationImageData thingToRun)
+        protected IEnumerator RunFunction(ScreenSaverEngine2.SceneHelpers.DelegateDeclarationImageData thingToRun)
         {
             byte[] imageData = null;
             if (LoadOnBackgroundThread)

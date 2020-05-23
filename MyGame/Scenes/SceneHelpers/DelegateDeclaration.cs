@@ -2,7 +2,7 @@
 using System.Drawing;
 using SharedKernel.Interfaces;
 
-namespace ScreenSaverEngine2.Scenes
+namespace ScreenSaverEngine2.Scenes.SceneHelpers
 {
     public delegate bool DelegateDeclarationBool();
 

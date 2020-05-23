@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.Xna.Framework.Graphics;
 using ScreenSaverEngine2.Attributes;
+using ScreenSaverEngine2.Scenes.SceneHelpers;
 using SharedKernel.Interfaces;
 using Unity;
 

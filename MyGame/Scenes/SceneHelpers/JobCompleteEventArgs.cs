@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using SharedKernel.Interfaces;
 
-namespace ScreenSaverEngine2.Scenes
+namespace ScreenSaverEngine2.Scenes.SceneHelpers
 {
     public class JobCompleteEventArgs : EventArgs
     {
