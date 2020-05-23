@@ -23,34 +23,31 @@ namespace ScreenSaverEngine2
         public int Height { get; set; }
         public int Width { get; set; }
 
-
         public const int ScreenSpaceRenderLayer = 999;
         public UICanvas Canvas;
         public UICanvas ForeGroundStage;
 
-
-        Table _table;
-        List<Button> _sceneButtons = new List<Button>();
-        ScreenSpaceRenderer _screenSpaceRenderer;
-        static bool _needsFullRenderSizeForUi;
+        private Table _table;
+        private List<Button> _sceneButtons = new List<Button>();
+        private ScreenSpaceRenderer _screenSpaceRenderer;
+        private static bool _needsFullRenderSizeForUi;
 
         public SpriteFont SimpleFont { get; set; }
+
         public override void Initialize()
         {
             Init(false, false);
             //  Graphics.Instance.BitmapFont = Core.Content.LoadBitmapFont("Content\\Shared\\montserrat-32.fnt");
         }
 
-     
-
         private void Init(bool addExcludeRenderer, bool needsFullRenderSizeForUi)
         {
+            this.SimpleFont = Content.Load<SpriteFont>("Shared\\SimpleFont");
             SetDesignResolution(Width, Height, Scene.SceneResolutionPolicy.ShowAll);
             Screen.SetSize(Width, Height);
 
             Screen.IsFullscreen = IsFullScreen;
             Screen.ApplyChanges();
-
 
             if (HasGui)
             {
@@ -72,7 +69,6 @@ namespace ScreenSaverEngine2
                 if (addExcludeRenderer)
                     AddRenderer(new RenderLayerExcludeRenderer(0, ScreenSpaceRenderLayer));
 
-
                 // create our canvas and put it on the screen space render layer
                 Canvas = CreateEntity("ui").AddComponent(new UICanvas());
                 Canvas.IsFullScreen = true;
@@ -82,8 +78,7 @@ namespace ScreenSaverEngine2
             }
         }
 
-
-        void SetupSceneSelector()
+        private void SetupSceneSelector()
         {
             _table = Canvas.Stage.AddElement(new Table());
             _table.SetFillParent(true).Right().Top();
@@ -108,16 +103,16 @@ namespace ScreenSaverEngine2
 
             //var buttonStyle = new TextButtonStyle(
             //             new PrimitiveDrawable(new Color(78, 91, 98), 10f),
-            //	new PrimitiveDrawable(new Color(244, 23, 135)), 
+            //	new PrimitiveDrawable(new Color(244, 23, 135)),
             //             new PrimitiveDrawable(new Color(168, 207, 115)))
             //{
             //	DownFontColor = Color.Black
             //};
 
-
             // find every Scene with the SampleSceneAttribute and create a button for each one
         }
-        IEnumerable<Type> GetTypesWithWindowedSceneAttribute()
+
+        private IEnumerable<Type> GetTypesWithWindowedSceneAttribute()
         {
             var assembly = typeof(StartSceneSubSceneHelper).Assembly;
             var scenes = assembly.GetTypes()
@@ -128,8 +123,6 @@ namespace ScreenSaverEngine2
             foreach (var s in scenes)
                 yield return s;
         }
-
-
 
         public bool HasGui { get; set; }
 
@@ -174,27 +167,26 @@ namespace ScreenSaverEngine2
             }
         }
 
-  
-        void AddInstructionText(string text)
+        private void AddInstructionText(string text)
         {
             var instructionsEntity = CreateEntity("instructions");
             instructionsEntity
                 .AddComponent(new TextComponent(
                     //this.SensationBitmapFont,
                     new NezSpriteFont(this.SimpleFont),
-                    //Graphics.Instance.BitmapFont, 
+                    //Graphics.Instance.BitmapFont,
                     text, new Vector2(10, 10), Color.White))
                 .SetRenderLayer(ScreenSpaceRenderLayer);
         }
 
-        void OnToggleSceneListClicked(Button butt)
+        private void OnToggleSceneListClicked(Button butt)
         {
             foreach (var button in _sceneButtons)
                 button.SetIsVisible(!button.IsVisible());
         }
 
         [Nez.Console.Command("toggle-imgui", "Toggles the Dear ImGui renderer")]
-        static void ToggleImGui()
+        private static void ToggleImGui()
         {
             if (_needsFullRenderSizeForUi)
             {
@@ -235,8 +227,6 @@ namespace ScreenSaverEngine2
             _screenSpaceRenderer.Render(_scene);
         }
 
-
-        #endregion
+        #endregion IFinalRenderDelegate
     }
-
 }

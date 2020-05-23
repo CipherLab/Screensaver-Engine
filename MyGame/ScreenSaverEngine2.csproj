@@ -20,6 +20,10 @@
     <None Remove="Content\obj\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Scenes\SpriteCharWRigidBodyBg.cs" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <PackageReference Include="MonoGame.Content.Builder" Version="3.7.0.9" />

@@ -1,7 +1,4 @@
-﻿using Microsoft.Xna.Framework.Graphics;
-using Nez;
-using Nez.Sprites;
-using ScreenSaverEngine2.Attributes;
+﻿using Nez;
 using ScreenSaverEngine2.Shared;
 using SharedKernel.Enums;
 using SharedKernel.Interfaces;
@@ -15,95 +12,123 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Net.NetworkInformation;
+using Microsoft.Xna.Framework.Graphics;
+using Nez.Sprites;
 using Nez.Tweens;
 using Unity;
 using Debug = Nez.Debug;
-using Graphics = Nez.Graphics;
 using Random = Nez.Random;
 
 namespace ScreenSaverEngine2.Scenes
 {
-    [StartupGuiScene("RigidBodyScene", 9999, "")]
-    public class RigidBodyFromImageSaver : StartSceneSubSceneHelper, IDisposable, IRigidBodyFromImageSaver
+    public abstract class BaseScreenSaver : StartSceneSubSceneHelper
     {
-        public byte[] BackgroundImage { get; set; }
-        public bool HasGlitchPostProcessor { get; set; }
-        public bool HasEdgeDetectedRigidFloatingObjects { get; set; }
-        public bool HasRigidBorders { get; set; }
-        public bool RenderRigidBodiesAfterPostProcess { get; set; }
-        public ISimpleImageHelper ImageHelper { get; }
-        public int MaxFloatingRigidBodies { get; set; }
+        protected ISimpleImageHelper ImageHelper { get; set; }
+        protected bool HasGlitchPostProcessor { get; set; }
+        protected bool HasRigidBorders { get; set; }
+        protected bool HasEdgeDetectRigidFloatingObjectsFromBackground { get; set; }
+        protected bool RenderRigidBodiesAfterPostProcessors { get; set; }
+        protected int MaxFloatingRigidBodies { get; set; }
 
-        private PixelGlitchPostProcessor PixelGlitchPostProcessor { get; set; }
+        //these are in StartSceneSubSceneHelper
+        //protected bool IsFullScreen { get; set; }
+        //protected bool HasGui { get; set; }
+        //protected int Height { get; set; }
+        //protected int Width { get; set; }
+        protected byte[] BackgroundImage { get; set; }
+
+        //must override
+        //public abstract override string ToString();
+
+        public virtual bool SetBackgroundImage()
+        {
+            int backgroundRenderLayer = 15;
+            var originalImageTex = Texture2D.FromStream(Nez.Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(BackgroundImage));
+
+            var spriteR = new SpriteRenderer(originalImageTex);
+
+            spriteR.SetRenderLayer(backgroundRenderLayer);
+
+            var bgEnt = CreateEntity("bg").SetPosition(Screen.Center);
+
+            var bgComponent = bgEnt.AddComponent(spriteR);
+            bgComponent.SetRenderLayer(backgroundRenderLayer);
+
+            return true;
+        }
+
+        //Optional to override
+        public abstract void InitProps(byte[] backgroundImage,
+            ISimpleImageHelper imageHelper,
+            bool hasGlitchPostProcessor,
+            bool hasRigidBorders,
+            bool edgeDetectRigidFloatingObjectsFromBackground,
+            bool renderRigidBodiesAfterPostProcessors,
+            int maxFloatingRigidBodies,
+            bool isFullScreen,
+            bool hasGui,
+            int height,
+            int width);
+
+        //Here's the functionality, override it if you want (or as abstract override to force next class)
+        public virtual string ToString3()
+        {
+            return string.Empty;
+        }
 
         private bool StartUpdate { get; set; }
 
-        public int GlitchOffsetMax = 0;
-        public int GlitchOffsetMin = 0;
+        private int GlitchOffsetMax = 0;
+        private int GlitchOffsetMin = 0;
         private readonly int BackgroundRenderLayer = 15;
         private readonly int RigidBodiesRenderLayer = 5;
         private bool _isFunctionDone = true;
-
+        private PixelGlitchPostProcessor PixelGlitchPostProcessor { get; set; }
         private ConcurrentQueue<RunLoadingFunction> LoadingFunctions = new ConcurrentQueue<RunLoadingFunction>();
-
-        public override void Initialize()
-        {
-            InitInterfaceProprties();
-            base.Initialize();
-        }
-
-        public void InitInterfaceProprties()
-        {
-            this.SimpleFont = Content.Load<SpriteFont>("Shared\\SimpleFont");
-            this.Width = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
-            this.Height = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
-            //this.Width = 1920;
-            //this.Height = 1080;
-
-            this.HasGui = false;
-            this.BackgroundImage = Game1.StartupBackgroundScreenshot;
-            this.IsFullScreen = true;
-            this.HasRigidBorders = true;
-            this.HasGlitchPostProcessor = true;
-            this.HasEdgeDetectedRigidFloatingObjects = true;
-            this.RenderRigidBodiesAfterPostProcess = true;
-            this.MaxFloatingRigidBodies = 300;
-        }
-
-        public RigidBodyFromImageSaver()
-        {
-            ImageHelper = Game1.Container.Resolve<ISimpleImageHelper>();
-        }
 
         public override void OnStart()
         {
             var bg = AddRenderer(new RenderLayerRenderer(0, BackgroundRenderLayer));
             var rb = AddRenderer(new RenderLayerRenderer(1, RigidBodiesRenderLayer));
             bg.WantsToRenderAfterPostProcessors = false;
-            rb.WantsToRenderAfterPostProcessors = RenderRigidBodiesAfterPostProcess;
+            rb.WantsToRenderAfterPostProcessors = RenderRigidBodiesAfterPostProcessors;
 
             this.AddRenderer(bg);
             this.AddRenderer(rb);
 
-            EnqueueLoadingFunction(SetBackground, 0, false);
+            EnqueueLoadingFunction(SetBackgroundImage, 0, false);
 
             if (HasRigidBorders)
                 EnqueueLoadingFunction(AddRigidBorders, 0, false);
 
-            if (HasEdgeDetectedRigidFloatingObjects)
+            if (HasEdgeDetectRigidFloatingObjectsFromBackground)
                 EnqueueLoadingFunction(GetEdgeDetectedObjectsFromBackground, 0, true);
 
             if (HasGlitchPostProcessor)
             {
                 PixelGlitchPostProcessor = AddPostProcessor(new PixelGlitchPostProcessor(1));
                 PixelGlitchPostProcessor.HorizontalOffset = 0;
-                Core.StartCoroutine(GlitchGlitchBackground(1, 5));
+                Core.StartCoroutine(GlitchBackground(1, 5));
             }
 
             Core.StartCoroutine(RunAllFunctions(LoadingFunctions));
 
             base.OnStart();
             StartUpdate = true;
+        }
+
+        public override void Update()
+        {
+            if (!StartUpdate)
+                return;
+
+            if (GlitchOffsetMin + GlitchOffsetMax <= 0 && !LoadingFunctions.Any())
+            {
+                GlitchOffsetMin = 1;
+                GlitchOffsetMax = 4;
+            }
+
+            base.Update();
         }
 
         public IEnumerator AddRigidBodyPartsToScene(List<ICroppedImagePart> parts)
@@ -126,7 +151,7 @@ namespace ScreenSaverEngine2.Scenes
             ImageHelper?.Dispose();
         }
 
-        public IEnumerator GlitchGlitchBackground(int glitchDelayMin, int glitchDelayMax)
+        public IEnumerator GlitchBackground(int glitchDelayMin, int glitchDelayMax)
         {
             yield return null;
 
@@ -162,20 +187,6 @@ namespace ScreenSaverEngine2.Scenes
                 }
                 yield return null;
             }
-        }
-
-        public override void Update()
-        {
-            if (!StartUpdate)
-                return;
-
-            if (GlitchOffsetMin + GlitchOffsetMax <= 0 && !LoadingFunctions.Any())
-            {
-                GlitchOffsetMin = 1;
-                GlitchOffsetMax = 4;
-            }
-
-            base.Update();
         }
 
         private bool AddRigidBodies(ICroppedImagePart part)
@@ -258,23 +269,6 @@ namespace ScreenSaverEngine2.Scenes
         private byte[] GetEdgeDetectedObjectsFromBackground()
         {
             return ImageHelper.EdgeDetectedFilledBlack(this.BackgroundImage, ImageFormat.Png);
-        }
-
-        private bool SetBackground()
-        {
-            var originalImageTex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(BackgroundImage));
-
-            var spriteR = new SpriteRenderer(originalImageTex);
-
-            spriteR.SetRenderLayer(BackgroundRenderLayer);
-
-            var bgEnt = CreateEntity("bg").SetPosition(Screen.Center);
-
-            var bgComponent = bgEnt.AddComponent(spriteR);
-            bgComponent.SetRenderLayer(BackgroundRenderLayer);
-
-            Debug.DrawText("AddRigidBorders", 1000f);
-            return true;
         }
     }
 }
