@@ -15,27 +15,26 @@ namespace FancyTiling
 {
     public partial class MainForm : Form
     {
-
         #region Preview API's
 
         [DllImport("user32.dll")]
-        static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
+        private static extern IntPtr SetParent(IntPtr hWndChild, IntPtr hWndNewParent);
 
         [DllImport("user32.dll")]
-        static extern int SetWindowLong(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
+        private static extern int SetWindowLong(IntPtr hWnd, int nIndex, IntPtr dwNewLong);
 
         [DllImport("user32.dll", SetLastError = true)]
-        static extern int GetWindowLong(IntPtr hWnd, int nIndex);
+        private static extern int GetWindowLong(IntPtr hWnd, int nIndex);
 
         [DllImport("user32.dll")]
-        static extern bool GetClientRect(IntPtr hWnd, out Rectangle lpRect);
+        private static extern bool GetClientRect(IntPtr hWnd, out Rectangle lpRect);
 
-        #endregion
+        #endregion Preview API's
 
         private Timer Timer { get; set; }
         private Settings Settings { get; set; }
-        bool _isPreviewMode = false;
-   
+        private bool _isPreviewMode = false;
+
         #region Constructors
 
         public MainForm()
@@ -47,6 +46,7 @@ namespace FancyTiling
         //It is used when in normal mode
         public MainForm(Rectangle bounds)
         {
+            //bounds = new Rectangle(0, 0, 1800, 800);
             InitializeComponent();
             this.Bounds = bounds;
             //hide the cursor
@@ -54,7 +54,7 @@ namespace FancyTiling
 
             Settings = new Settings();
             Settings.Load();
-             
+
             Cursor.Hide();
             TopMost = true;
 
@@ -70,8 +70,6 @@ namespace FancyTiling
                 null, 0, Settings.Speed * 1000);
             // this.BackgroundImage = new Bitmap(1,1);
             //  ShowImage(_imageFiles[0]);
-
-
         }
 
         //This constructor is the handle to the select screensaver dialog preview window
@@ -97,8 +95,7 @@ namespace FancyTiling
             _isPreviewMode = true;
         }
 
-        #endregion
-
+        #endregion Constructors
 
         //sets up the fake BSOD
         private void MainForm_Shown(object sender, EventArgs e)
@@ -117,6 +114,7 @@ namespace FancyTiling
         }
 
         public bool IsLoadingNext = false;
+
         private async Task ShowImage(string f)
         {
             Timer.Change(Settings.Speed * 1000, Timeout.Infinite);
@@ -145,18 +143,19 @@ namespace FancyTiling
         }
 
         private int _imageIdx = 0;
-        private void ShowPrevImage()
-        {
 
+        private async Task ShowPrevImage()
+        {
             if (IsLoadingNext)
                 return;
 
             if (_imageIdx <= 0)
                 return;
 
-            ShowImage(_imageFiles[--_imageIdx]);
+            await ShowImage(_imageFiles[--_imageIdx]);
         }
-        private void ShowNextImage(object state)
+
+        private async void ShowNextImage(object state)
         {
             if (IsLoadingNext)
                 return;
@@ -164,15 +163,13 @@ namespace FancyTiling
             if (_imageIdx >= _imageFiles.Count)
                 _imageIdx = 0;
 
-            ShowImage(_imageFiles[++_imageIdx]);
+            await ShowImage(_imageFiles[++_imageIdx]);
         }
 
         private void LoadSettings()
         {
             this.LoadSettings();
         }
-
-    
 
         #region User Input
 
@@ -205,7 +202,7 @@ namespace FancyTiling
         //start off OriginalLoction with an X and Y of int.MaxValue, because
         //it is impossible for the cursor to be at that position. That way, we
         //know if this variable has been set yet.
-        Point _originalLocation = new Point(int.MaxValue, int.MaxValue);
+        private Point _originalLocation = new Point(int.MaxValue, int.MaxValue);
 
         private void MainForm_MouseMove(object sender, MouseEventArgs e)
         {
@@ -224,6 +221,6 @@ namespace FancyTiling
             }
         }
 
-        #endregion
+        #endregion User Input
     }
 }

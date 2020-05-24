@@ -15,7 +15,6 @@ using Rectangle = System.Drawing.Rectangle;
 using Zavolokas.GdiExtensions;
 using Zavolokas.ImageProcessing.PatchMatch;
 
-
 namespace ScreenSaverHelper
 {
     public class ImageHelper : IDisposable, ISimpleImageHelper, IHeroSpriteImageHelper
@@ -26,31 +25,33 @@ namespace ScreenSaverHelper
         private IMagickImage OriginalImage { get; }
 
         private string ImageFile { get; }
+
         public ImageHelper(Rectangle bounds, string imageFile)
         {
             Bounds = bounds;
             ImageFile = imageFile;
             OriginalImage = new MagickImage(imageFile);
         }
+
         public ImageHelper(byte[] imageData)
         {
             OriginalImage = new MagickImage(imageData);
         }
+
         public ImageHelper(Rectangle bounds, byte[] imageData)
         {
             Bounds = bounds;
             OriginalImage = new MagickImage(imageData, MagickFormat.Jpg);
         }
+
         public ImageHelper()
         {
         }
-
 
         public ImageHelper(string file)
         {
             OriginalImage = new MagickImage(file);
             Bounds = new Rectangle(0, 0, OriginalImage.Width, OriginalImage.Height);
-
         }
 
         public byte[] GetFlattenedSprite()
@@ -60,12 +61,12 @@ namespace ScreenSaverHelper
                 int idx = 0;
                 foreach (var s in SpriteLocations)
                 {
-
                 }
 
                 return imageCol.Flatten(MagickColors.Transparent).ToByteArray(MagickFormat.Png);
             }
         }
+
         public byte[] MirrorUpconvertImage()
         {
             int origWidth = OriginalImage.Width;
@@ -73,7 +74,6 @@ namespace ScreenSaverHelper
             string i = ImageFile;
             if (origHeight >= Bounds.Height && origWidth >= Bounds.Width)
             {
-
                 Debug.WriteLine($"{new FileInfo(i).Name} - Original image is big enough");
                 var size = new MagickGeometry(Bounds.Width, Bounds.Height);
                 size.IgnoreAspectRatio = true;
@@ -107,9 +107,9 @@ namespace ScreenSaverHelper
                 return mirroredHImage;
             }
 
-
             return GetImageByteArrayFromFile(i);
         }
+
         /// <summary>
         /// Creates the edge filled object black with no transparency
         /// </summary>
@@ -122,11 +122,12 @@ namespace ScreenSaverHelper
 
             return GetSpriteBoundingBoxesInImage(OriginalImage.ToByteArray(), distanceBetweenTiles, padBoxes);
         }
+
         public byte[] GetImageByteArrayFromFile(string filename)
         {
             return new MagickImage(filename).ToByteArray();
-
         }
+
         public byte[] GetBlurImageByteArrayFromFile(string filename, int factor)
         {
             using (var img = new MagickImage(filename))
@@ -136,6 +137,7 @@ namespace ScreenSaverHelper
                 return img.ToByteArray();
             }
         }
+
         public byte[] GetBlurImageByteArrayFromData(int factor)
         {
             using (var img = OriginalImage.Clone())
@@ -146,6 +148,7 @@ namespace ScreenSaverHelper
                 return img.ToByteArray(MagickFormat.Png);
             }
         }
+
         public byte[] ChangeBrightness(int factor)
         {
             using (var img = OriginalImage.Clone())
@@ -187,7 +190,6 @@ namespace ScreenSaverHelper
                     image.FloodFill(MagickColors.Black, i, image.Height / i - 1);
                     image.FloodFill(MagickColors.Black, image.Width / i - 1, i);
                     image.FloodFill(MagickColors.Black, image.Width / i - 1, image.Height / i - 1);
-
                 }
                 //image.Write($"c:\\temp\\Flatten1-S{sigma}-{lowerP}-{upperP}.png");
                 if (format == ImageFormat.Png)
@@ -201,9 +203,9 @@ namespace ScreenSaverHelper
                     return image.ToByteArray(MagickFormat.Png);
                 }
                 throw new FormatException($"{format} not accounted for");
-
             }
         }
+
         public byte[] EdgeDetectedFilledBlack(ImageFormat format)
         {
             var fmt = MagickFormat.Png;
@@ -280,7 +282,6 @@ namespace ScreenSaverHelper
             }
         }
 
-
         public IEnumerable<ICroppedImagePart> GetSpritesFromImage(List<Rectangle> boxes, bool makeTransparent)
         {
             return boxes.Select(r => GetSpriteFromImage(OriginalImage.ToByteArray(), r, false, makeTransparent)).ToList();
@@ -308,7 +309,6 @@ namespace ScreenSaverHelper
                 {
                     if (makeTransparent)
                     {
-
                         int m = 15;
                         bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
                         stream.Seek(0, SeekOrigin.Begin);
@@ -352,8 +352,6 @@ namespace ScreenSaverHelper
                                 ImageProperties = box
                             };
                         }
-
-
                     }
                     bitmap.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
                     stream.Seek(0, SeekOrigin.Begin);
@@ -368,7 +366,6 @@ namespace ScreenSaverHelper
                             ImageProperties = box
                         };
                     }
-
                 }
             }
         }
@@ -466,14 +463,11 @@ namespace ScreenSaverHelper
 
         public ICroppedImagePart GetSpriteFromImage(Rectangle box, bool flipH, bool alpha)
         {
-
             return GetSpriteFromImage(OriginalImage.ToByteArray(), box, flipH, alpha);
         }
 
         public byte[] ImageMaskFromSprites(List<Rectangle> boxes)
         {
-
-
             using (var blankImage = new System.Drawing.Bitmap(OriginalImage.Width, OriginalImage.Height))
             {
                 var memStream = new MemoryStream();
@@ -495,6 +489,7 @@ namespace ScreenSaverHelper
                 }
             }
         }
+
         public byte[] ContentAwareFillFromSpriteImageMask(List<Rectangle> boxes)
         {
             var partsToFillImage = ImageMaskFromSprites(boxes);
@@ -510,8 +505,6 @@ namespace ScreenSaverHelper
                 PatchDistanceCalculator = ImagePatchDistance.Cie76,
                 IgnoreInpaintedPixelsOnFirstIteration = false,
             });
-
-
 
             using (MemoryStream sout = new MemoryStream())
             {
