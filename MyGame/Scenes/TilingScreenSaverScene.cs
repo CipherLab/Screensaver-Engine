@@ -1,34 +1,50 @@
 ﻿using System;
+using System.Drawing;
+using System.IO;
 using Microsoft.Xna.Framework.Graphics;
+using Nez;
 using ScreenSaverEngine2.Attributes;
 using ScreenSaverEngine2.Scenes.SceneHelpers;
 using SharedKernel.Interfaces;
 using Unity;
+using Graphics = Nez.Graphics;
 
 namespace ScreenSaverEngine2.Scenes
 {
-    [StartupGuiScene("RigidBodyScene", 9999, "")]
+    [StartupGuiScene("TilingScreenSaverScene", 9999, "")]
     //can't use reflection to setup an abstract class as a scene
-    public class RigidBodyScene : BaseScreenSaver
+    public class TilingScreenSaverScene : BaseScreenSaver
     {
         public override void Initialize()
         {
             InitProps(
-                Game1.StartupBackgroundScreenshot,
+                true,
+                true,
+                false,
+                true);
+            base.Initialize();
+        }
+
+        private void InitProps(
+            bool isTilingScreenSaver,
+            bool hasVignettePostProcessor,
+            bool hasGui,
+            bool isFullScreen)
+        {
+            InitProps(
+                null,
                 Game1.Container.Resolve<ISimpleImageHelper>(),
+                isTilingScreenSaver,
+                hasVignettePostProcessor,
                 false,
                 false,
-                true,
-                true,
-                true,
-                true,
-                300,
                 false,
-                true,
+                false,
+                0,
+                isFullScreen,
+                hasGui,
                 GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height,
                 GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width);
-
-            base.Initialize();
         }
 
         //thought this would help make sure everything that must be set is set
@@ -36,8 +52,8 @@ namespace ScreenSaverEngine2.Scenes
             byte[] backgroundImage,
             ISimpleImageHelper imageHelper,
             bool isTilingScreenSaver,
-            bool hasGlitchPostProcessor,
             bool hasVignettePostProcessor,
+            bool hasGlitchPostProcessor,
             bool hasRigidBorders,
             bool edgeDetectRigidFloatingObjectsFromBackground,
             bool renderRigidBodiesAfterPostProcessors,
@@ -47,8 +63,10 @@ namespace ScreenSaverEngine2.Scenes
             int height,
             int width)
         {
+            this.IsTilingScreenSaver = isTilingScreenSaver;
             this.BackgroundImage = backgroundImage;
             this.ImageHelper = imageHelper;
+            this.HasVignettePostProcessor = hasVignettePostProcessor;
             this.HasGlitchPostProcessor = hasGlitchPostProcessor;
             this.HasRigidBorders = hasRigidBorders;
             this.HasEdgeDetectRigidFloatingObjectsFromBackground = edgeDetectRigidFloatingObjectsFromBackground;

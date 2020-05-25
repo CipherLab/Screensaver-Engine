@@ -11,14 +11,13 @@ namespace SharedKernel.Enums
         Top,
         Bottom
     }
+
     public enum Phase
     {
-        ShowBackground,
-        BlurBackground,
-        TwitchAndLoad1,
-        TwitchAndLoad2,
-        RigidBodyMode,
-        None
-
+        GetImage,
+        GotImage,
+        FadeIn,
+        FadeOut,
+        ShowImage
     }
 }

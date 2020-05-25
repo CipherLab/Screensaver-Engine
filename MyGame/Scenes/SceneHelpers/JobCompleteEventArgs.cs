@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using Microsoft.Xna.Framework.Graphics;
+using SharedKernel.Enums;
 using SharedKernel.Interfaces;
 
 namespace ScreenSaverEngine2.Scenes.SceneHelpers
@@ -34,5 +36,23 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
         public IEnumerable<ICroppedImagePart> CroppedImageParts { get; set; }
         public byte[] EdgeDetectedImageData { get; set; }
         public List<Rectangle> BoxData { get; set; }
+    }
+
+    public class TilingSaverPhaseChangeEventArgs : EventArgs
+    {
+        public TilingSaverPhaseChangeEventArgs(Phase currentPhase, Texture2D newTiledImage)
+        {
+            CurrentPhase = currentPhase;
+            NewTiledImage = newTiledImage;
+        }
+
+        public TilingSaverPhaseChangeEventArgs(Phase currentPhase)
+        {
+            CurrentPhase = currentPhase;
+        }
+
+        public Phase CurrentPhase { get; set; }
+
+        public Texture2D NewTiledImage { get; set; }
     }
 }

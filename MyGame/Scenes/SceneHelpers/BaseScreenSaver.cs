@@ -2,18 +2,21 @@
 using System.Collections;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
 using Nez.Sprites;
+using Nez.Textures;
 using ScreenSaverEngine2.Shared;
 using SharedKernel.Enums;
 using SharedKernel.Interfaces;
+using Color = System.Drawing.Color;
 using Debug = Nez.Debug;
 using Random = Nez.Random;
+using Rectangle = System.Drawing.Rectangle;
 
 namespace ScreenSaverEngine2.Scenes.SceneHelpers
 {
@@ -21,6 +24,9 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
     {
         protected ISimpleImageHelper ImageHelper { get; set; }
         protected bool HasGlitchPostProcessor { get; set; }
+        protected bool HasVignettePostProcessor { get; set; }
+
+        protected bool IsTilingScreenSaver { get; set; }
         protected bool HasRigidBorders { get; set; }
         protected bool HasEdgeDetectRigidFloatingObjectsFromBackground { get; set; }
         protected bool RenderRigidBodiesAfterPostProcessors { get; set; }
@@ -33,6 +39,7 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
         //protected int Width { get; set; }
         protected byte[] BackgroundImage { get; set; }
 
+        private SpriteRenderer BackgroundImageSpriteRenderer { get; set; }
         //must override
         //public abstract override string ToString();
 
@@ -45,18 +52,20 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
 
             spriteR.SetRenderLayer(backgroundRenderLayer);
 
-            var bgEnt = CreateEntity("bg").SetPosition(Screen.Center);
+            Entity bgEnt = CreateEntity("bg").SetPosition(Screen.Center);
 
-            var bgComponent = bgEnt.AddComponent(spriteR);
+            SpriteRenderer bgComponent = bgEnt.AddComponent(spriteR);
+
             bgComponent.SetRenderLayer(backgroundRenderLayer);
-
             return true;
         }
 
         //Optional to override
         public abstract void InitProps(byte[] backgroundImage,
             ISimpleImageHelper imageHelper,
+            bool isTilingScreenSaver,
             bool hasGlitchPostProcessor,
+            bool hasVignettePostProcessor,
             bool hasRigidBorders,
             bool edgeDetectRigidFloatingObjectsFromBackground,
             bool renderRigidBodiesAfterPostProcessors,
@@ -81,18 +90,30 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
         private bool _isFunctionDone = true;
         private PixelGlitchPostProcessor PixelGlitchPostProcessor { get; set; }
         private ConcurrentQueue<RunLoadingFunction> LoadingFunctions = new ConcurrentQueue<RunLoadingFunction>();
+        private TilingScreenSaverComponent TilingScreenSaverComponent { get; set; }
+        private SpriteRenderer TilingImageSpriteRenderer { get; set; }
 
         public override void OnStart()
         {
+            if (BackgroundImage == null)
+            {
+                BackgroundImage = ImageHelper.BlankImage(new Rectangle(0, 0,
+                        GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width,
+                        GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height),
+                    Color.Black);
+            }
             var bg = AddRenderer(new RenderLayerRenderer(0, BackgroundRenderLayer));
-            var rb = AddRenderer(new RenderLayerRenderer(1, RigidBodiesRenderLayer));
             bg.WantsToRenderAfterPostProcessors = false;
-            rb.WantsToRenderAfterPostProcessors = RenderRigidBodiesAfterPostProcessors;
-
             this.AddRenderer(bg);
-            this.AddRenderer(rb);
 
-            EnqueueLoadingFunction(SetBackgroundImage, 0, false);
+            if (!IsTilingScreenSaver)
+            {
+                var rb = AddRenderer(new RenderLayerRenderer(1, RigidBodiesRenderLayer));
+                rb.WantsToRenderAfterPostProcessors = RenderRigidBodiesAfterPostProcessors;
+                this.AddRenderer(rb);
+
+                EnqueueLoadingFunction(SetBackgroundImage, 0, false);
+            }
 
             if (HasRigidBorders)
                 EnqueueLoadingFunction(AddRigidBorders, 0, false);
@@ -107,14 +128,100 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                 Core.StartCoroutine(GlitchBackground(1, 5));
             }
 
+            if (HasVignettePostProcessor)
+            {
+                var vig = AddPostProcessor(new VignettePostProcessor(1));
+                //float _power = 1f;
+                //float _radius = 1.25f;
+                vig.Power = .85f;
+                vig.Radius = 1.50f;
+            }
+
+            if (IsTilingScreenSaver)
+            {
+                EnqueueLoadingFunction(SetupTilingScreenSaverComponent, 0, false);
+            }
+
+            Core.Instance.IsMouseVisible = false;
             Core.StartCoroutine(RunAllFunctions(LoadingFunctions));
 
             base.OnStart();
-            StartUpdate = true;
+        }
+
+        private bool SetupTilingScreenSaverComponent()
+        {
+            TilingScreenSaverComponent =
+                new TilingScreenSaverComponent(Graphics.Instance.Batcher.GraphicsDevice, this.ImageHelper);
+            TilingScreenSaverComponent.PhaseChangedEvent += TilingScreenSaverComponent_PhaseChangedEvent;
+            TilingScreenSaverComponent.InitFont(this.SimpleFont);
+            // imageEntity.AddComponent(tilingScreenSaverComponent);
+
+            var blank = ImageHelper.BlankImage(new Rectangle(0, 0,
+                    GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width,
+                    GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height),
+                Color.Black);
+
+            var blankTexture2D =
+                Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice,
+                    new MemoryStream(blank));
+            var sr1 = new SpriteRenderer(blankTexture2D);
+            sr1.SetRenderLayer(BackgroundRenderLayer);
+            CreateEntity("moon", new Vector2(Screen.Width / 2, Screen.Height / 2)).AddComponent(sr1);
+            var sr2 = new SpriteRenderer(blankTexture2D);
+            sr2.SetRenderLayer(BackgroundRenderLayer);
+            CreateEntity("bg", new Vector2(Screen.Width / 2, Screen.Height / 2)).AddComponent(sr2);
+
+            return true;
+        }
+
+        private void TilingScreenSaverComponent_PhaseChangedEvent(object sender, TilingSaverPhaseChangeEventArgs e)
+        {
+            if (TilingImageSpriteRenderer == null)
+                TilingImageSpriteRenderer = this.FindEntity("moon").GetComponent<SpriteRenderer>();
+            if (BackgroundImageSpriteRenderer == null)
+            {
+                var ent = this.FindEntity("bg");
+                if (ent != null)
+                    BackgroundImageSpriteRenderer = ent.GetComponent<SpriteRenderer>();
+            }
+
+            if (TilingImageSpriteRenderer == null)
+                return;
+
+            switch (e.CurrentPhase)
+            {
+                case Phase.GetImage:
+                    //BackgroundImageSpriteRenderer.Color = new Microsoft.Xna.Framework.Color(0, 0, 0, 0);
+                    break;
+
+                case Phase.GotImage:
+                    //if (moonTex != null)
+                    TilingImageSpriteRenderer.Sprite = new Sprite(TilingScreenSaverComponent.CurrentImage);
+                    break;
+
+                case Phase.FadeIn:
+                case Phase.FadeOut:
+                    //addedComponent.Color = new Microsoft.Xna.Framework.Color(0, 0, 0,
+                    //    MathHelper.Clamp(255 - TilingScreenSaverComponent.mAlphaValue, 0, 255));
+                    BackgroundImageSpriteRenderer.Color = new Microsoft.Xna.Framework.Color(0, 0, 0,
+                        MathHelper.Clamp(TilingScreenSaverComponent.mAlphaValue, 0, 255));
+                    break;
+
+                case Phase.ShowImage:
+                    //BackgroundImageSpriteRenderer.Color = new Microsoft.Xna.Framework.Color(0, 0, 0, 0);
+                    break;
+
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+            //Console.WriteLine($"{e.CurrentPhase}-{MathHelper.Clamp(TilingScreenSaverComponent.mAlphaValue, 0, 255)} BG Alpha: {BackgroundImageSpriteRenderer.Color.A} ");
         }
 
         public override void Update()
         {
+            if (!LoadingFunctions.Any() && StartUpdate == false)
+                StartUpdate = true;
+
             if (!StartUpdate)
                 return;
 
@@ -123,6 +230,9 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                 GlitchOffsetMin = 1;
                 GlitchOffsetMax = 4;
             }
+
+            if (IsTilingScreenSaver)
+                TilingScreenSaverComponent?.Update();
 
             base.Update();
         }
@@ -166,6 +276,30 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
             }
         }
 
+        //public override void Update()
+        //{
+        //    tilingScreenSaverComponent.Update();
+        //    switch (tilingScreenSaverComponent.CurrentPhase)
+        //    {
+        //        case TilingScreenSaverComponent.Phase.GetImage:
+        //            moonTex = tilingScreenSaverComponent.CurrentImage;
+        //            if (moonTex != null)
+        //                addedComponent.Sprite = new Sprite(moonTex);
+        //            break;
+        //        case TilingScreenSaverComponent.Phase.FadeIn:
+        //        case TilingScreenSaverComponent.Phase.FadeOut:
+        //            //addedComponent.Color = new Color(0, 0, 0,
+        //            //    MathHelper.Clamp( tilingScreenSaverComponent.mAlphaValue, 0, 255));
+        //            break;
+        //        case TilingScreenSaverComponent.Phase.ShowImage:
+        //            Vector2 loc = tilingScreenSaverComponent.ImagePosition;
+        //            //addedComponent.Transform.LocalPosition = loc;
+        //            break;
+        //        default:
+        //            throw new ArgumentOutOfRangeException();
+        //    }
+        //    base.Update();
+        //}
         public IEnumerator RunAllFunctions(ConcurrentQueue<RunLoadingFunction> rf)
         {
             yield return null;

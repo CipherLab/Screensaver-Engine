@@ -16,20 +16,20 @@ namespace MonoGameTest.Scenes
         private Texture2D moonTex { get; set; }
         private Entity moonEntity { get; set; }
         private SpriteRenderer spriteRenderer { get; set; }
-        SpriteRenderer addedComponent { get; set; }
+        private SpriteRenderer addedComponent { get; set; }
 
         public MirrorEdgesEnlargeImage()
         {
             Enabled = true;
         }
+
         public override void Initialize()
         {
             base.Initialize();
 
-
             //var bounds = new Rectangle(0, 0, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width,
             //    GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height);
-            
+
             var simpleFont = Content.Load<SpriteFont>("Shared\\SimpleFont");
 
             SetDesignResolution(GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width, GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height, Scene.SceneResolutionPolicy.ShowAll);
@@ -50,19 +50,16 @@ namespace MonoGameTest.Scenes
             spriteRenderer = new SpriteRenderer(moonTex);
             addedComponent = moonEntity.AddComponent(spriteRenderer);
 
-
-            
             Screen.IsFullscreen = true;
             Screen.ApplyChanges();
-
-
         }
 
         public bool Enabled { get; }
         public int UpdateOrder { get; }
+
         public override void Update()
         {
-             tilingScreenSaverComponent.Update();
+            tilingScreenSaverComponent.Update();
             switch (tilingScreenSaverComponent.CurrentPhase)
             {
                 case TilingScreenSaverComponent.Phase.GetImage:
@@ -70,20 +67,22 @@ namespace MonoGameTest.Scenes
                     if (moonTex != null)
                         addedComponent.Sprite = new Sprite(moonTex);
                     break;
+
                 case TilingScreenSaverComponent.Phase.FadeIn:
                 case TilingScreenSaverComponent.Phase.FadeOut:
-                    //addedComponent.Color = new Color(0, 0, 0,
-                    //    MathHelper.Clamp( tilingScreenSaverComponent.mAlphaValue, 0, 255));
+                    addedComponent.Color = new Color(0, 0, 0,
+                        MathHelper.Clamp(tilingScreenSaverComponent.mAlphaValue, 0, 255));
                     break;
+
                 case TilingScreenSaverComponent.Phase.ShowImage:
                     Vector2 loc = tilingScreenSaverComponent.ImagePosition;
                     //addedComponent.Transform.LocalPosition = loc;
                     break;
+
                 default:
                     throw new ArgumentOutOfRangeException();
             }
             base.Update();
         }
-
     }
 }

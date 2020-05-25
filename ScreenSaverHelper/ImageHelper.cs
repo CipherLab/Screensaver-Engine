@@ -67,49 +67,6 @@ namespace ScreenSaverHelper
             }
         }
 
-        public byte[] MirrorUpconvertImage()
-        {
-            int origWidth = OriginalImage.Width;
-            int origHeight = OriginalImage.Height;
-            string i = ImageFile;
-            if (origHeight >= Bounds.Height && origWidth >= Bounds.Width)
-            {
-                Debug.WriteLine($"{new FileInfo(i).Name} - Original image is big enough");
-                var size = new MagickGeometry(Bounds.Width, Bounds.Height);
-                size.IgnoreAspectRatio = true;
-                OriginalImage.Resize(size);
-                return OriginalImage.ToByteArray();
-            }
-
-            if (origHeight >= Bounds.Height && origWidth < Bounds.Width)
-            {
-                Debug.WriteLine($"{new FileInfo(i).Name} - Not wide enough");
-                var mirroredWImage = MirrorLeftAndRight();
-                return mirroredWImage;
-            }
-
-            if (origWidth >= Bounds.Width && origHeight < Bounds.Height)
-            {
-                Debug.WriteLine($"{new FileInfo(i).Name} - Not tall enough");
-                var mirroredHImage = MirrorUpAndDown();
-                return mirroredHImage;
-            }
-
-            if (origHeight < Bounds.Height && origWidth < Bounds.Width)
-            {
-                Debug.WriteLine($"{new FileInfo(i).Name} - Not tall or wide enough");
-                var mirroredWImage = MirrorLeftAndRight();
-
-                //new is widened to the bounds now
-                origWidth = Bounds.Width;
-                //pass the niw extra wide one to be mirrored top and bottom
-                var mirroredHImage = MirrorUpAndDown();
-                return mirroredHImage;
-            }
-
-            return GetImageByteArrayFromFile(i);
-        }
-
         /// <summary>
         /// Creates the edge filled object black with no transparency
         /// </summary>
@@ -206,6 +163,55 @@ namespace ScreenSaverHelper
             }
         }
 
+        public byte[] MirrorUpconvertImage(Rectangle bounds, string imageFile)
+        {
+            using (var originalImage = new MagickImage(imageFile))
+            {
+                int origWidth = originalImage.Width;
+                int origHeight = originalImage.Height;
+                string i = imageFile;
+                if (origHeight >= bounds.Height && origWidth >= bounds.Width)
+                {
+                    Debug.WriteLine($"{new FileInfo(i).Name} - Original image is big enough");
+                    var size = new MagickGeometry(bounds.Width, bounds.Height);
+                    size.IgnoreAspectRatio = true;
+                    originalImage.Resize(size);
+                    return originalImage.ToByteArray();
+                }
+
+                if (origHeight >= bounds.Height && origWidth < bounds.Width)
+                {
+                    Debug.WriteLine($"{new FileInfo(i).Name} - Not wide enough");
+                    var mirroredWImage = MirrorLeftAndRight(bounds, originalImage.ToByteArray(MagickFormat.Jpg));
+                    return mirroredWImage;
+                }
+
+                if (origWidth >= bounds.Width && origHeight < bounds.Height)
+                {
+                    Debug.WriteLine($"{new FileInfo(i).Name} - Not tall enough");
+                    var mirroredHImage = MirrorUpAndDown(bounds, originalImage.ToByteArray(MagickFormat.Jpg));
+                    return mirroredHImage;
+                }
+
+                if (origHeight < bounds.Height && origWidth < bounds.Width)
+                {
+                    Debug.WriteLine($"{new FileInfo(i).Name} - Not tall or wide enough");
+                    var mirroredWImage = MirrorLeftAndRight(bounds, originalImage.ToByteArray(MagickFormat.Jpg));
+
+                    //pass the niw extra wide one to be mirrored top and bottom
+                    var mirroredHWImage = MirrorUpAndDown(bounds, mirroredWImage);
+                    return mirroredHWImage;
+                }
+
+                return GetImageByteArrayFromFile(i);
+            }
+        }
+
+        public byte[] MirrorUpconvertImage()
+        {
+            return MirrorUpconvertImage(this.Bounds, this.ImageFile);
+        }
+
         public byte[] EdgeDetectedFilledBlack(ImageFormat format)
         {
             var fmt = MagickFormat.Png;
@@ -214,68 +220,84 @@ namespace ScreenSaverHelper
             return EdgeDetectedFilledBlack(this.OriginalImage.ToByteArray(fmt), format);
         }
 
-        private byte[] MirrorUpAndDown()
+        private byte[] MirrorUpAndDown(Rectangle bounds, byte[] img)
         {
-            using (var top = OriginalImage.Clone())
+            using (var original = new MagickImage(img))
             {
-                using (var bottom = OriginalImage.Clone())
+                using (var top = original.Clone())
                 {
-                    var hDif = (Bounds.Height - OriginalImage.Height) / 2;
-
-                    var geom1 = new MagickGeometry(0, 0, OriginalImage.Width, hDif);
-                    top.Crop(geom1);
-                    var geom2 = new MagickGeometry(0, OriginalImage.Height - hDif, OriginalImage.Width, hDif);
-                    bottom.Crop(geom2);
-
-                    using (var imageCol = new MagickImageCollection())
+                    using (var bottom = original.Clone())
                     {
-                        top.Flip();
-                        imageCol.Add(top);
-                        imageCol.Add(OriginalImage.Clone());
-                        bottom.Flip();
-                        imageCol.Add(bottom);
+                        var hDif = (bounds.Height - original.Height) / 2;
 
-                        using (var result = imageCol.AppendVertically())
+                        var geom1 = new MagickGeometry(0, 0, original.Width, hDif);
+                        top.Crop(geom1);
+                        var geom2 = new MagickGeometry(0, original.Height - hDif, original.Width, hDif);
+                        bottom.Crop(geom2);
+
+                        using (var imageCol = new MagickImageCollection())
                         {
-                            var size = new MagickGeometry(OriginalImage.Width, Bounds.Height);
-                            size.IgnoreAspectRatio = true;
-                            result.Resize(size);
+                            top.Flip();
+                            imageCol.Add(top);
+                            imageCol.Add(original);
+                            bottom.Flip();
+                            imageCol.Add(bottom);
 
-                            return result.ToByteArray();
+                            using (var result = imageCol.AppendVertically())
+                            {
+                                var size = new MagickGeometry(original.Width, bounds.Height);
+                                size.IgnoreAspectRatio = true;
+                                result.Resize(size);
+
+                                return result.ToByteArray();
+                            }
                         }
                     }
                 }
             }
         }
 
+        private byte[] MirrorUpAndDown()
+        {
+            return MirrorUpAndDown(Bounds, OriginalImage.ToByteArray());
+        }
+
         private byte[] MirrorLeftAndRight()
         {
-            using (var left = OriginalImage.Clone())
+            return MirrorLeftAndRight(Bounds, OriginalImage.ToByteArray());
+        }
+
+        private byte[] MirrorLeftAndRight(Rectangle bounds, byte[] img)
+        {
+            using (var original = new MagickImage(img))
             {
-                using (var right = OriginalImage.Clone())
+                using (var left = original.Clone())
                 {
-                    var wDif = (Bounds.Width - OriginalImage.Width) / 2;
-
-                    var geom1 = new MagickGeometry(OriginalImage.Width - wDif, 0, wDif, OriginalImage.Height);
-                    right.Crop(geom1);
-                    var geom2 = new MagickGeometry(0, 0, wDif, OriginalImage.Height);
-                    left.Crop(geom2);
-
-                    using (var imageCol = new MagickImageCollection())
+                    using (var right = original.Clone())
                     {
-                        left.Flop();
-                        right.Flop();
-                        imageCol.Add(left);
-                        imageCol.Add(OriginalImage.Clone());
-                        imageCol.Add(right);
+                        var wDif = (bounds.Width - original.Width) / 2;
 
-                        using (var result = imageCol.AppendHorizontally())
+                        var geom1 = new MagickGeometry(original.Width - wDif, 0, wDif, original.Height);
+                        right.Crop(geom1);
+                        var geom2 = new MagickGeometry(0, 0, wDif, original.Height);
+                        left.Crop(geom2);
+
+                        using (var imageCol = new MagickImageCollection())
                         {
-                            var size = new MagickGeometry(Bounds.Width, OriginalImage.Height);
-                            size.IgnoreAspectRatio = true;
-                            result.Resize(size);
+                            left.Flop();
+                            right.Flop();
+                            imageCol.Add(left);
+                            imageCol.Add(original.Clone());
+                            imageCol.Add(right);
 
-                            return result.ToByteArray();
+                            using (var result = imageCol.AppendHorizontally())
+                            {
+                                var size = new MagickGeometry(bounds.Width, original.Height);
+                                size.IgnoreAspectRatio = true;
+                                result.Resize(size);
+
+                                return result.ToByteArray();
+                            }
                         }
                     }
                 }
