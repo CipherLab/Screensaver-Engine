@@ -142,7 +142,7 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                 EnqueueLoadingFunction(SetupTilingScreenSaverComponent, 0, false);
             }
 
-            Core.Instance.IsMouseVisible = false;
+            Core.Instance.IsMouseVisible = HasGui;
             Core.StartCoroutine(RunAllFunctions(LoadingFunctions));
 
             base.OnStart();
@@ -174,10 +174,17 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
             return true;
         }
 
+        private Entity TilingImageEntity { get; set; }
+
         private void TilingScreenSaverComponent_PhaseChangedEvent(object sender, TilingSaverPhaseChangeEventArgs e)
         {
             if (TilingImageSpriteRenderer == null)
-                TilingImageSpriteRenderer = this.FindEntity("moon").GetComponent<SpriteRenderer>();
+            {
+                TilingImageEntity = this.FindEntity("moon");
+
+                if (TilingImageEntity != null)
+                    TilingImageSpriteRenderer = TilingImageEntity.GetComponent<SpriteRenderer>();
+            }
             if (BackgroundImageSpriteRenderer == null)
             {
                 var ent = this.FindEntity("bg");
@@ -197,6 +204,7 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                 case Phase.GotImage:
                     //if (moonTex != null)
                     TilingImageSpriteRenderer.Sprite = new Sprite(TilingScreenSaverComponent.CurrentImage);
+
                     break;
 
                 case Phase.FadeIn:
@@ -232,7 +240,14 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
             }
 
             if (IsTilingScreenSaver)
+            {
                 TilingScreenSaverComponent?.Update();
+                //if (TilingScreenSaverComponent != null && TilingImageEntity != null)
+                //{
+                //    if (TilingScreenSaverComponent.ImagePosition != TilingImageEntity.LocalPosition)
+                //        TilingImageEntity.LocalPosition = TilingScreenSaverComponent.ImagePosition;
+                //}
+            }
 
             base.Update();
         }

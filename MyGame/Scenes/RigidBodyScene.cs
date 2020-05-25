@@ -14,21 +14,41 @@ namespace ScreenSaverEngine2.Scenes
         public override void Initialize()
         {
             InitProps(
-                Game1.StartupBackgroundScreenshot,
-                Game1.Container.Resolve<ISimpleImageHelper>(),
-                false,
-                false,
+                true,
                 true,
                 true,
                 true,
                 true,
                 300,
                 false,
-                true,
+                true);
+            base.Initialize();
+        }
+
+        private void InitProps(
+            bool hasGlitchPostProcessor,
+            bool hasVignettePostProcessor,
+            bool hasRigidBorders,
+            bool edgeDetectRigidFloatingObjectsFromBackground,
+            bool renderRigidBodiesAfterPostProcessors,
+            int maxFloatingRigidBodies,
+            bool isFullScreen,
+            bool hasGui)
+        {
+            InitProps(
+                Game1.StartupBackgroundScreenshot,
+                Game1.Container.Resolve<ISimpleImageHelper>(),
+                false,
+                hasGlitchPostProcessor,
+                hasVignettePostProcessor,
+                hasRigidBorders,
+                edgeDetectRigidFloatingObjectsFromBackground,
+                renderRigidBodiesAfterPostProcessors,
+                maxFloatingRigidBodies,
+                isFullScreen,
+                hasGui,
                 GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height,
                 GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width);
-
-            base.Initialize();
         }
 
         //thought this would help make sure everything that must be set is set

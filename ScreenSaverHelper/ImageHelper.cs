@@ -249,7 +249,7 @@ namespace ScreenSaverHelper
                                 size.IgnoreAspectRatio = true;
                                 result.Resize(size);
 
-                                return result.ToByteArray();
+                                return result.ToByteArray(MagickFormat.Jpg);
                             }
                         }
                     }
@@ -296,7 +296,7 @@ namespace ScreenSaverHelper
                                 size.IgnoreAspectRatio = true;
                                 result.Resize(size);
 
-                                return result.ToByteArray();
+                                return result.ToByteArray(MagickFormat.Jpg);
                             }
                         }
                     }

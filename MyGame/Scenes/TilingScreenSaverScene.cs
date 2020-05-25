@@ -21,7 +21,7 @@ namespace ScreenSaverEngine2.Scenes
                 true,
                 true,
                 false,
-                true);
+                false);
             base.Initialize();
         }
 

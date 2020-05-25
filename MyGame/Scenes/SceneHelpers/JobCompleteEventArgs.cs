@@ -40,19 +40,11 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
 
     public class TilingSaverPhaseChangeEventArgs : EventArgs
     {
-        public TilingSaverPhaseChangeEventArgs(Phase currentPhase, Texture2D newTiledImage)
-        {
-            CurrentPhase = currentPhase;
-            NewTiledImage = newTiledImage;
-        }
-
         public TilingSaverPhaseChangeEventArgs(Phase currentPhase)
         {
             CurrentPhase = currentPhase;
         }
 
         public Phase CurrentPhase { get; set; }
-
-        public Texture2D NewTiledImage { get; set; }
     }
 }

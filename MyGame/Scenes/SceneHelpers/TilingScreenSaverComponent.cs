@@ -285,7 +285,7 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                         CurrentImage = TempImage;
                         TempImage = null;
                         CurrentPhase = Phase.GotImage;
-                        OnPhaseChanged(new TilingSaverPhaseChangeEventArgs(CurrentPhase, CurrentImage));
+                        OnPhaseChanged(new TilingSaverPhaseChangeEventArgs(CurrentPhase));
                     }
 
                     break;
