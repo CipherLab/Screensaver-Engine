@@ -347,19 +347,19 @@ namespace ScreenSaverHelper
                             using (var highImg = orig.Clone())
                             {
                                 highImg.BrightnessContrast(new Percentage(m), new Percentage(0));
-                                high1 = highImg.GetPixels().GetPixel(1, 1).ToColor();
+                                high1 = highImg.GetPixels().GetPixel(0, 0).ToColor();
                                 high2 = highImg.GetPixels().GetPixel(bitmap.Width - 1, bitmap.Height - 1).ToColor();
-                                high3 = highImg.GetPixels().GetPixel(bitmap.Width - 1, 1).ToColor();
-                                high4 = highImg.GetPixels().GetPixel(1, bitmap.Height - 1).ToColor();
+                                high3 = highImg.GetPixels().GetPixel(bitmap.Width - 1, 0).ToColor();
+                                high4 = highImg.GetPixels().GetPixel(0, bitmap.Height - 1).ToColor();
                             }
 
                             using (var lwoImg = orig.Clone())
                             {
                                 lwoImg.BrightnessContrast(new Percentage(m * -1), new Percentage(0));
-                                low1 = lwoImg.GetPixels().GetPixel(1, 1).ToColor();
+                                low1 = lwoImg.GetPixels().GetPixel(0, 0).ToColor();
                                 low2 = lwoImg.GetPixels().GetPixel(bitmap.Width - 1, bitmap.Height - 1).ToColor();
-                                low3 = lwoImg.GetPixels().GetPixel(bitmap.Width - 1, 1).ToColor();
-                                low4 = lwoImg.GetPixels().GetPixel(1, bitmap.Height - 1).ToColor();
+                                low3 = lwoImg.GetPixels().GetPixel(bitmap.Width - 1, 0).ToColor();
+                                low4 = lwoImg.GetPixels().GetPixel(0, bitmap.Height - 1).ToColor();
                             }
 
                             orig.HasAlpha = true;

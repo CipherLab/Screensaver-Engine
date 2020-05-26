@@ -24,7 +24,6 @@
     <Compile Remove="Scenes\SpriteCharWRigidBodyBg.cs" />
   </ItemGroup>
 
-
   <ItemGroup>
     <PackageReference Include="MonoGame.Content.Builder" Version="3.7.0.9" />
     <PackageReference Include="MonoGame.Framework.DesktopGL.Core" Version="3.8.0.13" />
@@ -33,7 +32,6 @@
     <PackageReference Include="System.Drawing.Primitives" Version="4.3.0" />
     <PackageReference Include="Unity" Version="5.11.6" />
   </ItemGroup>
-
 
   <ItemGroup>
     <ProjectReference Include="..\Nez-master\Nez.FarseerPhysics\Nez.FarseerPhysics.csproj" />
@@ -45,12 +43,11 @@
     <ProjectReference Include="..\WpfApp\WpfApp.csproj" />
   </ItemGroup>
 
-
   <ItemGroup>
+    <Folder Include="Content\ParticleDesigner\" />
     <Folder Include="Enums\" />
     <Folder Include="Plugin\" />
   </ItemGroup>
-
 
   <ItemGroup>
     <Compile Update="Shared\ContentPathGenerator.cs">
@@ -59,7 +56,6 @@
       <AutoGen>True</AutoGen>
     </Compile>
   </ItemGroup>
-
 
   <ItemGroup>
     <None Update="Content\nez\effects\Bevels.mgfxo">
@@ -194,16 +190,94 @@
     <None Update="Content\nez\textures\textureWipeTransition\wink.xnb">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Content\ParticleDesigner\Atomic Bubble.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Blue Flame.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Blue Galaxy.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Comet.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Crazy Blue.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Electrons.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Fire.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Foam.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Giros Gratis.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\huo1.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Into The Blue.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\JasonChoi_Flash.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\JasonChoi_rising up.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\JasonChoi_Swirl01.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Leaves.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Meks Blood Spill.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Plasma Glow.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Real Popcorn.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Shooting Fireball.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Snow.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\The Sun.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Thingy.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\thingy.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Touch Up.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Trippy.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\Winner Stars.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Content\ParticleDesigner\wu1.pex">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Shared\ContentPathGenerator.tt">
       <LastGenOutput>ContentPathGenerator.cs</LastGenOutput>
       <Generator>TextTemplatingFileGenerator</Generator>
     </None>
   </ItemGroup>
 
-
   <ItemGroup>
     <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
   </ItemGroup>
-
-
 </Project>

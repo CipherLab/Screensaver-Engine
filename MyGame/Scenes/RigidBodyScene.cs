@@ -14,8 +14,8 @@ namespace ScreenSaverEngine2.Scenes
         public override void Initialize()
         {
             InitProps(
-                true,
-                true,
+                false,
+                false,
                 true,
                 true,
                 true,

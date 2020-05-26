@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Nez;
 using Nez.Sprites;
 using Nez.Textures;
+using ScreenSaverEngine2.Scenes.SceneHelpers.Particles;
 using ScreenSaverEngine2.Shared;
 using SharedKernel.Enums;
 using SharedKernel.Interfaces;
@@ -45,18 +46,17 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
 
         public virtual bool SetBackgroundImage()
         {
-            int backgroundRenderLayer = 15;
             var originalImageTex = Texture2D.FromStream(Nez.Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(BackgroundImage));
 
             var spriteR = new SpriteRenderer(originalImageTex);
 
-            spriteR.SetRenderLayer(backgroundRenderLayer);
+            spriteR.SetRenderLayer(BackgroundRenderLayer);
 
             Entity bgEnt = CreateEntity("bg").SetPosition(Screen.Center);
 
-            SpriteRenderer bgComponent = bgEnt.AddComponent(spriteR);
+            //SpriteRenderer bgComponent = bgEnt.AddComponent(spriteR);
 
-            bgComponent.SetRenderLayer(backgroundRenderLayer);
+            //bgComponent.SetRenderLayer(BackgroundRenderLayer);
             return true;
         }
 
@@ -85,7 +85,7 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
 
         private int GlitchOffsetMax = 0;
         private int GlitchOffsetMin = 0;
-        private readonly int BackgroundRenderLayer = 15;
+        private readonly int BackgroundRenderLayer = 0;
         private readonly int RigidBodiesRenderLayer = 5;
         private bool _isFunctionDone = true;
         private PixelGlitchPostProcessor PixelGlitchPostProcessor { get; set; }
@@ -95,12 +95,17 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
 
         public override void OnStart()
         {
+            this.ClearColor = Microsoft.Xna.Framework.Color.Black;
             if (BackgroundImage == null)
             {
                 BackgroundImage = ImageHelper.BlankImage(new Rectangle(0, 0,
                         GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width,
                         GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height),
                     Color.Black);
+            }
+            else
+            {
+                EnqueueLoadingFunction(SetBackgroundImage, 0, false);
             }
             var bg = AddRenderer(new RenderLayerRenderer(0, BackgroundRenderLayer));
             bg.WantsToRenderAfterPostProcessors = false;
@@ -111,8 +116,6 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                 var rb = AddRenderer(new RenderLayerRenderer(1, RigidBodiesRenderLayer));
                 rb.WantsToRenderAfterPostProcessors = RenderRigidBodiesAfterPostProcessors;
                 this.AddRenderer(rb);
-
-                EnqueueLoadingFunction(SetBackgroundImage, 0, false);
             }
 
             if (HasRigidBorders)
@@ -141,6 +144,8 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
             {
                 EnqueueLoadingFunction(SetupTilingScreenSaverComponent, 0, false);
             }
+
+            EnqueueLoadingFunction(AddParticleEffect, 0, false);
 
             Core.Instance.IsMouseVisible = HasGui;
             Core.StartCoroutine(RunAllFunctions(LoadingFunctions));
@@ -289,6 +294,16 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                 }
                 yield return null;
             }
+        }
+
+        private bool AddParticleEffect()
+        {
+            // add the ParticleSystemSelector which handles input for the scene and a SimpleMover to move it around with the keyboard
+            var particlesEntity = CreateEntity("particles");
+            particlesEntity.SetPosition(Screen.Center - new Vector2(0, 200));
+            particlesEntity.AddComponent(new ParticleSystemSelector());
+            particlesEntity.AddComponent(new SimpleMover());
+            return true;
         }
 
         //public override void Update()
