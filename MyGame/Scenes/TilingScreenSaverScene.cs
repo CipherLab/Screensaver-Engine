@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.IO;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Nez;
 using ScreenSaverEngine2.Attributes;
@@ -40,7 +41,10 @@ namespace ScreenSaverEngine2.Scenes
                 false,
                 false,
                 false,
+                false,
+                false,
                 0,
+                Vector2.Zero,
                 isFullScreen,
                 hasGui,
                 GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height,
@@ -56,8 +60,11 @@ namespace ScreenSaverEngine2.Scenes
             bool hasGlitchPostProcessor,
             bool hasRigidBorders,
             bool edgeDetectRigidFloatingObjectsFromBackground,
+            bool showImageOnDetectedRigidFloatingObjects,
             bool renderRigidBodiesAfterPostProcessors,
+            bool hasParticleSystem,
             int maxFloatingRigidBodies,
+            Vector2 edgeDetectedRigidFloatingObjectsVelocity,
             bool isFullScreen,
             bool hasGui,
             int height,
@@ -70,6 +77,7 @@ namespace ScreenSaverEngine2.Scenes
             this.HasGlitchPostProcessor = hasGlitchPostProcessor;
             this.HasRigidBorders = hasRigidBorders;
             this.HasEdgeDetectRigidFloatingObjectsFromBackground = edgeDetectRigidFloatingObjectsFromBackground;
+            this.ShowImageOnDetectedRigidFloatingObjects = showImageOnDetectedRigidFloatingObjects;
             this.RenderRigidBodiesAfterPostProcessors = renderRigidBodiesAfterPostProcessors;
             this.MaxFloatingRigidBodies = maxFloatingRigidBodies;
             this.IsFullScreen = isFullScreen;

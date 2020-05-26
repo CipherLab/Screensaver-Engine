@@ -29,6 +29,12 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers.Particles
         private bool _isCollisionEnabled;
 
         private bool _simulateInWorldSpace = true;
+        private int backgroundRenderLayer;
+
+        public ParticleSystemSelector(int backgroundRenderLayer)
+        {
+            this.backgroundRenderLayer = backgroundRenderLayer;
+        }
 
         public override void OnAddedToEntity()
         {
@@ -78,6 +84,10 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers.Particles
             // set state based on the values of our CheckBoxes
             _particleEmitter.CollisionConfig.Enabled = _isCollisionEnabled;
             _particleEmitter.SimulateInWorldSpace = _simulateInWorldSpace;
+            _particleEmitter.RenderLayer = backgroundRenderLayer;
+            _particleEmitter.LayerDepth = 1;
+            _particleEmitter.SetRenderLayer(backgroundRenderLayer);
+            _particleEmitter.SetLayerDepth(1);
         }
 
         /// <summary>
@@ -357,7 +367,7 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers.Particles
                 else
                     _particleEmitterConfig.EmitterType = ParticleEmitterType.Radial;
                 ResetEmitter();
-                //ResetUi();
+                ResetUi();
             };
 
             table.Add(label).Left().Width(140);

@@ -18,11 +18,15 @@ namespace ScreenSaverEngine2.Shared
     {
         public ICroppedImagePart CroppedImagePart { get; }
         public int RenderLayer { get; }
+        private Vector2 ObjVelocity { get; }
+        private bool HasTexture { get; }
 
-        public RigidBodies(ICroppedImagePart croppedImagePart, int renderLayer)
+        public RigidBodies(ICroppedImagePart croppedImagePart, int renderLayer, Vector2 objVelocity, bool hasTexture)
         {
             CroppedImagePart = croppedImagePart;
             RenderLayer = renderLayer;
+            ObjVelocity = objVelocity;
+            HasTexture = hasTexture;
         }
 
         //public void Initialize(int thickness, ScreenEdgeSide side)
@@ -46,15 +50,26 @@ namespace ScreenSaverEngine2.Shared
             Entity.AddComponent(rigidbody);
             Entity.AddComponent(new BoxCollider(width, height));
             Entity.SetPosition(position);
-            var spriteRenderer = new SpriteRenderer(texture);
-            spriteRenderer.SetRenderLayer(RenderLayer);
-            Entity.AddComponent(spriteRenderer);
+            if (HasTexture)
+            {
+                var spriteRenderer = new SpriteRenderer(texture);
+                spriteRenderer.SetRenderLayer(RenderLayer);
+                Entity.AddComponent(spriteRenderer);
+            }
+
             return rigidbody;
         }
 
         public void AddRigidBodies()
         {
-            Texture2D tex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(CroppedImagePart.ImageData));
+            var mass = CroppedImagePart.ImageProperties.X * CroppedImagePart.ImageProperties.Y;
+            if (ObjVelocity == Vector2.Zero)
+                mass = 0;
+
+            Texture2D tex = null;
+            if (CroppedImagePart.ImageData != null)
+                tex = Texture2D.FromStream(Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(CroppedImagePart.ImageData));
+
             ArcadeRigidbody rb = CreateEntity(
                 new Vector2(
                     CroppedImagePart.ImageProperties.X + (CroppedImagePart.ImageProperties.Width / 2f),
@@ -63,15 +78,18 @@ namespace ScreenSaverEngine2.Shared
                 CroppedImagePart.ImageProperties.Height,
                 tex,
                 0,
-                CroppedImagePart.ImageProperties.X * CroppedImagePart.ImageProperties.Y,
+                mass,
                 1);
             var task = Task.Run(async () =>
             {
                 for (; ; )
                 {
                     await Task.Delay(Random.Range(2000, 20000));
-                    rb.SetVelocity(new Vector2(Random.NextAngle(), Random.NextAngle()) * 2);
-                    rb.AddImpulse(Vector2.One);
+                    if (ObjVelocity == Vector2.Zero)
+                        rb.SetVelocity(ObjVelocity);
+                    else
+                        rb.SetVelocity(new Vector2(Random.NextAngle(), Random.NextAngle()) * ObjVelocity);
+                    rb.AddImpulse(ObjVelocity);
                 }
             });
             //rb.Entity.GetComponent<SpriteRenderer>().Color = Color.Magenta;

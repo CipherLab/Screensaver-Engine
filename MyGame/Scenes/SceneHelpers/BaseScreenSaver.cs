@@ -12,6 +12,7 @@ using Nez.Sprites;
 using Nez.Textures;
 using ScreenSaverEngine2.Scenes.SceneHelpers.Particles;
 using ScreenSaverEngine2.Shared;
+using ScreenSaverHelper.Util;
 using SharedKernel.Enums;
 using SharedKernel.Interfaces;
 using Color = System.Drawing.Color;
@@ -30,8 +31,11 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
         protected bool IsTilingScreenSaver { get; set; }
         protected bool HasRigidBorders { get; set; }
         protected bool HasEdgeDetectRigidFloatingObjectsFromBackground { get; set; }
+        protected bool ShowImageOnDetectedRigidFloatingObjects { get; set; }
         protected bool RenderRigidBodiesAfterPostProcessors { get; set; }
+        protected bool HasParticleSystem { get; set; }
         protected int MaxFloatingRigidBodies { get; set; }
+        protected Vector2 EdgeDetectedRigidFloatingObjectsVelocity { get; set; }
 
         //these are in StartSceneSubSceneHelper
         //protected bool IsFullScreen { get; set; }
@@ -44,22 +48,6 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
         //must override
         //public abstract override string ToString();
 
-        public virtual bool SetBackgroundImage()
-        {
-            var originalImageTex = Texture2D.FromStream(Nez.Graphics.Instance.Batcher.GraphicsDevice, new MemoryStream(BackgroundImage));
-
-            var spriteR = new SpriteRenderer(originalImageTex);
-
-            spriteR.SetRenderLayer(BackgroundRenderLayer);
-
-            Entity bgEnt = CreateEntity("bg").SetPosition(Screen.Center);
-
-            //SpriteRenderer bgComponent = bgEnt.AddComponent(spriteR);
-
-            //bgComponent.SetRenderLayer(BackgroundRenderLayer);
-            return true;
-        }
-
         //Optional to override
         public abstract void InitProps(byte[] backgroundImage,
             ISimpleImageHelper imageHelper,
@@ -68,8 +56,11 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
             bool hasVignettePostProcessor,
             bool hasRigidBorders,
             bool edgeDetectRigidFloatingObjectsFromBackground,
+            bool showImageOnDetectedRigidFloatingObjects,
             bool renderRigidBodiesAfterPostProcessors,
+            bool hasParticleSystem,
             int maxFloatingRigidBodies,
+            Vector2 edgeDetectedRigidFloatingObjectsVelocity,
             bool isFullScreen,
             bool hasGui,
             int height,
@@ -85,7 +76,7 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
 
         private int GlitchOffsetMax = 0;
         private int GlitchOffsetMin = 0;
-        private readonly int BackgroundRenderLayer = 0;
+        private int BackgroundRenderLayer = 15;
         private readonly int RigidBodiesRenderLayer = 5;
         private bool _isFunctionDone = true;
         private PixelGlitchPostProcessor PixelGlitchPostProcessor { get; set; }
@@ -107,15 +98,20 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
             {
                 EnqueueLoadingFunction(SetBackgroundImage, 0, false);
             }
-            var bg = AddRenderer(new RenderLayerRenderer(0, BackgroundRenderLayer));
-            bg.WantsToRenderAfterPostProcessors = false;
-            this.AddRenderer(bg);
-
-            if (!IsTilingScreenSaver)
+            if (HasParticleSystem)
+            {
+                Console.WriteLine("adding particle system");
+                EnqueueLoadingFunction(AddParticleEffect, 0, false);
+                //BackgroundRenderLayer = Int32.MaxValue;
+            }
+            else
             {
                 var rb = AddRenderer(new RenderLayerRenderer(1, RigidBodiesRenderLayer));
                 rb.WantsToRenderAfterPostProcessors = RenderRigidBodiesAfterPostProcessors;
                 this.AddRenderer(rb);
+                var bg = AddRenderer(new RenderLayerRenderer(0, BackgroundRenderLayer));
+                bg.WantsToRenderAfterPostProcessors = false;
+                this.AddRenderer(bg);
             }
 
             if (HasRigidBorders)
@@ -145,12 +141,24 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                 EnqueueLoadingFunction(SetupTilingScreenSaverComponent, 0, false);
             }
 
-            EnqueueLoadingFunction(AddParticleEffect, 0, false);
-
             Core.Instance.IsMouseVisible = HasGui;
             Core.StartCoroutine(RunAllFunctions(LoadingFunctions));
 
             base.OnStart();
+        }
+
+        public virtual bool SetBackgroundImage()
+        {
+            var bgEntity = CreateEntity("bg");
+            var bgTexture = Texture2D.FromStream(
+                Nez.Graphics.Instance.Batcher.GraphicsDevice,
+                new MemoryStream(BackgroundImage));
+
+            bgEntity.Position = Screen.Center;
+            var sr = new SpriteRenderer(bgTexture);
+            sr.SetRenderLayer(BackgroundRenderLayer);
+            bgEntity.AddComponent(sr);
+            return true;
         }
 
         private bool SetupTilingScreenSaverComponent()
@@ -257,16 +265,33 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
             base.Update();
         }
 
-        public IEnumerator AddRigidBodyPartsToScene(List<ICroppedImagePart> parts)
+        public IEnumerator AddRigidBodyPartsToScene(IEnumerable<ICroppedImagePart> parts)
         {
             yield return null;
 
-            int total = parts.Count();
+            var croppedImageParts = parts as ICroppedImagePart[] ?? parts.ToArray();
+            int total = croppedImageParts.Count();
             int idx = 0;
 
             while (idx < total)
             {
-                AddRigidBodies(parts[idx++]);
+                AddRigidBodies(croppedImageParts[idx++]);
+                Console.WriteLine($"AddRigidBodies {idx}");
+                yield return null;
+            }
+        }
+
+        public IEnumerator AddRigidBodyPartsToScene(IEnumerable<Rectangle> parts)
+        {
+            yield return null;
+
+            var rectangles = parts as Rectangle[] ?? parts.ToArray();
+            int total = rectangles.Count();
+            int idx = 0;
+
+            while (idx < total)
+            {
+                AddRigidBodies(rectangles[idx++]);
                 Console.WriteLine($"AddRigidBodies {idx}");
                 yield return null;
             }
@@ -301,35 +326,14 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
             // add the ParticleSystemSelector which handles input for the scene and a SimpleMover to move it around with the keyboard
             var particlesEntity = CreateEntity("particles");
             particlesEntity.SetPosition(Screen.Center - new Vector2(0, 200));
-            particlesEntity.AddComponent(new ParticleSystemSelector());
+            var pss = new ParticleSystemSelector(BackgroundRenderLayer * -1);
+            pss.Enabled = false;
+            particlesEntity.AddComponent(pss);
             particlesEntity.AddComponent(new SimpleMover());
+
             return true;
         }
 
-        //public override void Update()
-        //{
-        //    tilingScreenSaverComponent.Update();
-        //    switch (tilingScreenSaverComponent.CurrentPhase)
-        //    {
-        //        case TilingScreenSaverComponent.Phase.GetImage:
-        //            moonTex = tilingScreenSaverComponent.CurrentImage;
-        //            if (moonTex != null)
-        //                addedComponent.Sprite = new Sprite(moonTex);
-        //            break;
-        //        case TilingScreenSaverComponent.Phase.FadeIn:
-        //        case TilingScreenSaverComponent.Phase.FadeOut:
-        //            //addedComponent.Color = new Color(0, 0, 0,
-        //            //    MathHelper.Clamp( tilingScreenSaverComponent.mAlphaValue, 0, 255));
-        //            break;
-        //        case TilingScreenSaverComponent.Phase.ShowImage:
-        //            Vector2 loc = tilingScreenSaverComponent.ImagePosition;
-        //            //addedComponent.Transform.LocalPosition = loc;
-        //            break;
-        //        default:
-        //            throw new ArgumentOutOfRangeException();
-        //    }
-        //    base.Update();
-        //}
         public IEnumerator RunAllFunctions(ConcurrentQueue<RunLoadingFunction> rf)
         {
             yield return null;
@@ -347,11 +351,32 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                 }
                 yield return null;
             }
+
+            if (HasParticleSystem)
+            {
+                Console.WriteLine("enabled particles");
+                this.FindEntity("particles").GetComponent<ParticleSystemSelector>().Enabled = true;
+            }
+        }
+
+        private bool AddRigidBodies(Rectangle part)
+        {
+            CreateEntity(Guid.NewGuid().ToString()).AddComponent(
+                new RigidBodies(
+                    new CroppedImagePart { ImageData = null, ImageProperties = part },
+                    RigidBodiesRenderLayer,
+                    EdgeDetectedRigidFloatingObjectsVelocity,
+                    ShowImageOnDetectedRigidFloatingObjects));
+            return true;
         }
 
         private bool AddRigidBodies(ICroppedImagePart part)
         {
-            CreateEntity(Guid.NewGuid().ToString()).AddComponent(new RigidBodies(part, RigidBodiesRenderLayer));
+            CreateEntity(Guid.NewGuid().ToString()).AddComponent(
+                new RigidBodies(part,
+                    RigidBodiesRenderLayer,
+                    EdgeDetectedRigidFloatingObjectsVelocity,
+                    ShowImageOnDetectedRigidFloatingObjects));
             return true;
         }
 
@@ -377,7 +402,9 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
                 _isFunctionDone = true;
                 //get sprites
                 if (e.BoxData.Any())
+                {
                     EnqueueLoadingSpritesFromImageBoxData(e.BoxData);
+                }
             };
             LoadingFunctions.Enqueue(rlf);
         }
@@ -410,20 +437,28 @@ namespace ScreenSaverEngine2.Scenes.SceneHelpers
 
         private void EnqueueLoadingSpritesFromImageBoxData(List<Rectangle> boxData)
         {
-            ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListCroppedImageParts d1 = ImageHelper.GetSpritesFromImage;
-            RunLoadingFunction rlf = new RunLoadingFunction(d1, 0, true, this.BackgroundImage,
-                boxData.OrderByDescending(r => r.Width * r.Height).Take(MaxFloatingRigidBodies).ToList());
-
-            rlf.JobComplete += (sender, e) =>
+            if (ShowImageOnDetectedRigidFloatingObjects)
             {
-                Console.WriteLine("Got sprites from bounding boxes");
-                //got sprites
-                _isFunctionDone = true;
-                //put it on the screen
-                if (e.CroppedImageParts.Any())
-                    Core.StartCoroutine(AddRigidBodyPartsToScene(e.CroppedImageParts.ToList()));
-            };
-            LoadingFunctions.Enqueue(rlf);
+                ScreenSaverEngine2.SceneHelpers.DelegateDeclarationListCroppedImageParts d1 = ImageHelper.GetSpritesFromImage;
+
+                RunLoadingFunction rlf = new RunLoadingFunction(d1, 0, true, this.BackgroundImage,
+                    boxData.OrderByDescending(r => r.Width * r.Height).Take(MaxFloatingRigidBodies).ToList());
+
+                rlf.JobComplete += (sender, e) =>
+                {
+                    Console.WriteLine("Got sprites from bounding boxes");
+                    //got sprites
+                    _isFunctionDone = true;
+                    //put it on the screen
+                    if (e.CroppedImageParts.Any())
+                        Core.StartCoroutine(AddRigidBodyPartsToScene(e.CroppedImageParts.ToList()));
+                };
+                LoadingFunctions.Enqueue(rlf);
+            }
+            else
+            {
+                Core.StartCoroutine(AddRigidBodyPartsToScene(boxData.OrderByDescending(r => r.Width * r.Height).Take(MaxFloatingRigidBodies)));
+            }
         }
 
         private byte[] GetEdgeDetectedObjectsFromBackground()

@@ -42,24 +42,24 @@ namespace ScreenSaverEngine2.Scenes
     }
     */
 
-    [StartupGuiScene("RigidBodyScene", 9999, "")]
+    [StartupGuiScene("Rigid Bg Particles", 80, "")]
     //can't use reflection to setup an abstract class as a scene
-    public class RigidBodyScene : BaseScreenSaver
+    public class RigidBodyWithParticlesScene : BaseScreenSaver
     {
         public override void Initialize()
         {
             InitProps(
                 false,
                 false,
-                true,
-                true,
+                false,
                 true,
                 true,
                 false,
-                300,
-                Vector2.One,
                 true,
-                false);
+                500,
+                Vector2.Zero,
+                false,
+                true);
             base.Initialize();
         }
 
@@ -122,8 +122,8 @@ namespace ScreenSaverEngine2.Scenes
             this.ShowImageOnDetectedRigidFloatingObjects = showImageOnDetectedRigidFloatingObjects;
             this.RenderRigidBodiesAfterPostProcessors = renderRigidBodiesAfterPostProcessors;
             this.HasParticleSystem = hasParticleSystem;
-            this.MaxFloatingRigidBodies = maxFloatingRigidBodies;
             this.EdgeDetectedRigidFloatingObjectsVelocity = edgeDetectedRigidFloatingObjectsVelocity;
+            this.MaxFloatingRigidBodies = maxFloatingRigidBodies;
             this.IsFullScreen = isFullScreen;
             this.HasGui = hasGui;
             this.Width = width;
